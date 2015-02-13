@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		631496F31A8E98C60015CAD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631496F21A8E98C60015CAD0 /* AppDelegate.swift */; };
+		631496F51A8E98C60015CAD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631496F41A8E98C60015CAD0 /* ViewController.swift */; };
+		631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631496F61A8E98C60015CAD0 /* Main.storyboard */; };
+		631496FA1A8E98C60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
+		631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */; };
+		631497091A8E98C60015CAD0 /* Watch_The_CornersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631497081A8E98C60015CAD0 /* Watch_The_CornersTests.swift */; };
+		6314971B1A8E98F60015CAD0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314971A1A8E98F60015CAD0 /* InterfaceController.swift */; };
+		6314971D1A8E98F60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6314971C1A8E98F60015CAD0 /* Images.xcassets */; };
+		631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */; };
+		631497291A8E98F60015CAD0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631497271A8E98F60015CAD0 /* Interface.storyboard */; };
+		6314972B1A8E98F60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6314972A1A8E98F60015CAD0 /* Images.xcassets */; };
+		6314972E1A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		631497031A8E98C60015CAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 631496E51A8E98C60015CAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 631496EC1A8E98C60015CAD0;
+			remoteInfo = "Watch The Corners";
+		};
+		631497221A8E98F60015CAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 631496E51A8E98C60015CAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6314971F1A8E98F60015CAD0;
+			remoteInfo = "Watch The Corners WatchKit App";
+		};
+		6314972C1A8E98F60015CAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 631496E51A8E98C60015CAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 631497151A8E98F60015CAD0;
+			remoteInfo = "Watch The Corners WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		631497351A8E98F60015CAD0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6314972E1A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		631496ED1A8E98C60015CAD0 /* Watch The Corners.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch The Corners.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		631496F11A8E98C60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		631496F21A8E98C60015CAD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		631496F41A8E98C60015CAD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		631496F71A8E98C60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		631496F91A8E98C60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		631496FC1A8E98C60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		631497021A8E98C60015CAD0 /* Watch The CornersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Watch The CornersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		631497071A8E98C60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		631497081A8E98C60015CAD0 /* Watch_The_CornersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_The_CornersTests.swift; sourceTree = "<group>"; };
+		631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch The Corners WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		631497191A8E98F60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6314971A1A8E98F60015CAD0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		6314971C1A8E98F60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch The Corners WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		631497261A8E98F60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		631497281A8E98F60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		6314972A1A8E98F60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		631496EA1A8E98C60015CAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		631496FF1A8E98C60015CAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		631497131A8E98F60015CAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		631496E41A8E98C60015CAD0 = {
+			isa = PBXGroup;
+			children = (
+				631496EF1A8E98C60015CAD0 /* Watch The Corners */,
+				631497051A8E98C60015CAD0 /* Watch The CornersTests */,
+				631497171A8E98F60015CAD0 /* Watch The Corners WatchKit Extension */,
+				631497241A8E98F60015CAD0 /* Watch The Corners WatchKit App */,
+				631496EE1A8E98C60015CAD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		631496EE1A8E98C60015CAD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				631496ED1A8E98C60015CAD0 /* Watch The Corners.app */,
+				631497021A8E98C60015CAD0 /* Watch The CornersTests.xctest */,
+				631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */,
+				631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		631496EF1A8E98C60015CAD0 /* Watch The Corners */ = {
+			isa = PBXGroup;
+			children = (
+				631496F21A8E98C60015CAD0 /* AppDelegate.swift */,
+				631496F41A8E98C60015CAD0 /* ViewController.swift */,
+				631496F61A8E98C60015CAD0 /* Main.storyboard */,
+				631496F91A8E98C60015CAD0 /* Images.xcassets */,
+				631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */,
+				631496F01A8E98C60015CAD0 /* Supporting Files */,
+			);
+			path = "Watch The Corners";
+			sourceTree = "<group>";
+		};
+		631496F01A8E98C60015CAD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				631496F11A8E98C60015CAD0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		631497051A8E98C60015CAD0 /* Watch The CornersTests */ = {
+			isa = PBXGroup;
+			children = (
+				631497081A8E98C60015CAD0 /* Watch_The_CornersTests.swift */,
+				631497061A8E98C60015CAD0 /* Supporting Files */,
+			);
+			path = "Watch The CornersTests";
+			sourceTree = "<group>";
+		};
+		631497061A8E98C60015CAD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				631497071A8E98C60015CAD0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		631497171A8E98F60015CAD0 /* Watch The Corners WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6314971A1A8E98F60015CAD0 /* InterfaceController.swift */,
+				6314971C1A8E98F60015CAD0 /* Images.xcassets */,
+				631497181A8E98F60015CAD0 /* Supporting Files */,
+			);
+			path = "Watch The Corners WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		631497181A8E98F60015CAD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				631497191A8E98F60015CAD0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		631497241A8E98F60015CAD0 /* Watch The Corners WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				631497271A8E98F60015CAD0 /* Interface.storyboard */,
+				6314972A1A8E98F60015CAD0 /* Images.xcassets */,
+				631497251A8E98F60015CAD0 /* Supporting Files */,
+			);
+			path = "Watch The Corners WatchKit App";
+			sourceTree = "<group>";
+		};
+		631497251A8E98F60015CAD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				631497261A8E98F60015CAD0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		631496EC1A8E98C60015CAD0 /* Watch The Corners */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6314970C1A8E98C60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The Corners" */;
+			buildPhases = (
+				631496E91A8E98C60015CAD0 /* Sources */,
+				631496EA1A8E98C60015CAD0 /* Frameworks */,
+				631496EB1A8E98C60015CAD0 /* Resources */,
+				631497351A8E98F60015CAD0 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6314972D1A8E98F60015CAD0 /* PBXTargetDependency */,
+			);
+			name = "Watch The Corners";
+			productName = "Watch The Corners";
+			productReference = 631496ED1A8E98C60015CAD0 /* Watch The Corners.app */;
+			productType = "com.apple.product-type.application";
+		};
+		631497011A8E98C60015CAD0 /* Watch The CornersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6314970F1A8E98C60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The CornersTests" */;
+			buildPhases = (
+				631496FE1A8E98C60015CAD0 /* Sources */,
+				631496FF1A8E98C60015CAD0 /* Frameworks */,
+				631497001A8E98C60015CAD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				631497041A8E98C60015CAD0 /* PBXTargetDependency */,
+			);
+			name = "Watch The CornersTests";
+			productName = "Watch The CornersTests";
+			productReference = 631497021A8E98C60015CAD0 /* Watch The CornersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		631497151A8E98F60015CAD0 /* Watch The Corners WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631497321A8E98F60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The Corners WatchKit Extension" */;
+			buildPhases = (
+				631497121A8E98F60015CAD0 /* Sources */,
+				631497131A8E98F60015CAD0 /* Frameworks */,
+				631497141A8E98F60015CAD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				631497231A8E98F60015CAD0 /* PBXTargetDependency */,
+			);
+			name = "Watch The Corners WatchKit Extension";
+			productName = "Watch The Corners WatchKit Extension";
+			productReference = 631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		6314971F1A8E98F60015CAD0 /* Watch The Corners WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6314972F1A8E98F60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The Corners WatchKit App" */;
+			buildPhases = (
+				6314971E1A8E98F60015CAD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch The Corners WatchKit App";
+			productName = "Watch The Corners WatchKit App";
+			productReference = 631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		631496E51A8E98C60015CAD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "TwistSix, LLC";
+				TargetAttributes = {
+					631496EC1A8E98C60015CAD0 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = AFFQEB7V6T;
+					};
+					631497011A8E98C60015CAD0 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 631496EC1A8E98C60015CAD0;
+					};
+					631497151A8E98F60015CAD0 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					6314971F1A8E98F60015CAD0 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = AFFQEB7V6T;
+					};
+				};
+			};
+			buildConfigurationList = 631496E81A8E98C60015CAD0 /* Build configuration list for PBXProject "Watch The Corners" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 631496E41A8E98C60015CAD0;
+			productRefGroup = 631496EE1A8E98C60015CAD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				631496EC1A8E98C60015CAD0 /* Watch The Corners */,
+				631497011A8E98C60015CAD0 /* Watch The CornersTests */,
+				631497151A8E98F60015CAD0 /* Watch The Corners WatchKit Extension */,
+				6314971F1A8E98F60015CAD0 /* Watch The Corners WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		631496EB1A8E98C60015CAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */,
+				631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */,
+				631496FA1A8E98C60015CAD0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		631497001A8E98C60015CAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		631497141A8E98F60015CAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6314971D1A8E98F60015CAD0 /* Images.xcassets in Resources */,
+				631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6314971E1A8E98F60015CAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631497291A8E98F60015CAD0 /* Interface.storyboard in Resources */,
+				6314972B1A8E98F60015CAD0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		631496E91A8E98C60015CAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631496F51A8E98C60015CAD0 /* ViewController.swift in Sources */,
+				631496F31A8E98C60015CAD0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		631496FE1A8E98C60015CAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631497091A8E98C60015CAD0 /* Watch_The_CornersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		631497121A8E98F60015CAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6314971B1A8E98F60015CAD0 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		631497041A8E98C60015CAD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 631496EC1A8E98C60015CAD0 /* Watch The Corners */;
+			targetProxy = 631497031A8E98C60015CAD0 /* PBXContainerItemProxy */;
+		};
+		631497231A8E98F60015CAD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6314971F1A8E98F60015CAD0 /* Watch The Corners WatchKit App */;
+			targetProxy = 631497221A8E98F60015CAD0 /* PBXContainerItemProxy */;
+		};
+		6314972D1A8E98F60015CAD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 631497151A8E98F60015CAD0 /* Watch The Corners WatchKit Extension */;
+			targetProxy = 6314972C1A8E98F60015CAD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		631496F61A8E98C60015CAD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				631496F71A8E98C60015CAD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				631496FC1A8E98C60015CAD0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		631497271A8E98F60015CAD0 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				631497281A8E98F60015CAD0 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6314970A1A8E98C60015CAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6314970B1A8E98C60015CAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6314970D1A8E98C60015CAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "Watch The Corners/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6314970E1A8E98C60015CAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "Watch The Corners/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		631497101A8E98C60015CAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Watch The CornersTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Watch The Corners.app/Watch The Corners";
+			};
+			name = Debug;
+		};
+		631497111A8E98C60015CAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Watch The CornersTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Watch The Corners.app/Watch The Corners";
+			};
+			name = Release;
+		};
+		631497301A8E98F60015CAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Watch_The_Corners_WatchKit_Extension;
+				INFOPLIST_FILE = "Watch The Corners WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		631497311A8E98F60015CAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IBSC_MODULE = Watch_The_Corners_WatchKit_Extension;
+				INFOPLIST_FILE = "Watch The Corners WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		631497331A8E98F60015CAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Watch The Corners WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		631497341A8E98F60015CAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Watch The Corners WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		631496E81A8E98C60015CAD0 /* Build configuration list for PBXProject "Watch The Corners" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6314970A1A8E98C60015CAD0 /* Debug */,
+				6314970B1A8E98C60015CAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6314970C1A8E98C60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The Corners" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6314970D1A8E98C60015CAD0 /* Debug */,
+				6314970E1A8E98C60015CAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6314970F1A8E98C60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The CornersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631497101A8E98C60015CAD0 /* Debug */,
+				631497111A8E98C60015CAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6314972F1A8E98F60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The Corners WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631497301A8E98F60015CAD0 /* Debug */,
+				631497311A8E98F60015CAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		631497321A8E98F60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The Corners WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631497331A8E98F60015CAD0 /* Debug */,
+				631497341A8E98F60015CAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 631496E51A8E98C60015CAD0 /* Project object */;
+}
