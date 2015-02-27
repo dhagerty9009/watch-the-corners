@@ -16,14 +16,16 @@ class InterfaceController: WKInterfaceController {
   let BLACK: UIColor = UIColor.blackColor()
   
   var random: NSNumber!
-  var highScore: NSNumber!
+  var highScore: Int!
   
   @IBOutlet weak var label: WKInterfaceLabel!
+  @IBOutlet weak var gameTimer: WKInterfaceTimer!
   
   @IBOutlet weak var buttonOne: WKInterfaceButton!
   @IBOutlet weak var buttonTwo: WKInterfaceButton!
   @IBOutlet weak var buttonThree: WKInterfaceButton!
   @IBOutlet weak var buttonFour: WKInterfaceButton!
+  @IBOutlet weak var startButton: WKInterfaceButton!
   
   func randomNumber() -> NSNumber {
     let number = Int(arc4random_uniform(4)+1)
@@ -56,7 +58,7 @@ class InterfaceController: WKInterfaceController {
       setInactive(buttonFour)
       setInactive(buttonThree)
       setInactive(buttonTwo)
-      setActive(buttonOne)
+      setInactive(buttonOne)
     }
   }
   
@@ -72,33 +74,44 @@ class InterfaceController: WKInterfaceController {
     button.setEnabled(false)
   }
   
+  func tapActions() {
+    highScore = highScore + 1
+    label.setText("Score: \(highScore)")
+    random = randomNumber()
+    makeButtonActive(random)
+  }
+  
   @IBAction func startTimer() {
-    
+    random = randomNumber()
+    makeButtonActive(random)
+    startButton.setEnabled(false)
   }
   @IBAction func TapOne() {
-    label.setText("One was tapped.")
-    random = randomNumber()
-    makeButtonActive(random)
+    tapActions()
   }
   @IBAction func TapTwo() {
-    label.setText("Two was tapped.")
-    random = randomNumber()
-    makeButtonActive(random)
+    tapActions()
   }
   @IBAction func TapThree() {
-    label.setText("Three was tapped.")
-    random = randomNumber()
-    makeButtonActive(random)
+    tapActions()
   }
   @IBAction func TapFour() {
-    label.setText("Four was tapped.")
-    random = randomNumber()
-    makeButtonActive(random)
+    tapActions()
+  }
+  
+  func tapTimer() {
+    
   }
 
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
+    
+    // Disable all buttons initially.
+    buttonOne.setEnabled(false)
+    buttonTwo.setEnabled(false)
+    buttonThree.setEnabled(false)
+    buttonFour.setEnabled(false)
     highScore = 0
-    label.setText("Score: \(highScore)")
+    label.setText("No Score")
   }
 }

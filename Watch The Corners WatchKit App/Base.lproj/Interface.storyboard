@@ -10,9 +10,17 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_The_Corners_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Label" id="Fpw-LA-iK6">
-                            <fontDescription key="font" type="system" weight="light" pointSize="12"/>
-                        </label>
+                        <group width="1" alignment="left" id="DoP-qP-lxl">
+                            <items>
+                                <label alignment="left" text="Label" id="Fpw-LA-iK6">
+                                    <fontDescription key="font" type="system" weight="light" pointSize="14"/>
+                                </label>
+                                <timer alignment="right" id="VM7-42-HBf">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                            </items>
+                        </group>
                         <group width="1" height="0.29999999999999999" alignment="left" id="Vl3-Lc-2QX">
                             <items>
                                 <button width="0.5" height="1" alignment="left" title="Button" id="pBv-gp-gVK">
@@ -53,7 +61,9 @@
                         <outlet property="buttonOne" destination="pBv-gp-gVK" id="NIi-tp-hMC"/>
                         <outlet property="buttonThree" destination="AFc-Hf-40u" id="L7s-hB-1jP"/>
                         <outlet property="buttonTwo" destination="F5u-xN-g8w" id="L2O-RS-ZbV"/>
+                        <outlet property="gameTimer" destination="VM7-42-HBf" id="XAM-au-6dm"/>
                         <outlet property="label" destination="Fpw-LA-iK6" id="j0R-f1-zgj"/>
+                        <outlet property="startButton" destination="qDU-Cl-WPQ" id="xcq-a5-KSa"/>
                     </connections>
                 </controller>
             </objects>
