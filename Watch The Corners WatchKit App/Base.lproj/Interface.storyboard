@@ -10,21 +10,19 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_The_Corners_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" id="XfP-Ol-bfT"/>
-                        <timer alignment="center" verticalAlignment="center" id="LE1-r4-ffr">
-                            <fontDescription key="font" type="system" weight="semibold" pointSize="28"/>
-                            <calendarUnit key="units" minute="YES" second="YES"/>
-                        </timer>
-                        <group width="1" alignment="left" id="Vl3-Lc-2QX">
+                        <label alignment="center" text="Label" id="Fpw-LA-iK6">
+                            <fontDescription key="font" type="system" weight="light" pointSize="12"/>
+                        </label>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="Vl3-Lc-2QX">
                             <items>
-                                <button width="0.5" alignment="left" title="Button" id="pBv-gp-gVK">
+                                <button width="0.5" height="1" alignment="left" title="Button" id="pBv-gp-gVK">
                                     <connections>
-                                        <action selector="Tap1" destination="AgC-eL-Hgc" id="LKm-2q-GTm"/>
+                                        <action selector="TapOne" destination="AgC-eL-Hgc" id="UCk-tV-h0j"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" alignment="left" title="Button" id="F5u-xN-g8w">
+                                <button width="0.5" height="1" alignment="left" title="Button" id="F5u-xN-g8w">
                                     <connections>
-                                        <action selector="Tap2" destination="AgC-eL-Hgc" id="OyM-hf-Yxd"/>
+                                        <action selector="TapTwo" destination="AgC-eL-Hgc" id="3zz-TL-6Ru"/>
                                     </connections>
                                 </button>
                             </items>
@@ -33,20 +31,29 @@
                             <items>
                                 <button width="0.5" height="1" alignment="left" title="Button" id="AFc-Hf-40u">
                                     <connections>
-                                        <action selector="Tap3" destination="AgC-eL-Hgc" id="tbI-vI-AWz"/>
+                                        <action selector="TapThree" destination="AgC-eL-Hgc" id="096-na-kCI"/>
                                     </connections>
                                 </button>
                                 <button width="0.5" height="1" alignment="left" title="Button" id="HGg-sp-blw">
                                     <connections>
-                                        <action selector="Tap4" destination="AgC-eL-Hgc" id="rTd-JF-k0G"/>
+                                        <action selector="TapFour" destination="AgC-eL-Hgc" id="6aM-J2-nXT"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
+                        <button width="1" alignment="left" title="Start" id="qDU-Cl-WPQ">
+                            <connections>
+                                <action selector="startTimer" destination="AgC-eL-Hgc" id="YZq-AL-y5y"/>
+                            </connections>
+                        </button>
                     </items>
+                    <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <outlet property="Label" destination="XfP-Ol-bfT" id="Ija-BY-QWw"/>
-                        <outlet property="coundownTimer" destination="LE1-r4-ffr" id="Wr4-gW-7kG"/>
+                        <outlet property="buttonFour" destination="HGg-sp-blw" id="EGx-dB-OKz"/>
+                        <outlet property="buttonOne" destination="pBv-gp-gVK" id="NIi-tp-hMC"/>
+                        <outlet property="buttonThree" destination="AFc-Hf-40u" id="L7s-hB-1jP"/>
+                        <outlet property="buttonTwo" destination="F5u-xN-g8w" id="L2O-RS-ZbV"/>
+                        <outlet property="label" destination="Fpw-LA-iK6" id="j0R-f1-zgj"/>
                     </connections>
                 </controller>
             </objects>
