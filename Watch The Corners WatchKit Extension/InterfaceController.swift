@@ -12,26 +12,32 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
   
+  // Color constants
   let WHITE: UIColor = UIColor.whiteColor()
   let BLACK: UIColor = UIColor.blackColor()
   
+  // Game data
   var random: NSNumber!
   var highScore: Int!
   
+  // Game data outlets
   @IBOutlet weak var label: WKInterfaceLabel!
   @IBOutlet weak var gameTimer: WKInterfaceTimer!
   
+  // The game's buttons
   @IBOutlet weak var buttonOne: WKInterfaceButton!
   @IBOutlet weak var buttonTwo: WKInterfaceButton!
   @IBOutlet weak var buttonThree: WKInterfaceButton!
   @IBOutlet weak var buttonFour: WKInterfaceButton!
   @IBOutlet weak var startButton: WKInterfaceButton!
   
+  // Generates a random number
   func randomNumber() -> NSNumber {
     let number = Int(arc4random_uniform(4)+1)
     return number
   }
   
+  // Sets a random button to be active, and deactivates the rest.
   func makeButtonActive(number:NSNumber) {
     switch number {
     case 1:
@@ -61,19 +67,21 @@ class InterfaceController: WKInterfaceController {
       setInactive(buttonOne)
     }
   }
-  
+  // This activates the passed button, making it tappable
   func setActive(button:WKInterfaceButton) {
     button.setBackgroundColor(WHITE)
-    button.setTitle("Active")
+    button.setTitle("")
     button.setEnabled(true)
   }
   
+  // This deactivates the passed button, making it untappable.
   func setInactive(button:WKInterfaceButton) {
     button.setBackgroundColor(BLACK)
-    button.setTitle("Inactive")
+    button.setTitle("")
     button.setEnabled(false)
   }
   
+  // These actions are called every time a button is tapped.
   func tapActions() {
     highScore = highScore + 1
     label.setText("Score: \(highScore)")
@@ -81,11 +89,22 @@ class InterfaceController: WKInterfaceController {
     makeButtonActive(random)
   }
   
+  // This sets all game buttons - not the start button - to their default, inactive state.
+  func disableAllButtons() {
+    setInactive(buttonFour)
+    setInactive(buttonThree)
+    setInactive(buttonTwo)
+    setInactive(buttonOne)
+  }
+  
+  // This is the game timer, started when the player pushes the start button.
   @IBAction func startTimer() {
     random = randomNumber()
     makeButtonActive(random)
     startButton.setEnabled(false)
   }
+  
+  // Event handlers for all the buttons.
   @IBAction func TapOne() {
     tapActions()
   }
@@ -99,19 +118,28 @@ class InterfaceController: WKInterfaceController {
     tapActions()
   }
   
+  // This function will fake incorrect taps by the user. It is a one second timer that runs
+  // the game over function whenever it stops.
   func tapTimer() {
     
+  }
+  
+  // A game over function to return the app to the initial state
+  func gameOver() {
+    highScore = highScore - 1
+    label.setText("Score: \(highScore)")
+    disableAllButtons()
+    startButton.setEnabled(true)
   }
 
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
     
     // Disable all buttons initially.
-    buttonOne.setEnabled(false)
-    buttonTwo.setEnabled(false)
-    buttonThree.setEnabled(false)
-    buttonFour.setEnabled(false)
+    disableAllButtons()
+    // Set the High Score to 0
     highScore = 0
+    // Initially there is no score
     label.setText("No Score")
   }
 }
