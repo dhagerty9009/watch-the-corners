@@ -19,13 +19,9 @@ class GameBoard {
   }
 
   // makes a random 'button' active
-  func makeRandomButtonActive() -> Int {
+  func makeRandomButtonActive() {
     let number = Int(arc4random_uniform(4)+1)
-    return number
-  }
-  
-  func getActiveButton() -> Int {
-    return self.activeButton
+    self.activeButton = number
   }
   
 }

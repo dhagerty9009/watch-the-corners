@@ -23,12 +23,14 @@
                         </group>
                         <group width="1" height="0.40000000000000002" alignment="left" id="Vl3-Lc-2QX">
                             <items>
-                                <button width="0.5" height="1" alignment="left" title="Button" id="pBv-gp-gVK">
+                                <button width="0.5" height="1" alignment="left" id="pBv-gp-gVK">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="TapOne" destination="AgC-eL-Hgc" id="UCk-tV-h0j"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="left" title="Button" id="F5u-xN-g8w">
+                                <button width="0.5" height="1" alignment="left" id="F5u-xN-g8w">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="TapTwo" destination="AgC-eL-Hgc" id="3zz-TL-6Ru"/>
                                     </connections>
@@ -37,12 +39,14 @@
                         </group>
                         <group width="1" height="0.40000000000000002" alignment="left" verticalAlignment="bottom" id="G2c-f2-qRS">
                             <items>
-                                <button width="0.5" height="1" alignment="left" title="Button" id="AFc-Hf-40u">
+                                <button width="0.5" height="1" alignment="left" id="AFc-Hf-40u">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="TapThree" destination="AgC-eL-Hgc" id="096-na-kCI"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="left" title="Button" id="HGg-sp-blw">
+                                <button width="0.5" height="1" alignment="left" id="HGg-sp-blw">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="TapFour" destination="AgC-eL-Hgc" id="6aM-J2-nXT"/>
                                     </connections>
@@ -50,14 +54,14 @@
                             </items>
                         </group>
                     </items>
-                    <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="buttonFour" destination="HGg-sp-blw" id="EGx-dB-OKz"/>
                         <outlet property="buttonOne" destination="pBv-gp-gVK" id="NIi-tp-hMC"/>
                         <outlet property="buttonThree" destination="AFc-Hf-40u" id="L7s-hB-1jP"/>
                         <outlet property="buttonTwo" destination="F5u-xN-g8w" id="L2O-RS-ZbV"/>
                         <outlet property="gameTimer" destination="VM7-42-HBf" id="XAM-au-6dm"/>
-                        <outlet property="label" destination="Fpw-LA-iK6" id="j0R-f1-zgj"/>
+                        <outlet property="scoreLabel" destination="Fpw-LA-iK6" id="CCZ-t3-XrN"/>
                         <outlet property="startButton" destination="qDU-Cl-WPQ" id="xcq-a5-KSa"/>
                     </connections>
                 </controller>
@@ -78,7 +82,6 @@
                                 <segue destination="AgC-eL-Hgc" kind="push" id="Sgu-Aa-ywq"/>
                             </connections>
                         </button>
-                        <label alignment="center" verticalAlignment="bottom" text="High Score" id="0Ah-hh-Kyp"/>
                         <label alignment="center" text="Press Start" id="Njz-Vo-VEJ">
                             <fontDescription key="font" type="system" pointSize="22"/>
                         </label>
@@ -86,9 +89,6 @@
                             <fontDescription key="font" type="system" pointSize="22"/>
                         </label>
                     </items>
-                    <connections>
-                        <outlet property="scoreLabel" destination="0Ah-hh-Kyp" id="Rbq-Fj-7A5"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-125" y="124"/>

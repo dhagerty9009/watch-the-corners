@@ -24,7 +24,7 @@ class gameController: WKInterfaceController {
   var board:GameBoard!
   
   // Game data outlets
-  @IBOutlet weak var label: WKInterfaceLabel!
+  @IBOutlet weak var scoreLabel: WKInterfaceLabel!
   @IBOutlet weak var gameTimer: WKInterfaceTimer!
   
   // The game's buttons
@@ -54,16 +54,17 @@ class gameController: WKInterfaceController {
   func tappedButton(button: Int) {
     var active = board.activeButton
     if button == active {
-      board.makeRandomButtonActive()
-      activateButton()
       highScore = highScore + 1
+      scoreLabel.setText("Score: \(highScore)")
+      board.makeRandomButtonActive()
+      activateButton(board.activeButton)
     } else {
       gameOver()
     }
   }
   
-  func activateButton() {
-    var newButton = board.activeButton
+  func activateButton(button: Int) {
+    var newButton = button
     switch newButton {
     case 1:
       buttonOne.setBackgroundColor(WHITE)
@@ -102,7 +103,7 @@ class gameController: WKInterfaceController {
     gameTimer.setDate(currentTime)
     gameTimer.start()
     board = GameBoard()
-    activateButton()
+    activateButton(board.activeButton)
   }
   
   // This function will fake incorrect taps by the user. It is a short timer that runs
@@ -110,9 +111,8 @@ class gameController: WKInterfaceController {
   // A game over function to return the app to the initial state
   func gameOver() {
     gameTimer.stop()
-    label.setText("Final Score: \(highScore)")
     minuteTimer = nil
-    pushControllerWithName("mainController", context: highScore)
+    pushControllerWithName("mainController", context: nil)
   }
   
   // The default initialization function
