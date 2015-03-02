@@ -87,7 +87,6 @@ class InterfaceController: WKInterfaceController {
     random = randomNumber()
     makeButtonActive(random)
     secondTimer.timeInterval + 2 // destroy the previous timer so it doesn't go off by accident.
-    tapTimer()
   }
   // This sets all game buttons - not the start button - to their default, inactive state.
   func disableAllButtons() {
@@ -102,6 +101,7 @@ class InterfaceController: WKInterfaceController {
     makeButtonActive(random)
     startButton.setEnabled(false)
     minuteTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: gameTimer, selector: Selector("gameOver"), userInfo: nil, repeats: false)
+    tapTimer()
     currentTime = NSDate()
     currentTime.dateByAddingTimeInterval(60)
     gameTimer.setDate(currentTime)

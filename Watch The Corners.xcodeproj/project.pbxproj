@@ -645,6 +645,7 @@
 				6314970E1A8E98C60015CAD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6314970F1A8E98C60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The CornersTests" */ = {
 			isa = XCConfigurationList;
@@ -653,6 +654,7 @@
 				631497111A8E98C60015CAD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6314972F1A8E98F60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The Corners WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +663,7 @@
 				631497311A8E98F60015CAD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		631497321A8E98F60015CAD0 /* Build configuration list for PBXNativeTarget "Watch The Corners WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +672,7 @@
 				631497341A8E98F60015CAD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
