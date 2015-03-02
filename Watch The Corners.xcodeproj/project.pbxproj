@@ -13,12 +13,14 @@
 		631496FA1A8E98C60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
 		631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */; };
 		631497091A8E98C60015CAD0 /* Watch_The_CornersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631497081A8E98C60015CAD0 /* Watch_The_CornersTests.swift */; };
-		6314971B1A8E98F60015CAD0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314971A1A8E98F60015CAD0 /* InterfaceController.swift */; };
+		6314971B1A8E98F60015CAD0 /* gameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314971A1A8E98F60015CAD0 /* gameController.swift */; };
 		6314971D1A8E98F60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6314971C1A8E98F60015CAD0 /* Images.xcassets */; };
 		631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */; };
 		631497291A8E98F60015CAD0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631497271A8E98F60015CAD0 /* Interface.storyboard */; };
 		6314972B1A8E98F60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6314972A1A8E98F60015CAD0 /* Images.xcassets */; };
 		6314972E1A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
+		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,12 +74,14 @@
 		631497081A8E98C60015CAD0 /* Watch_The_CornersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_The_CornersTests.swift; sourceTree = "<group>"; };
 		631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch The Corners WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631497191A8E98F60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6314971A1A8E98F60015CAD0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		6314971A1A8E98F60015CAD0 /* gameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameController.swift; sourceTree = "<group>"; };
 		6314971C1A8E98F60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch The Corners WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631497261A8E98F60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631497281A8E98F60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		6314972A1A8E98F60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
+		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +172,9 @@
 		631497171A8E98F60015CAD0 /* Watch The Corners WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				6314971A1A8E98F60015CAD0 /* InterfaceController.swift */,
+				63AA28C21AA4E4C0005E869A /* GameBoard.swift */,
+				63AA28C01AA4D40F005E869A /* mainController.swift */,
+				6314971A1A8E98F60015CAD0 /* gameController.swift */,
 				6314971C1A8E98F60015CAD0 /* Images.xcassets */,
 				631497181A8E98F60015CAD0 /* Supporting Files */,
 			);
@@ -381,7 +387,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6314971B1A8E98F60015CAD0 /* InterfaceController.swift in Sources */,
+				63AA28C11AA4D40F005E869A /* mainController.swift in Sources */,
+				63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */,
+				6314971B1A8E98F60015CAD0 /* gameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

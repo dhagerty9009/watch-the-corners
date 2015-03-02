@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BBu-0I-fMw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--gameController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_The_Corners_WatchKit_App" customModuleProvider="target">
+                <controller identifier="gameController" id="AgC-eL-Hgc" customClass="gameController" customModule="Watch_The_Corners_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="DoP-qP-lxl">
+                        <group width="1" alignment="left" verticalAlignment="center" id="DoP-qP-lxl">
                             <items>
                                 <label alignment="left" text="Label" id="Fpw-LA-iK6">
                                     <fontDescription key="font" type="system" weight="light" pointSize="14"/>
@@ -21,7 +21,7 @@
                                 </timer>
                             </items>
                         </group>
-                        <group width="1" height="0.29999999999999999" alignment="left" id="Vl3-Lc-2QX">
+                        <group width="1" height="0.40000000000000002" alignment="left" id="Vl3-Lc-2QX">
                             <items>
                                 <button width="0.5" height="1" alignment="left" title="Button" id="pBv-gp-gVK">
                                     <connections>
@@ -35,7 +35,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="0.29999999999999999" alignment="left" id="G2c-f2-qRS">
+                        <group width="1" height="0.40000000000000002" alignment="left" verticalAlignment="bottom" id="G2c-f2-qRS">
                             <items>
                                 <button width="0.5" height="1" alignment="left" title="Button" id="AFc-Hf-40u">
                                     <connections>
@@ -49,11 +49,6 @@
                                 </button>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Start" id="qDU-Cl-WPQ">
-                            <connections>
-                                <action selector="startTimer" destination="AgC-eL-Hgc" id="YZq-AL-y5y"/>
-                            </connections>
-                        </button>
                     </items>
                     <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
@@ -67,7 +62,36 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-95" y="71"/>
+            <point key="canvasLocation" x="192" y="107"/>
+        </scene>
+        <!--mainController-->
+        <scene sceneID="EE5-2H-xRO">
+            <objects>
+                <controller identifier="mainController" id="BBu-0I-fMw" customClass="mainController" customModule="Watch_The_Corners_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Start" id="qDU-Cl-WPQ">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                            <connections>
+                                <action selector="startGame" destination="BBu-0I-fMw" id="mWg-Tn-aH5"/>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="Sgu-Aa-ywq"/>
+                            </connections>
+                        </button>
+                        <label alignment="center" verticalAlignment="bottom" text="High Score" id="0Ah-hh-Kyp"/>
+                        <label alignment="center" text="Press Start" id="Njz-Vo-VEJ">
+                            <fontDescription key="font" type="system" pointSize="22"/>
+                        </label>
+                        <label alignment="center" text="To Play" textAlignment="center" id="YyH-ea-DnI">
+                            <fontDescription key="font" type="system" pointSize="22"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="scoreLabel" destination="0Ah-hh-Kyp" id="Rbq-Fj-7A5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-125" y="124"/>
         </scene>
     </scenes>
 </document>
