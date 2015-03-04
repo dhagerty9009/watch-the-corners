@@ -15,6 +15,13 @@ class gameController: WKInterfaceController {
   // Color constants
   let WHITE: UIColor = UIColor.whiteColor()
   let BLACK: UIColor = UIColor.blackColor()
+  //let RED: UIColor = UIColor
+  //let GREEN: UIColor = UIColor
+  let GREY: UIColor = UIColor.grayColor()
+  
+  // Time Constants
+  let MINUTE: NSTimeInterval = 60
+  let UPDATE: NSTimeInterval = 15
   
   // Game data
   var random: NSNumber!
@@ -52,15 +59,26 @@ class gameController: WKInterfaceController {
   }
   
   func tappedButton(button: Int) {
+    var button = button
     var active = board.activeButton
     if button == active {
       highScore = highScore + 1
+      if highScore % 10 == 0 {
+        addTimeToTimer()
+      }
       scoreLabel.setText("Score: \(highScore)")
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
       gameOver()
     }
+  }
+  
+  func addTimeToTimer() {
+    minuteTimer.timeInterval + UPDATE
+    NSLog("Timer now set for \(minuteTimer.timeInterval)")
+    currentTime.dateByAddingTimeInterval(UPDATE)
+    gameTimer.setDate(currentTime)
   }
   
   func activateButton(button: Int) {
@@ -96,23 +114,24 @@ class gameController: WKInterfaceController {
   
   // This is the game timer, started when the player pushes the start button.
   func startGame() {
+    NSLog("Game started!")
     highScore = 0
-    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: gameTimer, selector: Selector("gameOver"), userInfo: nil, repeats: false)
+    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(MINUTE, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
     currentTime = NSDate()
-    currentTime.dateByAddingTimeInterval(60)
+    currentTime.dateByAddingTimeInterval(MINUTE)
     gameTimer.setDate(currentTime)
     gameTimer.start()
+    NSLog("Timer set for \(minuteTimer.timeInterval)")
     board = GameBoard()
     activateButton(board.activeButton)
   }
-  
-  // This function will fake incorrect taps by the user. It is a short timer that runs
-  // the game over function whenever it stops.
+
   // A game over function to return the app to the initial state
   func gameOver() {
+    NSLog("Game over: score was \(highScore)")
     gameTimer.stop()
-    minuteTimer = nil
-    pushControllerWithName("mainController", context: nil)
+    minuteTimer.invalidate()
+    pushControllerWithName("resultController", context: highScore)
   }
   
   // The default initialization function
