@@ -21,7 +21,7 @@ class gameController: WKInterfaceController {
   
   // Time Constants
   let MINUTE: NSTimeInterval = 60
-  let UPDATE: NSTimeInterval = 15
+  let INTERVAL: NSTimeInterval = 15
   
   // Game data
   var random: NSNumber!
@@ -64,7 +64,8 @@ class gameController: WKInterfaceController {
     if button == active {
       highScore = highScore + 1
       if highScore % 10 == 0 {
-        addTimeToTimer()
+        minuteTimer.invalidate()
+        setTimer()
       }
       scoreLabel.setText("Score: \(highScore)")
       board.makeRandomButtonActive()
@@ -74,12 +75,14 @@ class gameController: WKInterfaceController {
     }
   }
   
-  func addTimeToTimer() {
-    minuteTimer.timeInterval + UPDATE
-    NSLog("Timer now set for \(minuteTimer.timeInterval)")
-    currentTime.dateByAddingTimeInterval(UPDATE)
+  func setTimer() {
+    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(INTERVAL, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
+    currentTime = NSDate()
+    currentTime.dateByAddingTimeInterval(-INTERVAL)
     gameTimer.setDate(currentTime)
+    gameTimer.start()
   }
+  
   func activateButton(button: Int) {
     var newButton = button
     switch newButton {
@@ -114,12 +117,7 @@ class gameController: WKInterfaceController {
   func startGame() {
     NSLog("Game started!")
     highScore = 0
-    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(MINUTE, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
-    currentTime = NSDate()
-    currentTime.dateByAddingTimeInterval(MINUTE)
-    gameTimer.setDate(currentTime)
-    gameTimer.start()
-    NSLog("Timer set for \(minuteTimer.timeInterval)")
+    setTimer()
     board = GameBoard()
     activateButton(board.activeButton)
   }
