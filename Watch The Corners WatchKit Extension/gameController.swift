@@ -15,9 +15,9 @@ class gameController: WKInterfaceController {
   // Color constants
   let WHITE: UIColor = UIColor.whiteColor()
   let BLACK: UIColor = UIColor.blackColor()
-  //let RED: UIColor
-  //let GREEN: UIColor = UIColor
-  let GREY: UIColor = UIColor.grayColor()
+  let GREEN : UIColor = UIColor.greenColor()
+  let GRAY : UIColor = UIColor.grayColor()
+  let RED : UIColor = UIColor.redColor()
   
   // Time Constants
   let MINUTE: NSTimeInterval = 60
@@ -80,38 +80,36 @@ class gameController: WKInterfaceController {
     currentTime.dateByAddingTimeInterval(UPDATE)
     gameTimer.setDate(currentTime)
   }
-  
   func activateButton(button: Int) {
     var newButton = button
     switch newButton {
     case 1:
-      buttonOne.setBackgroundColor(WHITE)
-      buttonTwo.setBackgroundColor(BLACK)
-      buttonThree.setBackgroundColor(BLACK)
-      buttonFour.setBackgroundColor(BLACK)
+      buttonOne.setBackgroundColor(GREEN)
+      buttonTwo.setBackgroundColor(GRAY)
+      buttonThree.setBackgroundColor(GRAY)
+      buttonFour.setBackgroundColor(GRAY)
     case 2:
-      buttonOne.setBackgroundColor(BLACK)
-      buttonTwo.setBackgroundColor(WHITE)
-      buttonThree.setBackgroundColor(BLACK)
-      buttonFour.setBackgroundColor(BLACK)
+      buttonOne.setBackgroundColor(GRAY)
+      buttonTwo.setBackgroundColor(GREEN)
+      buttonThree.setBackgroundColor(GRAY)
+      buttonFour.setBackgroundColor(GRAY)
     case 3:
-      buttonOne.setBackgroundColor(BLACK)
-      buttonTwo.setBackgroundColor(BLACK)
-      buttonThree.setBackgroundColor(WHITE)
-      buttonFour.setBackgroundColor(BLACK)
+      buttonOne.setBackgroundColor(GRAY)
+      buttonTwo.setBackgroundColor(GRAY)
+      buttonThree.setBackgroundColor(GREEN)
+      buttonFour.setBackgroundColor(GRAY)
     case 4:
-      buttonOne.setBackgroundColor(BLACK)
-      buttonTwo.setBackgroundColor(BLACK)
-      buttonThree.setBackgroundColor(BLACK)
-      buttonFour.setBackgroundColor(WHITE)
+      buttonOne.setBackgroundColor(GRAY)
+      buttonTwo.setBackgroundColor(GRAY)
+      buttonThree.setBackgroundColor(GRAY)
+      buttonFour.setBackgroundColor(GREEN)
     default:
-      buttonOne.setBackgroundColor(BLACK)
-      buttonTwo.setBackgroundColor(BLACK)
-      buttonThree.setBackgroundColor(BLACK)
-      buttonFour.setBackgroundColor(BLACK)
+      buttonOne.setBackgroundColor(GRAY)
+      buttonTwo.setBackgroundColor(GRAY)
+      buttonThree.setBackgroundColor(GRAY)
+      buttonFour.setBackgroundColor(GRAY)
     }
   }
-  
   // This is the game timer, started when the player pushes the start button.
   func startGame() {
     NSLog("Game started!")
