@@ -21,7 +21,7 @@ class gameController: WKInterfaceController {
   
   // Time Constants
   let MINUTE: NSTimeInterval = 60
-  let INTERVAL: NSTimeInterval = 15
+  let INTERVAL: NSTimeInterval = 5
   
   // Game data
   var random: NSNumber!
@@ -40,12 +40,17 @@ class gameController: WKInterfaceController {
   @IBOutlet weak var buttonThree: WKInterfaceButton!
   @IBOutlet weak var buttonFour: WKInterfaceButton!
 
-  // End Game Code
+  // End Game Enum
   enum EndGameReason {
     case TimeOut
     case WrongButton
     case Error
   }
+  var endGameReason = EndGameReason.Error
+  
+  // Button Tapped
+  var tapped = 5
+  // 5 = error
   
   // Event handlers for all the buttons.
   @IBAction func TapOne() {
@@ -78,7 +83,8 @@ class gameController: WKInterfaceController {
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
-      gameOver(button, reason: EndGameReason.WrongButton)
+      endGameReason = EndGameReason.WrongButton
+      gameOver()
     }
   }
   
@@ -88,6 +94,8 @@ class gameController: WKInterfaceController {
     currentTime.dateByAddingTimeInterval(-INTERVAL)
     gameTimer.setDate(currentTime)
     gameTimer.start()
+    
+    //gameOver(EndGameReason.TimeOut, button: 1)
   }
   
   func activateButton(button: Int) {
@@ -130,19 +138,45 @@ class gameController: WKInterfaceController {
   }
 
   // A game over function to return the app to the initial state
-  func gameOver(button : Int, reason : EndGameReason ) {
-  
-    switch reason{
+  func gameOver() {
+    var endGameText : String = ""
+    
+    
+    // What to do for each reason the game was ended
+    switch endGameReason{
     case .WrongButton:
-      var endGameText = "WRONG BUTTON"
+      endGameText = "WRONG BUTTON"
+      switch tapped{
+      case 1:
+        buttonOne.setBackgroundColor(RED)
+      case 2:
+        buttonTwo.setBackgroundColor(RED)
+      case 3:
+        buttonThree.setBackgroundColor(RED)
+      case 4:
+        buttonFour.setBackgroundColor(RED)
+      default:
+        buttonOne.setBackgroundColor(RED)
+        buttonTwo.setBackgroundColor(RED)
+        buttonThree.setBackgroundColor(RED)
+        buttonFour.setBackgroundColor(RED)
+      }
     case .TimeOut:
-      var endGameText = "TIME OUT"
+      endGameText = "TIME OUT"
     case .Error:
-      var endGameText = "ERROR!"
+      endGameText = "ERROR!"
     }
-    NSLog("INCORRECT BUTTON")
+    
+    NSLog("END GAME REASON : \(endGameText)")
     
     NSLog("Game over: score was \(highScore)")
+    
+    toResults()
+  }
+  
+  func toResults() {
+    sleep(1)
+  
     gameTimer.stop()
     minuteTimer.invalidate()
     pushControllerWithName("resultController", context: highScore)
