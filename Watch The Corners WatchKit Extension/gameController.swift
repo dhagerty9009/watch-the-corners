@@ -20,11 +20,9 @@ class gameController: WKInterfaceController {
   let RED : UIColor = UIColor.redColor()
   
   // Time Constants
-  let MINUTE: NSTimeInterval = 60
-  let INTERVAL: NSTimeInterval = 5
+  let INTERVAL: NSTimeInterval = 15
   
   // Game data
-  var random: NSNumber!
   var highScore: Int!
   var minuteTimer: NSTimer!
   var currentTime: NSDate!
