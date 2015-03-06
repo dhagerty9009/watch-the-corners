@@ -39,6 +39,13 @@ class gameController: WKInterfaceController {
   @IBOutlet weak var buttonTwo: WKInterfaceButton!
   @IBOutlet weak var buttonThree: WKInterfaceButton!
   @IBOutlet weak var buttonFour: WKInterfaceButton!
+
+  // End Game Code
+  enum EndGameReason {
+    case TimeOut
+    case WrongButton
+    case Error
+  }
   
   // Event handlers for all the buttons.
   @IBAction func TapOne() {
@@ -71,7 +78,7 @@ class gameController: WKInterfaceController {
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
-      gameOver()
+      gameOver(button, reason: EndGameReason.WrongButton)
     }
   }
   
@@ -123,7 +130,18 @@ class gameController: WKInterfaceController {
   }
 
   // A game over function to return the app to the initial state
-  func gameOver() {
+  func gameOver(button : Int, reason : EndGameReason ) {
+  
+    switch reason{
+    case .WrongButton:
+      var endGameText = "WRONG BUTTON"
+    case .TimeOut:
+      var endGameText = "TIME OUT"
+    case .Error:
+      var endGameText = "ERROR!"
+    }
+    NSLog("INCORRECT BUTTON")
+    
     NSLog("Game over: score was \(highScore)")
     gameTimer.stop()
     minuteTimer.invalidate()
