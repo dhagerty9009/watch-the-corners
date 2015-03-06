@@ -15,7 +15,7 @@ class gameController: WKInterfaceController {
   // Color constants
   let WHITE: UIColor = UIColor.whiteColor()
   let BLACK: UIColor = UIColor.blackColor()
-  //let RED: UIColor = UIColor
+  //let RED: UIColor
   //let GREEN: UIColor = UIColor
   let GREY: UIColor = UIColor.grayColor()
   
