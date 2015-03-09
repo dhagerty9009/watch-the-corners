@@ -13,7 +13,6 @@ class mainController: WKInterfaceController {
 
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
-
   }
   
   @IBAction func startGame() {

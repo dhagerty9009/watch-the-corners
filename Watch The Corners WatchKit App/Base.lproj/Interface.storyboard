@@ -13,23 +13,25 @@
                         <group width="1" alignment="left" verticalAlignment="center" id="DoP-qP-lxl">
                             <items>
                                 <label alignment="left" text="Score" id="Fpw-LA-iK6">
-                                    <fontDescription key="font" type="system" weight="light" pointSize="14"/>
+                                    <color key="textColor" red="0.62745098040000002" green="0.82745098039999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
                                 </label>
                                 <label alignment="right" text="Time Left" id="Wf3-gA-u7X">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.94117647059999998" green="0.33333333329999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="14"/>
                                 </label>
                             </items>
                         </group>
                         <group width="1" height="0.40000000000000002" alignment="left" id="Vl3-Lc-2QX">
                             <items>
                                 <button width="0.5" height="1" alignment="left" id="pBv-gp-gVK">
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.57647058819999997" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="TapOne" destination="AgC-eL-Hgc" id="UCk-tV-h0j"/>
                                     </connections>
                                 </button>
                                 <button width="0.5" height="1" alignment="left" id="F5u-xN-g8w">
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.57647058819999997" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="TapTwo" destination="AgC-eL-Hgc" id="3zz-TL-6Ru"/>
                                     </connections>
@@ -39,13 +41,13 @@
                         <group width="1" height="0.40000000000000002" alignment="left" verticalAlignment="bottom" id="G2c-f2-qRS">
                             <items>
                                 <button width="0.5" height="1" alignment="left" id="AFc-Hf-40u">
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.57647058819999997" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="TapThree" destination="AgC-eL-Hgc" id="096-na-kCI"/>
                                     </connections>
                                 </button>
                                 <button width="0.5" height="1" alignment="left" id="HGg-sp-blw">
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.57647058819999997" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="TapFour" destination="AgC-eL-Hgc" id="6aM-J2-nXT"/>
                                     </connections>
@@ -53,7 +55,7 @@
                             </items>
                         </group>
                     </items>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="buttonFour" destination="HGg-sp-blw" id="EGx-dB-OKz"/>
                         <outlet property="buttonOne" destination="pBv-gp-gVK" id="NIi-tp-hMC"/>
@@ -72,21 +74,25 @@
             <objects>
                 <controller identifier="resultController" id="KG6-o6-Qdr" customClass="resultController" customModule="Watch_The_Corners_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="High Score" id="X87-Ds-F18"/>
-                        <label alignment="center" text="Score" numberOfLines="0" id="0dI-Hv-aE6">
-                            <fontDescription key="font" type="system" pointSize="40"/>
+                        <label alignment="center" text="High Score" id="X87-Ds-F18">
+                            <color key="textColor" red="0.62745098040000002" green="0.82745098039999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="center" text="Score" numberOfLines="0" id="0dI-Hv-aE6">
+                            <color key="textColor" red="0.62745098040000002" green="0.82745098039999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="50"/>
                         </label>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="New Game" id="Oea-If-v9Y">
-                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <fontDescription key="font" type="system" pointSize="20"/>
+                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.62745098040000002" green="0.82745098039999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                             <connections>
                                 <action selector="newGame" destination="KG6-o6-Qdr" id="H0p-1O-tGo"/>
                                 <segue destination="AgC-eL-Hgc" kind="push" id="1He-C4-57o"/>
                             </connections>
                         </button>
                     </items>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="finalScore" destination="0dI-Hv-aE6" id="XcG-pj-ygd"/>
                         <outlet property="newGame" destination="Oea-If-v9Y" id="3lH-Ag-fle"/>
@@ -101,8 +107,8 @@
                 <controller identifier="mainController" id="BBu-0I-fMw" customClass="mainController" customModule="Watch_The_Corners_WatchKit_Extension">
                     <items>
                         <button width="1" alignment="left" verticalAlignment="center" title="Start" id="qDU-Cl-WPQ">
-                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.62745098040000002" green="0.82745098039999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="30"/>
                             <connections>
                                 <action selector="startGame" destination="BBu-0I-fMw" id="mWg-Tn-aH5"/>
@@ -110,19 +116,21 @@
                             </connections>
                         </button>
                         <label alignment="center" text="Press Start" id="Njz-Vo-VEJ">
-                            <fontDescription key="font" type="system" pointSize="22"/>
+                            <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="22"/>
                         </label>
                         <label alignment="center" text="To Play" textAlignment="center" id="YyH-ea-DnI">
-                            <fontDescription key="font" type="system" pointSize="22"/>
+                            <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="22"/>
                         </label>
                     </items>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-125" y="124"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1He-C4-57o"/>
+        <segue reference="Sgu-Aa-ywq"/>
     </inferredMetricsTieBreakers>
 </document>

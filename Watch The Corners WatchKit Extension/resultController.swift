@@ -20,6 +20,6 @@ class resultController: WKInterfaceController {
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
     var score = context as Int!
-    finalScore.setText("Score: \(score)")
+    finalScore.setText("\(score)")
   }
 }

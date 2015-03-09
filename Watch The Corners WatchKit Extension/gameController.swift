@@ -15,9 +15,9 @@ class gameController: WKInterfaceController {
   // Color constants
   let WHITE: UIColor = UIColor.whiteColor()
   let BLACK: UIColor = UIColor.blackColor()
-  let GREEN : UIColor = UIColor.greenColor()
-  let GRAY : UIColor = UIColor.grayColor()
-  let RED : UIColor = UIColor.redColor()
+  let GREEN: UIColor = UIColor.init(red: 0.64, green: 0.83, blue: 0.63, alpha: 1)
+  let GRAY: UIColor = UIColor.init(red: 0.58, green: 0.59, blue: 0.6, alpha: 1)
+  let RED : UIColor = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
   
   // Time Constants
   let TIME_INTERVAL: NSTimeInterval = 15
@@ -77,6 +77,7 @@ class gameController: WKInterfaceController {
       highScore = highScore + 1
       if highScore % 10 == 0 {
         gameTimeLeft = gameTimeLeft + Int(TIME_INTERVAL)
+        secondTimer.invalidate()
         minuteTimer.invalidate()
         setTimer()
       }
