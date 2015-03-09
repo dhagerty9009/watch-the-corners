@@ -20,17 +20,19 @@ class gameController: WKInterfaceController {
   let RED : UIColor = UIColor.redColor()
   
   // Time Constants
-  let INTERVAL: NSTimeInterval = 15
+  let TIME_INTERVAL: NSTimeInterval = 15
+  let ONE_SECOND: NSTimeInterval = 1
   
   // Game data
   var highScore: Int!
   var minuteTimer: NSTimer!
-  var currentTime: NSDate!
+  var secondTimer: NSTimer!
   var board:GameBoard!
+  var gameTimeLeft: Int!
   
   // Game data outlets
   @IBOutlet weak var scoreLabel: WKInterfaceLabel!
-  @IBOutlet weak var gameTimer: WKInterfaceTimer!
+  @IBOutlet weak var gameTimer: WKInterfaceLabel!
   
   // The game's buttons
   @IBOutlet weak var buttonOne: WKInterfaceButton!
@@ -74,6 +76,7 @@ class gameController: WKInterfaceController {
     if button == active {
       highScore = highScore + 1
       if highScore % 10 == 0 {
+        gameTimeLeft = gameTimeLeft + Int(TIME_INTERVAL)
         minuteTimer.invalidate()
         setTimer()
       }
@@ -87,15 +90,11 @@ class gameController: WKInterfaceController {
   }
   
   func setTimer() {
-    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(INTERVAL, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
-    currentTime = NSDate()
-    currentTime.dateByAddingTimeInterval(-INTERVAL)
-    gameTimer.setDate(currentTime)
-    gameTimer.start()
-    
-    //gameOver(EndGameReason.TimeOut, button: 1)
+    let TIME = NSTimeInterval(gameTimeLeft)
+    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
+    secondTimer = NSTimer.scheduledTimerWithTimeInterval(ONE_SECOND, target: self, selector: Selector("updateLabel"), userInfo: nil, repeats: true)
   }
-  
+  // This function changes the color of a button depending on whether it is the active button or not.
   func activateButton(button: Int) {
     buttonOne.setBackgroundColor(GRAY)
     buttonTwo.setBackgroundColor(GRAY)
@@ -115,10 +114,17 @@ class gameController: WKInterfaceController {
       break
     }
   }
+  
+  func updateLabel() {
+    NSLog("Time left: \(gameTimeLeft)")
+    gameTimer.setText("\(gameTimeLeft)s")
+    gameTimeLeft = gameTimeLeft - 1
+  }
   // This is the game timer, started when the player pushes the start button.
   func startGame() {
     NSLog("Game started!")
     highScore = 0
+    gameTimeLeft = Int(TIME_INTERVAL)
     setTimer()
     board = GameBoard()
     activateButton(board.activeButton)
@@ -129,7 +135,8 @@ class gameController: WKInterfaceController {
   // A game over function to return the app to the initial state
   func gameOver() {
     var endGameText : String = ""
-    
+    secondTimer.invalidate()
+    minuteTimer.invalidate()
     // What to do for each reason the game was ended
     switch endGameReason{
     case .WrongButton:
@@ -165,9 +172,6 @@ class gameController: WKInterfaceController {
   
   func toResults() {
     sleep(1)
-  
-    gameTimer.stop()
-    minuteTimer.invalidate()
     pushControllerWithName("resultController", context: highScore)
   }
   
