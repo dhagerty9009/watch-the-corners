@@ -74,7 +74,7 @@
                     <items>
                         <label alignment="center" text="High Score" id="X87-Ds-F18"/>
                         <label alignment="center" text="Score" numberOfLines="0" id="0dI-Hv-aE6">
-                            <fontDescription key="font" type="system" pointSize="50"/>
+                            <fontDescription key="font" type="system" pointSize="40"/>
                         </label>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="New Game" id="Oea-If-v9Y">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
