@@ -12,13 +12,12 @@
                     <items>
                         <group width="1" alignment="left" verticalAlignment="center" id="DoP-qP-lxl">
                             <items>
-                                <label alignment="left" text="Label" id="Fpw-LA-iK6">
+                                <label alignment="left" text="Score" id="Fpw-LA-iK6">
                                     <fontDescription key="font" type="system" weight="light" pointSize="14"/>
                                 </label>
-                                <timer alignment="right" previewedSeconds="60" id="VM7-42-HBf">
+                                <label alignment="right" text="Time Left" id="Wf3-gA-u7X">
                                     <fontDescription key="font" type="system" pointSize="14"/>
-                                    <calendarUnit key="units" minute="YES" second="YES"/>
-                                </timer>
+                                </label>
                             </items>
                         </group>
                         <group width="1" height="0.40000000000000002" alignment="left" id="Vl3-Lc-2QX">
@@ -60,7 +59,7 @@
                         <outlet property="buttonOne" destination="pBv-gp-gVK" id="NIi-tp-hMC"/>
                         <outlet property="buttonThree" destination="AFc-Hf-40u" id="L7s-hB-1jP"/>
                         <outlet property="buttonTwo" destination="F5u-xN-g8w" id="L2O-RS-ZbV"/>
-                        <outlet property="gameTimer" destination="VM7-42-HBf" id="XAM-au-6dm"/>
+                        <outlet property="gameTimer" destination="Wf3-gA-u7X" id="ViL-To-wKa"/>
                         <outlet property="scoreLabel" destination="Fpw-LA-iK6" id="CCZ-t3-XrN"/>
                         <outlet property="startButton" destination="qDU-Cl-WPQ" id="xcq-a5-KSa"/>
                     </connections>
@@ -74,8 +73,8 @@
                 <controller identifier="resultController" id="KG6-o6-Qdr" customClass="resultController" customModule="Watch_The_Corners_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="High Score" id="X87-Ds-F18"/>
-                        <label alignment="center" verticalAlignment="center" text="Score" id="0dI-Hv-aE6">
-                            <fontDescription key="font" type="system" pointSize="50"/>
+                        <label alignment="center" text="Score" numberOfLines="0" id="0dI-Hv-aE6">
+                            <fontDescription key="font" type="system" pointSize="40"/>
                         </label>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="New Game" id="Oea-If-v9Y">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
