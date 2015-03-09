@@ -73,7 +73,7 @@
                 <controller identifier="resultController" id="KG6-o6-Qdr" customClass="resultController" customModule="Watch_The_Corners_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="High Score" id="X87-Ds-F18"/>
-                        <label alignment="center" verticalAlignment="center" text="Score" id="0dI-Hv-aE6">
+                        <label alignment="center" text="Score" numberOfLines="0" id="0dI-Hv-aE6">
                             <fontDescription key="font" type="system" pointSize="50"/>
                         </label>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="New Game" id="Oea-If-v9Y">

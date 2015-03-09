@@ -20,7 +20,8 @@ class gameController: WKInterfaceController {
   let RED : UIColor = UIColor.redColor()
   
   // Time Constants
-  let INTERVAL: NSTimeInterval = 15
+  let TIME_INTERVAL: NSTimeInterval = 15
+  let ONE_SECOND: NSTimeInterval = 1
   
   // Game data
   var highScore: Int!
@@ -88,8 +89,8 @@ class gameController: WKInterfaceController {
   }
   
   func setTimer() {
-    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(INTERVAL, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
-    secondTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateLabel"), userInfo: nil, repeats: true)
+    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(TIME_INTERVAL, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
+    secondTimer = NSTimer.scheduledTimerWithTimeInterval(ONE_SECOND, target: self, selector: Selector("updateLabel"), userInfo: nil, repeats: true)
   }
   // This function changes the color of a button depending on whether it is the active button or not.
   func activateButton(button: Int) {
@@ -142,6 +143,7 @@ class gameController: WKInterfaceController {
     
     var endGameText : String = ""
     secondTimer.invalidate()
+    minuteTimer.invalidate()
     // What to do for each reason the game was ended
     switch endGameReason{
     case .WrongButton:
@@ -176,14 +178,13 @@ class gameController: WKInterfaceController {
   
   func toResults() {
     sleep(1)
-    minuteTimer.invalidate()
     pushControllerWithName("resultController", context: highScore)
   }
   
   // The default initialization function
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
-    gameTimeLeft = Int(INTERVAL)
+    gameTimeLeft = Int(TIME_INTERVAL)
     startGame()
   }
 }
