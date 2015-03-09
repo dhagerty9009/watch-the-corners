@@ -76,6 +76,7 @@ class gameController: WKInterfaceController {
     if button == active {
       highScore = highScore + 1
       if highScore % 10 == 0 {
+        gameTimeLeft = gameTimeLeft + Int(TIME_INTERVAL)
         minuteTimer.invalidate()
         setTimer()
       }
@@ -89,7 +90,8 @@ class gameController: WKInterfaceController {
   }
   
   func setTimer() {
-    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(TIME_INTERVAL, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
+    let TIME = NSTimeInterval(gameTimeLeft)
+    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
     secondTimer = NSTimer.scheduledTimerWithTimeInterval(ONE_SECOND, target: self, selector: Selector("updateLabel"), userInfo: nil, repeats: true)
   }
   // This function changes the color of a button depending on whether it is the active button or not.
@@ -133,6 +135,7 @@ class gameController: WKInterfaceController {
   func startGame() {
     NSLog("Game started!")
     highScore = 0
+    gameTimeLeft = Int(TIME_INTERVAL)
     setTimer()
     board = GameBoard()
     activateButton(board.activeButton)
@@ -184,7 +187,6 @@ class gameController: WKInterfaceController {
   // The default initialization function
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
-    gameTimeLeft = Int(TIME_INTERVAL)
     startGame()
   }
 }
