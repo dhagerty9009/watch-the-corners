@@ -78,8 +78,7 @@
       "size" : "44x44",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "watch-the-corners-logo-44.png",
-      "role" : "appLauncher",
+      "role" : "longLook",
       "subtype" : "42mm"
     },
     {
@@ -97,6 +96,15 @@
       "filename" : "watch-the-corners-logo-98.png",
       "role" : "quickLook",
       "subtype" : "42mm"
+    },
+    {
+      "role" : "appLauncher",
+      "size" : "44x44",
+      "idiom" : "watch",
+      "filename" : "watch-the-corners-logo-44.png",
+      "subtype" : "42mm",
+      "unassigned" : true,
+      "scale" : "2x"
     }
   ],
   "info" : {
