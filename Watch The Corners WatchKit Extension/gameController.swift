@@ -13,7 +13,7 @@ import Foundation
 class gameController: WKInterfaceController {
   
   // Color constants
-  let WHITE: UIColor = UIColor.whiteColor()
+  let WHITE: UIColor = UIColor.init(red: 0.94, green: 0.94, blue: 0.94, alpha: 1)
   let BLACK: UIColor = UIColor.blackColor()
   let GREEN: UIColor = UIColor.init(red: 0.64, green: 0.83, blue: 0.63, alpha: 1)
   let GRAY: UIColor = UIColor.init(red: 0.58, green: 0.59, blue: 0.6, alpha: 1)
@@ -46,7 +46,7 @@ class gameController: WKInterfaceController {
     case WrongButton
     case Error
   }
-  var endGameReason = EndGameReason.Error
+  var endGameReason = EndGameReason.TimeOut
   
   // Button Tapped
   var tapped = 5
@@ -118,14 +118,14 @@ class gameController: WKInterfaceController {
   
   func updateLabel() {
     NSLog("Time left: \(gameTimeLeft)")
-    gameTimer.setText("\(gameTimeLeft)s")
+    gameTimer.setText("\(gameTimeLeft)")
     gameTimeLeft = gameTimeLeft - 1
   }
   // This is the game timer, started when the player pushes the start button.
   func startGame() {
     NSLog("Game started!")
     highScore = 0
-    gameTimeLeft = Int(TIME_INTERVAL)
+    gameTimeLeft = Int(TIME_INTERVAL) - 1
     setTimer()
     board = GameBoard()
     activateButton(board.activeButton)
@@ -135,7 +135,7 @@ class gameController: WKInterfaceController {
   
   // A game over function to return the app to the initial state
   func gameOver() {
-    var endGameText : String = ""
+    var endGameText: String = ""
     secondTimer.invalidate()
     minuteTimer.invalidate()
     // What to do for each reason the game was ended
