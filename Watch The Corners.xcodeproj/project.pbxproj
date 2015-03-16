@@ -23,6 +23,7 @@
 		634882871AB36E4E008940C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
 		634882881AB36E4F008940C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
 		634BB2681AB72EC9005407A9 /* logo-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 634BB2671AB72EC9005407A9 /* logo-6.png */; };
+		634BB26A1AB73C3D005407A9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634BB2691AB73C3D005407A9 /* GameKit.framework */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		6314972A1A8E98F60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63334F3C1AA78437004C86BA /* resultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultController.swift; sourceTree = "<group>"; };
 		634BB2671AB72EC9005407A9 /* logo-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-6.png"; sourceTree = "<group>"; };
+		634BB2691AB73C3D005407A9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634BB26A1AB73C3D005407A9 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +121,7 @@
 		631496E41A8E98C60015CAD0 = {
 			isa = PBXGroup;
 			children = (
+				634BB2691AB73C3D005407A9 /* GameKit.framework */,
 				631496EF1A8E98C60015CAD0 /* Watch The Corners */,
 				631497051A8E98C60015CAD0 /* Watch The CornersTests */,
 				631497171A8E98F60015CAD0 /* Watch The Corners WatchKit Extension */,
@@ -300,6 +304,11 @@
 					631496EC1A8E98C60015CAD0 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = AFFQEB7V6T;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					631497011A8E98C60015CAD0 = {
 						CreatedOnToolsVersion = 6.2;
@@ -537,10 +546,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Watch The Corners/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -549,10 +560,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Watch The Corners/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
