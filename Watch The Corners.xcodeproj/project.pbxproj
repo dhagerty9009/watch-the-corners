@@ -22,6 +22,7 @@
 		63334F3D1AA78437004C86BA /* resultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63334F3C1AA78437004C86BA /* resultController.swift */; };
 		634882871AB36E4E008940C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
 		634882881AB36E4F008940C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
+		634BB2681AB72EC9005407A9 /* logo-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 634BB2671AB72EC9005407A9 /* logo-6.png */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		631497281A8E98F60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		6314972A1A8E98F60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63334F3C1AA78437004C86BA /* resultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultController.swift; sourceTree = "<group>"; };
+		634BB2671AB72EC9005407A9 /* logo-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-6.png"; sourceTree = "<group>"; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 				631496F61A8E98C60015CAD0 /* Main.storyboard */,
 				631496F91A8E98C60015CAD0 /* Images.xcassets */,
 				631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */,
+				634BB2671AB72EC9005407A9 /* logo-6.png */,
 				631496F01A8E98C60015CAD0 /* Supporting Files */,
 			);
 			path = "Watch The Corners";
@@ -338,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */,
+				634BB2681AB72EC9005407A9 /* logo-6.png in Resources */,
 				631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */,
 				631496FA1A8E98C60015CAD0 /* Images.xcassets in Resources */,
 			);
