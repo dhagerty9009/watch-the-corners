@@ -114,8 +114,7 @@
       "size" : "44x44",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "Icon-44.png",
-      "role" : "appLauncher",
+      "role" : "longLook",
       "subtype" : "42mm"
     },
     {
@@ -133,6 +132,15 @@
       "filename" : "Icon-98.png",
       "role" : "quickLook",
       "subtype" : "42mm"
+    },
+    {
+      "role" : "appLauncher",
+      "size" : "44x44",
+      "idiom" : "watch",
+      "filename" : "Icon-44.png",
+      "subtype" : "42mm",
+      "unassigned" : true,
+      "scale" : "2x"
     }
   ],
   "info" : {
