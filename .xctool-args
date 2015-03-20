@@ -1,0 +1,6 @@
+[
+  "-workspace", "Watch The Corners.xcworkspace",
+  "-scheme", "Watch The Corners",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator"
+]
