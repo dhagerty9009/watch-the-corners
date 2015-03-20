@@ -10,18 +10,16 @@
 		631496F31A8E98C60015CAD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631496F21A8E98C60015CAD0 /* AppDelegate.swift */; };
 		631496F51A8E98C60015CAD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631496F41A8E98C60015CAD0 /* ViewController.swift */; };
 		631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631496F61A8E98C60015CAD0 /* Main.storyboard */; };
-		631496FA1A8E98C60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
+		631496FA1A8E98C60015CAD0 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */; };
 		631497091A8E98C60015CAD0 /* Watch_The_CornersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631497081A8E98C60015CAD0 /* Watch_The_CornersTests.swift */; };
 		6314971B1A8E98F60015CAD0 /* gameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314971A1A8E98F60015CAD0 /* gameController.swift */; };
-		6314971D1A8E98F60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6314971C1A8E98F60015CAD0 /* Images.xcassets */; };
 		631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */; };
 		631497291A8E98F60015CAD0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631497271A8E98F60015CAD0 /* Interface.storyboard */; };
-		6314972B1A8E98F60015CAD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6314972A1A8E98F60015CAD0 /* Images.xcassets */; };
 		6314972E1A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		63334F3D1AA78437004C86BA /* resultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63334F3C1AA78437004C86BA /* resultController.swift */; };
-		634882871AB36E4E008940C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
-		634882881AB36E4F008940C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* Images.xcassets */; };
+		634882871AB36E4E008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
+		634882881AB36E4F008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		634BB26A1AB73C3D005407A9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634BB2691AB73C3D005407A9 /* GameKit.framework */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
@@ -72,7 +70,7 @@
 		631496F21A8E98C60015CAD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		631496F41A8E98C60015CAD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		631496F71A8E98C60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		631496F91A8E98C60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		631496F91A8E98C60015CAD0 /* MainImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MainImages.xcassets; sourceTree = "<group>"; };
 		631496FC1A8E98C60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		631497021A8E98C60015CAD0 /* Watch The CornersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Watch The CornersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631497071A8E98C60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,11 +78,9 @@
 		631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch The Corners WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631497191A8E98F60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6314971A1A8E98F60015CAD0 /* gameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameController.swift; sourceTree = "<group>"; };
-		6314971C1A8E98F60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch The Corners WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631497261A8E98F60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631497281A8E98F60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		6314972A1A8E98F60015CAD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63334F3C1AA78437004C86BA /* resultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultController.swift; sourceTree = "<group>"; };
 		634BB2691AB73C3D005407A9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
@@ -148,7 +144,7 @@
 				631496F41A8E98C60015CAD0 /* ViewController.swift */,
 				63B94D141ABA0F9900F1F6BB /* HighScoreTableViewController.swift */,
 				631496F61A8E98C60015CAD0 /* Main.storyboard */,
-				631496F91A8E98C60015CAD0 /* Images.xcassets */,
+				631496F91A8E98C60015CAD0 /* MainImages.xcassets */,
 				631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */,
 				631496F01A8E98C60015CAD0 /* Supporting Files */,
 			);
@@ -187,7 +183,6 @@
 				63AA28C01AA4D40F005E869A /* mainController.swift */,
 				6314971A1A8E98F60015CAD0 /* gameController.swift */,
 				63334F3C1AA78437004C86BA /* resultController.swift */,
-				6314971C1A8E98F60015CAD0 /* Images.xcassets */,
 				631497181A8E98F60015CAD0 /* Supporting Files */,
 			);
 			path = "Watch The Corners WatchKit Extension";
@@ -205,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				631497271A8E98F60015CAD0 /* Interface.storyboard */,
-				6314972A1A8E98F60015CAD0 /* Images.xcassets */,
 				631497251A8E98F60015CAD0 /* Supporting Files */,
 			);
 			path = "Watch The Corners WatchKit App";
@@ -316,6 +310,7 @@
 					};
 					631497151A8E98F60015CAD0 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = AFFQEB7V6T;
 					};
 					6314971F1A8E98F60015CAD0 = {
 						CreatedOnToolsVersion = 6.2;
@@ -351,7 +346,7 @@
 			files = (
 				631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */,
 				631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */,
-				631496FA1A8E98C60015CAD0 /* Images.xcassets in Resources */,
+				631496FA1A8E98C60015CAD0 /* MainImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,8 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634882871AB36E4E008940C7 /* Images.xcassets in Resources */,
-				6314971D1A8E98F60015CAD0 /* Images.xcassets in Resources */,
+				634882871AB36E4E008940C7 /* MainImages.xcassets in Resources */,
 				631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,9 +370,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634882881AB36E4F008940C7 /* Images.xcassets in Resources */,
+				634882881AB36E4F008940C7 /* MainImages.xcassets in Resources */,
 				631497291A8E98F60015CAD0 /* Interface.storyboard in Resources */,
-				6314972B1A8E98F60015CAD0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +541,7 @@
 		6314970D1A8E98C60015CAD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -557,7 +551,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08f5b9a0-cd04-4d0e-bcaa-8ee6ec750600";
+				PROVISIONING_PROFILE = "";
+				SYMROOT = build;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -566,6 +561,7 @@
 		6314970E1A8E98C60015CAD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -575,7 +571,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08f5b9a0-cd04-4d0e-bcaa-8ee6ec750600";
+				PROVISIONING_PROFILE = "";
+				SYMROOT = build;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -620,6 +617,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -627,6 +625,7 @@
 				IBSC_MODULE = Watch_The_Corners_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch The Corners WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -638,9 +637,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = Watch_The_Corners_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch The Corners WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -650,6 +651,8 @@
 		631497331A8E98F60015CAD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -657,6 +660,7 @@
 				INFOPLIST_FILE = "Watch The Corners WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -664,9 +668,12 @@
 		631497341A8E98F60015CAD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Watch The Corners WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
