@@ -81,7 +81,7 @@ class gameController: WKInterfaceController {
         minuteTimer.invalidate()
         setTimer()
       }
-      scoreLabel.setText("Score: \(highScore)")
+      scoreLabel.setText("\(highScore)")
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
