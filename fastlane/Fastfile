@@ -1,27 +1,15 @@
-# Customise this file, documentation can be found here:
-# https://github.com/krausefx/fastlane#customise-the-fastfile
-
-# Change the syntax highlighting to Ruby
-
-# All lines starting with a # are ignored when running `fastlane`
-
-# This is the minimum version number required. 
-# Update this, if you use features of a newer version
-fastlane_version "0.3.0" 
+# Fastfile for Watch the Corners. This will speed up deployment of the game.
+fastlane_version '0.3.0'
 
 before_all do
-  # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+  ENV['SLACK_URL'] = 'https://hooks.slack.com/services/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'
 
-  # sh "./customShellScript.sh"
-
-  # cocoapods
-
-  # increment_build_number
+  increment_build_number
 
   ipa({
-    workspace: "MyApp.xcworkspace",
-    configuration: "Debug",
-    scheme: "MyApp",
+    workspace: 'Watch The Corners.xcworkspace',
+    configuration: 'Debug',
+    scheme: 'Watch The Corners'
   })
 
   xctool
@@ -35,32 +23,26 @@ lane :beta do
   snapshot
   sigh
   deliver :skip_deploy, :beta
-  # sh "your_script.sh"
+
 end
 
 lane :deploy do
   snapshot
   sigh
   deliver :skip_deploy, :force
-  # frameit
+  frameit
 end
-
-lane :inhouse do
-  # insert your code here
-end
-
-# You can define as many lanes as you want
 
 after_all do |lane|
-  # This block is called, only if the executed lane was successful
-  # slack({
-  #   message: "Successfully deployed new App Update for [App](http://link.com).",
-  #   success: true,
-  #   channel: 'development'
-  # })
+  slack({
+    message: "Successfully deployed an update for Watch The Corners via #{lane}",
+    success: true
+  })
 end
 
-
 error do |lane, exception|
-  # Something bad happened
+  slack({
+    message: "Error deploying your update for Watch the Corners via #{lane}, caused by #{exception}",
+    success: false
+    })
 end
