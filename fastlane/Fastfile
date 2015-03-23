@@ -2,6 +2,8 @@
 fastlane_version '0.3.0'
 
 before_all do
+  ensure_git_status_clean
+
   ENV['SLACK_URL'] = 'https://hooks.slack.com/services/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'
 
   increment_build_number
@@ -23,7 +25,6 @@ lane :beta do
   snapshot
   sigh
   deliver :skip_deploy, :beta
-
 end
 
 lane :deploy do
@@ -38,6 +39,7 @@ after_all do |lane|
     message: "Successfully deployed an update for Watch The Corners via #{lane}",
     success: true
   })
+  notify "Finished running #{lane}!"
 end
 
 error do |lane, exception|
@@ -45,4 +47,5 @@ error do |lane, exception|
     message: "Error deploying your update for Watch the Corners via #{lane}, caused by #{exception}",
     success: false
     })
+  notify "Error running #{lane}, caused by #{exception}."
 end

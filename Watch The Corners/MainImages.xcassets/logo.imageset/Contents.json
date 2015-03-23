@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "watch-the-corners-logo.png"
+      "filename" : "wtc-logo.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "watch-the-corners-logo@2x.png"
+      "filename" : "wtc-logo@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "watch-the-corners-logo@3x.png"
+      "filename" : "wtc-logo@3x.png"
     }
   ],
   "info" : {

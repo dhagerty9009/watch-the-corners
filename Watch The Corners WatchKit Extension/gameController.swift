@@ -11,29 +11,29 @@ import Foundation
 
 
 class gameController: WKInterfaceController {
-  
+
   // Color constants
   let WHITE: UIColor = UIColor.init(red: 0.94, green: 0.94, blue: 0.94, alpha: 1)
   let BLACK: UIColor = UIColor.blackColor()
   let GREEN: UIColor = UIColor.init(red: 0.64, green: 0.83, blue: 0.63, alpha: 1)
   let GRAY: UIColor = UIColor.init(red: 0.58, green: 0.59, blue: 0.6, alpha: 1)
   let RED : UIColor = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
-  
+
   // Time Constants
   let TIME_INTERVAL: NSTimeInterval = 15
   let ONE_SECOND: NSTimeInterval = 1
-  
+
   // Game data
   var highScore: Int!
   var minuteTimer: NSTimer!
   var secondTimer: NSTimer!
   var board:GameBoard!
   var gameTimeLeft: Int!
-  
+
   // Game data outlets
   @IBOutlet weak var scoreLabel: WKInterfaceLabel!
   @IBOutlet weak var gameTimer: WKInterfaceLabel!
-  
+
   // The game's buttons
   @IBOutlet weak var buttonOne: WKInterfaceButton!
   @IBOutlet weak var buttonTwo: WKInterfaceButton!
@@ -47,29 +47,25 @@ class gameController: WKInterfaceController {
     case Error
   }
   var endGameReason = EndGameReason.TimeOut
-  
+
   // Button Tapped
   var tapped = 5
   // 5 = error
-  
+
   // Event handlers for all the buttons.
   @IBAction func TapOne() {
-    let buttonNumber = 1
-    tappedButton(buttonNumber)
+    tappedButton(1)
   }
   @IBAction func TapTwo() {
-    let buttonNumber = 2
-    tappedButton(buttonNumber)
+    tappedButton(2)
   }
   @IBAction func TapThree() {
-    let buttonNumber = 3
-    tappedButton(buttonNumber)
+    tappedButton(3)
   }
   @IBAction func TapFour() {
-    let buttonNumber = 4
-    tappedButton(buttonNumber)
+    tappedButton(4)
   }
-  
+
   func tappedButton(button: Int) {
     var button = button
     var active = board.activeButton
@@ -89,7 +85,7 @@ class gameController: WKInterfaceController {
       gameOver()
     }
   }
-  
+
   func setTimer() {
     let TIME = NSTimeInterval(gameTimeLeft)
     minuteTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
@@ -115,7 +111,7 @@ class gameController: WKInterfaceController {
       break
     }
   }
-  
+
   func updateLabel() {
     NSLog("Time left: \(gameTimeLeft)")
     gameTimer.setText("\(gameTimeLeft)")
@@ -130,9 +126,9 @@ class gameController: WKInterfaceController {
     board = GameBoard()
     activateButton(board.activeButton)
   }
-  
-  
-  
+
+
+
   // A game over function to return the app to the initial state
   func gameOver() {
     var endGameText: String = ""
@@ -163,19 +159,19 @@ class gameController: WKInterfaceController {
     case .Error:
       endGameText = "error"
     }
-    
+
     NSLog("End Game Reason : \(endGameText)")
-    
+
     NSLog("Game over: score was \(highScore)")
-    
+
     toResults()
   }
-  
+
   func toResults() {
     sleep(1)
     pushControllerWithName("resultController", context: highScore)
   }
-  
+
   // The default initialization function
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)

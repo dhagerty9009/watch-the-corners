@@ -13,10 +13,6 @@ class ViewController: UIViewController {
   @IBOutlet weak var highScoreButton: UIButton!
   @IBOutlet weak var playGameButton: UIButton!
 
-  let alertView: UIAlertView = UIAlertView.init(title:"Open in Watch to Play",
-    message: "This app is to track high scores, the game is meant for the Watch.",
-    delegate: nil,
-    cancelButtonTitle: "Ok")
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,13 +26,8 @@ class ViewController: UIViewController {
 
 
   @IBAction func playGamePressed(sender: UIButton) {
-    alertView.show()
+    showViewController(gameViewController(), sender: self)
   }
-
-  @IBAction func goToHighScores(sender: UIButton) {
-    showViewController(HighScoreTableViewController(), sender: highScoreButton)
-  }
-
 
 }
 

@@ -17,13 +17,15 @@
 		631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */; };
 		631497291A8E98F60015CAD0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631497271A8E98F60015CAD0 /* Interface.storyboard */; };
 		6314972E1A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6332742C1AC05B35007056D0 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332742B1AC05B35007056D0 /* GameBoard.swift */; };
+		6332742E1AC05B99007056D0 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332742D1AC05B99007056D0 /* gameViewController.swift */; };
+		633274301AC0A25C007056D0 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332742F1AC0A25C007056D0 /* resultViewController.swift */; };
 		63334F3D1AA78437004C86BA /* resultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63334F3C1AA78437004C86BA /* resultController.swift */; };
 		634882871AB36E4E008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		634882881AB36E4F008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		634BB26A1AB73C3D005407A9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634BB2691AB73C3D005407A9 /* GameKit.framework */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
-		63B94D151ABA0F9900F1F6BB /* HighScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B94D141ABA0F9900F1F6BB /* HighScoreTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,11 +83,13 @@
 		631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch The Corners WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631497261A8E98F60015CAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631497281A8E98F60015CAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		6332742B1AC05B35007056D0 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		6332742D1AC05B99007056D0 /* gameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = gameViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6332742F1AC0A25C007056D0 /* resultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		63334F3C1AA78437004C86BA /* resultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultController.swift; sourceTree = "<group>"; };
 		634BB2691AB73C3D005407A9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
-		63B94D141ABA0F9900F1F6BB /* HighScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				631496F21A8E98C60015CAD0 /* AppDelegate.swift */,
+				6332742B1AC05B35007056D0 /* GameBoard.swift */,
 				631496F41A8E98C60015CAD0 /* ViewController.swift */,
-				63B94D141ABA0F9900F1F6BB /* HighScoreTableViewController.swift */,
+				6332742D1AC05B99007056D0 /* gameViewController.swift */,
+				6332742F1AC0A25C007056D0 /* resultViewController.swift */,
 				631496F61A8E98C60015CAD0 /* Main.storyboard */,
 				631496F91A8E98C60015CAD0 /* MainImages.xcassets */,
 				631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */,
@@ -383,9 +389,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633274301AC0A25C007056D0 /* resultViewController.swift in Sources */,
+				6332742C1AC05B35007056D0 /* GameBoard.swift in Sources */,
 				631496F51A8E98C60015CAD0 /* ViewController.swift in Sources */,
 				631496F31A8E98C60015CAD0 /* AppDelegate.swift in Sources */,
-				63B94D151ABA0F9900F1F6BB /* HighScoreTableViewController.swift in Sources */,
+				6332742E1AC05B99007056D0 /* gameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
