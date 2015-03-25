@@ -3,4 +3,5 @@
   "-scheme", "Watch The Corners",
   "-configuration", "Debug",
   "-sdk", "iphonesimulator"
+  "-archivePath", "./build"
 ]

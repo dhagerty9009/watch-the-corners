@@ -2,8 +2,3 @@ app_identifier "TS.Watch-The-Corners" # The bundle identifier of your app
 apple_id "hagerty9009@gmail.com" # Your Apple email address
 team_id "8QG2QB2D4F"
 team_name "TwistSix LLC"
-
-# You can uncomment the lines below and add your own
-# team selection in case you're in multiple teams
-# team_name "Felix Krause"
-# team_id "Q2CBPJ58CA"
