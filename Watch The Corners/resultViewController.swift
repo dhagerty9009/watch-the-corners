@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class resultViewController: UIViewController {
 
@@ -25,6 +26,7 @@ class resultViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.canDisplayBannerAds = true
 
     self.view.backgroundColor = WHITE
 

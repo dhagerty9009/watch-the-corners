@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,6 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2015 TwistSix, LLC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUs-4K-32U">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="A9s-3T-VJr">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-il-cbs">
                                 <rect key="frame" x="216" y="169" width="169" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
@@ -31,25 +42,22 @@
                                     <action selector="playGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3a-ae-6BV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2015 TwistSix, LLC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUs-4K-32U">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="A9s-3T-VJr">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="wp7-il-cbs" secondAttribute="centerX" constant="-0.5" id="3tl-jX-Yll"/>
+                            <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="height" multiplier="5:3" id="5Mu-u6-Ze6"/>
+                            <constraint firstAttribute="centerX" secondItem="A9s-3T-VJr" secondAttribute="centerX" id="7L3-5n-PtW"/>
                             <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-51" id="9zR-k7-Ca2"/>
+                            <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="height" multiplier="1:1" id="W3c-LK-D5g"/>
                             <constraint firstItem="A9s-3T-VJr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Wok-BO-0gD"/>
                             <constraint firstItem="A9s-3T-VJr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="XjA-9G-mlO"/>
-                            <constraint firstAttribute="centerY" secondItem="A9s-3T-VJr" secondAttribute="centerY" constant="252" id="hIj-Gi-gWa"/>
+                            <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="height" multiplier="5:3" id="daw-5h-F24"/>
+                            <constraint firstItem="wp7-il-cbs" firstAttribute="top" secondItem="A9s-3T-VJr" secondAttribute="bottom" constant="33" id="kNk-40-sKw"/>
                             <constraint firstAttribute="centerX" secondItem="gUs-4K-32U" secondAttribute="centerX" id="lkT-nf-lNe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A9s-3T-VJr" secondAttribute="bottom" constant="532" id="lzE-t5-KfH"/>
+                            <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-82" id="rda-sx-dh7"/>
+                            <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="width" id="riF-IK-3IS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUs-4K-32U" secondAttribute="bottom" constant="8" id="tqu-h6-oMx"/>
                             <constraint firstItem="A9s-3T-VJr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="wTB-Kw-4U6"/>
                             <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-51" id="yDj-R1-5K6"/>
@@ -60,12 +68,18 @@
                                 <exclude reference="A9s-3T-VJr"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="5Mu-u6-Ze6"/>
+                                <exclude reference="7L3-5n-PtW"/>
+                                <exclude reference="W3c-LK-D5g"/>
                                 <exclude reference="Wok-BO-0gD"/>
                                 <exclude reference="XjA-9G-mlO"/>
-                                <exclude reference="hIj-Gi-gWa"/>
+                                <exclude reference="daw-5h-F24"/>
+                                <exclude reference="riF-IK-3IS"/>
                                 <exclude reference="wTB-Kw-4U6"/>
                                 <exclude reference="3tl-jX-Yll"/>
                                 <exclude reference="9zR-k7-Ca2"/>
+                                <exclude reference="kNk-40-sKw"/>
+                                <exclude reference="rda-sx-dh7"/>
                                 <exclude reference="yDj-R1-5K6"/>
                                 <exclude reference="lkT-nf-lNe"/>
                                 <exclude reference="lzE-t5-KfH"/>
@@ -78,15 +92,21 @@
                                 <include reference="A9s-3T-VJr"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="5Mu-u6-Ze6"/>
+                                <include reference="7L3-5n-PtW"/>
+                                <include reference="W3c-LK-D5g"/>
                                 <include reference="Wok-BO-0gD"/>
-                                <include reference="XjA-9G-mlO"/>
-                                <include reference="hIj-Gi-gWa"/>
+                                <exclude reference="XjA-9G-mlO"/>
+                                <exclude reference="daw-5h-F24"/>
+                                <include reference="riF-IK-3IS"/>
                                 <exclude reference="wTB-Kw-4U6"/>
                                 <include reference="3tl-jX-Yll"/>
-                                <include reference="9zR-k7-Ca2"/>
-                                <include reference="yDj-R1-5K6"/>
+                                <exclude reference="9zR-k7-Ca2"/>
+                                <include reference="kNk-40-sKw"/>
+                                <include reference="rda-sx-dh7"/>
+                                <exclude reference="yDj-R1-5K6"/>
                                 <include reference="lkT-nf-lNe"/>
-                                <include reference="lzE-t5-KfH"/>
+                                <exclude reference="lzE-t5-KfH"/>
                                 <include reference="tqu-h6-oMx"/>
                             </mask>
                         </variation>
