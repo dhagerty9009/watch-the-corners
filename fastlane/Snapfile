@@ -23,4 +23,4 @@ js_file './snapshot.js'
 scheme 'Watch The Corners'
 
 # Where is your project (or workspace)? Provide the full path here
-project_path './Watch The Corners.xcworkspace'
+project_path '../Watch The Corners.xcworkspace'
