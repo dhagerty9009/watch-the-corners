@@ -20,7 +20,6 @@ class gameViewController: UIViewController {
 
   // Game variables and constants
   var board: GameBoard!
-  var score: Int!
   var gameTimer: NSTimer!
   var secondTimer: NSTimer!
   var timeLeft: Int!
@@ -32,6 +31,8 @@ class gameViewController: UIViewController {
   var buttonTwo: UIButton!
   var buttonThree: UIButton!
   var buttonFour: UIButton!
+
+  let score = Score.sharedInstance
 
   let ONE_SECOND: NSTimeInterval = 1
   let TIME_INTERVAL: NSTimeInterval = 15
@@ -108,13 +109,13 @@ class gameViewController: UIViewController {
     var button = sender.tag
     var active = board.activeButton
     if button == active {
-      score = score + 1
-      if score % 10 == 0 {
+      score.value = score.value + 1
+      if score.value % 10 == 0 {
         timeLeft = timeLeft + Int(TIME_INTERVAL)
         invalidateTimers()
         setTimers()
       }
-      scoreLabel.text = ("\(score)")
+      scoreLabel.text = ("\(score.value)")
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
@@ -184,7 +185,7 @@ class gameViewController: UIViewController {
   }
 
   func startGame() {
-    score = 0
+    score.value = 0
     timeLeft = Int(TIME_INTERVAL) - 1
     setTimers()
     board = GameBoard()

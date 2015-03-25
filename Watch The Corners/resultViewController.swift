@@ -24,6 +24,8 @@ class resultViewController: UIViewController {
     showViewController(gameViewController(), sender: self)
   }
 
+  let score = Score.sharedInstance
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.canDisplayBannerAds = true
@@ -33,9 +35,15 @@ class resultViewController: UIViewController {
     var button: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
 
     button.frame = CGRectMake(WIDTH/2 - 50, HEIGHT/2 - 10, 100, 20)
-    button.setTitle("It Worked!", forState: UIControlState.Normal)
+    button.setTitle("Play Again", forState: UIControlState.Normal)
     button.setTitleColor(GREEN, forState: UIControlState.Normal)
     button.addTarget(self, action: Selector("backToGame"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(button)
+
+    var scoreText: UILabel = UILabel()
+    scoreText.text = "\(score.value)"
+    scoreText.textColor = GREEN
+    scoreText.frame = CGRectMake(WIDTH/2 - 25, HEIGHT/3, 50, 20)
+    self.view.addSubview(scoreText)
   }
 }
