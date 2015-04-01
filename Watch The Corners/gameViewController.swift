@@ -34,6 +34,8 @@ class gameViewController: UIViewController {
 
   let score = Score.sharedInstance
 
+  let labelFont = UIFont.systemFontOfSize(50)
+
   let ONE_SECOND: NSTimeInterval = 1
   let TIME_INTERVAL: NSTimeInterval = 15
 
@@ -89,12 +91,14 @@ class gameViewController: UIViewController {
     scoreLabel.frame = CGRectMake(0, HEIGHT/2, HALF_WIDTH, 60)
     scoreLabel.textColor = GREEN
     scoreLabel.textAlignment = NSTextAlignment.Left
+    scoreLabel.font = labelFont
     scoreLabel.text = "Score"
     self.view.addSubview(scoreLabel)
     // this is the label for the timer
     gameTimerLabel.frame = CGRectMake(HALF_WIDTH, HEIGHT/2, HALF_WIDTH, 60)
     gameTimerLabel.textColor = RED
     gameTimerLabel.textAlignment = NSTextAlignment.Right
+    gameTimerLabel.font = labelFont
     gameTimerLabel.text = "15"
     self.view.addSubview(gameTimerLabel)
 
@@ -109,13 +113,13 @@ class gameViewController: UIViewController {
     var button = sender.tag
     var active = board.activeButton
     if button == active {
-      score.value = score.value + 1
-      if score.value % 10 == 0 {
-        timeLeft = timeLeft + Int(TIME_INTERVAL)
+      score.currentScore = score.currentScore + 1
+      if score.currentScore % 10 == 0 {
+        timeLeft = timeLeft + Int(ONE_SECOND)
         invalidateTimers()
         setTimers()
       }
-      scoreLabel.text = ("\(score.value)")
+      scoreLabel.text = ("\(score.currentScore)")
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
@@ -185,7 +189,7 @@ class gameViewController: UIViewController {
   }
 
   func startGame() {
-    score.value = 0
+    score.currentScore = 0
     timeLeft = Int(TIME_INTERVAL) - 1
     setTimers()
     board = GameBoard()

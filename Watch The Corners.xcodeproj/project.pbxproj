@@ -152,6 +152,7 @@
 			children = (
 				631496F21A8E98C60015CAD0 /* AppDelegate.swift */,
 				6332742B1AC05B35007056D0 /* GameBoard.swift */,
+				633C0F0A1AC31DEE00788930 /* Score.swift */,
 				631496F41A8E98C60015CAD0 /* ViewController.swift */,
 				6332742D1AC05B99007056D0 /* gameViewController.swift */,
 				6332742F1AC0A25C007056D0 /* resultViewController.swift */,
@@ -159,7 +160,6 @@
 				631496F91A8E98C60015CAD0 /* MainImages.xcassets */,
 				631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */,
 				631496F01A8E98C60015CAD0 /* Supporting Files */,
-				633C0F0A1AC31DEE00788930 /* Score.swift */,
 			);
 			path = "Watch The Corners";
 			sourceTree = "<group>";

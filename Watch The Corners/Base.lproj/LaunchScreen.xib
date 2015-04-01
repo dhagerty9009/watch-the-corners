@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,15 +13,28 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kY5-bI-5Sy">
                     <rect key="frame" x="86" y="72" width="240" height="360"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kY5-bI-5Sy" secondAttribute="height" multiplier="1:1" id="oZ6-mB-W5a"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="oZ6-mB-W5a"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="oZ6-mB-W5a"/>
+                        </mask>
+                    </variation>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.94509803920000002" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="kY5-bI-5Sy" secondAttribute="centerX" id="3Vt-9U-twc"/>
                 <constraint firstAttribute="bottom" secondItem="kY5-bI-5Sy" secondAttribute="bottom" constant="168" id="4GJ-sh-xPM"/>
-                <constraint firstAttribute="bottom" secondItem="kY5-bI-5Sy" secondAttribute="bottom" constant="200" id="4ZI-bk-gFD"/>
                 <constraint firstItem="kY5-bI-5Sy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="72" id="CQw-s9-q1A"/>
                 <constraint firstAttribute="trailing" secondItem="kY5-bI-5Sy" secondAttribute="trailing" id="FIF-kt-DdQ"/>
+                <constraint firstItem="kY5-bI-5Sy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="200" id="FnH-qi-rpI"/>
                 <constraint firstAttribute="trailing" secondItem="kY5-bI-5Sy" secondAttribute="trailing" constant="120" id="HEo-Gm-fUu"/>
                 <constraint firstAttribute="centerX" secondItem="kY5-bI-5Sy" secondAttribute="centerX" id="OfA-d6-EL5"/>
                 <constraint firstItem="kY5-bI-5Sy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Os8-KS-bN2"/>
@@ -28,7 +42,6 @@
                 <constraint firstAttribute="centerX" secondItem="kY5-bI-5Sy" secondAttribute="centerX" id="Wh7-Mp-YWo"/>
                 <constraint firstAttribute="centerY" secondItem="kY5-bI-5Sy" secondAttribute="centerY" constant="231" id="arr-Bl-SPI"/>
                 <constraint firstAttribute="bottom" secondItem="kY5-bI-5Sy" secondAttribute="bottom" constant="334" id="cTh-Tn-0iR"/>
-                <constraint firstItem="kY5-bI-5Sy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="200" id="ijA-N5-Xn4"/>
                 <constraint firstAttribute="centerY" secondItem="kY5-bI-5Sy" secondAttribute="centerY" constant="48" id="kCl-C3-oX6"/>
                 <constraint firstItem="kY5-bI-5Sy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="lzy-Hn-Mz2"/>
                 <constraint firstAttribute="centerX" secondItem="kY5-bI-5Sy" secondAttribute="centerX" id="tHY-fp-MLV"/>
@@ -40,8 +53,8 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
-                    <exclude reference="4ZI-bk-gFD"/>
                     <exclude reference="FIF-kt-DdQ"/>
+                    <exclude reference="FnH-qi-rpI"/>
                     <exclude reference="HEo-Gm-fUu"/>
                     <exclude reference="OfA-d6-EL5"/>
                     <exclude reference="Os8-KS-bN2"/>
@@ -49,7 +62,6 @@
                     <exclude reference="Wh7-Mp-YWo"/>
                     <exclude reference="arr-Bl-SPI"/>
                     <exclude reference="cTh-Tn-0iR"/>
-                    <exclude reference="ijA-N5-Xn4"/>
                     <exclude reference="kCl-C3-oX6"/>
                     <exclude reference="lzy-Hn-Mz2"/>
                     <exclude reference="tHY-fp-MLV"/>
@@ -60,16 +72,15 @@
                 <mask key="constraints">
                     <exclude reference="3Vt-9U-twc"/>
                     <exclude reference="4GJ-sh-xPM"/>
-                    <include reference="4ZI-bk-gFD"/>
                     <exclude reference="CQw-s9-q1A"/>
                     <include reference="FIF-kt-DdQ"/>
+                    <include reference="FnH-qi-rpI"/>
                     <exclude reference="OfA-d6-EL5"/>
                     <include reference="Os8-KS-bN2"/>
                     <exclude reference="UR1-1b-l5k"/>
                     <include reference="Wh7-Mp-YWo"/>
                     <exclude reference="arr-Bl-SPI"/>
                     <exclude reference="cTh-Tn-0iR"/>
-                    <include reference="ijA-N5-Xn4"/>
                     <exclude reference="lzy-Hn-Mz2"/>
                     <exclude reference="tHY-fp-MLV"/>
                     <exclude reference="vIj-zt-WIF"/>
