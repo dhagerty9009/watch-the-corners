@@ -33,9 +33,7 @@ class Score {
         if index + 1 != 5 {
           highScores.insert(saved, atIndex: index + 1)
         }
-        if index + 1 == 5 {
-          highScores.removeLast()
-        }
+        highScores.removeLast()
         break
       }
     }

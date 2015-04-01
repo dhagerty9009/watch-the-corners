@@ -88,14 +88,14 @@ class gameViewController: UIViewController {
 
   func makeLabels() {
     // this is the label for the score
-    scoreLabel.frame = CGRectMake(0, HEIGHT/2, HALF_WIDTH, 60)
+    scoreLabel.frame = CGRectMake(10, HEIGHT/2, HALF_WIDTH - 10, 60)
     scoreLabel.textColor = GREEN
     scoreLabel.textAlignment = NSTextAlignment.Left
     scoreLabel.font = labelFont
-    scoreLabel.text = "Score"
+    scoreLabel.text = "0"
     self.view.addSubview(scoreLabel)
     // this is the label for the timer
-    gameTimerLabel.frame = CGRectMake(HALF_WIDTH, HEIGHT/2, HALF_WIDTH, 60)
+    gameTimerLabel.frame = CGRectMake(HALF_WIDTH, HEIGHT/2, HALF_WIDTH - 10, 60)
     gameTimerLabel.textColor = RED
     gameTimerLabel.textAlignment = NSTextAlignment.Right
     gameTimerLabel.font = labelFont

@@ -25,6 +25,7 @@ class resultViewController: UIViewController {
   let labelFont = UIFont.boldSystemFontOfSize(30)
   let buttonFont = UIFont.systemFontOfSize(50)
   let scoreFont = UIFont.boldSystemFontOfSize(150)
+  let scoreListFont = UIFont.systemFontOfSize(40)
 
   func backToGame() {
     showViewController(gameViewController(), sender: self)
@@ -44,10 +45,12 @@ class resultViewController: UIViewController {
     NSLog("High Scores: \(score.highScores)")
 
     var scoresAsText = ""
+    var numberOfScores = 0
 
     for value in score.highScores {
       if value > 0 {
-        scoresAsText = scoresAsText + "\(value) | "
+        numberOfScores++
+        scoresAsText = scoresAsText + "| \(value) "
       }
     }
 
@@ -55,9 +58,9 @@ class resultViewController: UIViewController {
 
     self.view.backgroundColor = WHITE
 
+    // The button to allow the player to start a new game
     var button: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-
-    button.frame = CGRectMake(5, HEIGHT*2/3 - 10, WIDTH-10, 60)
+    button.frame = CGRectMake(5, HEIGHT*2/3 + 30, WIDTH-10, 60)
     button.setTitle("Play Again", forState: UIControlState.Normal)
     button.setTitleColor(GRAY, forState: UIControlState.Normal)
     button.layer.cornerRadius = 10
@@ -67,6 +70,7 @@ class resultViewController: UIViewController {
     button.addTarget(self, action: Selector("backToGame"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(button)
 
+    // The player's score from the completed game
     var scoreLabel: UILabel = UILabel()
     scoreLabel.text = "\(score.currentScore)"
     scoreLabel.frame = CGRectMake(0, 125, WIDTH, 160)
@@ -75,18 +79,37 @@ class resultViewController: UIViewController {
     scoreLabel.font = scoreFont
     self.view.addSubview(scoreLabel)
 
+    // high score labels
+    var highScoresLabel: UILabel = UILabel()
+    highScoresLabel.frame = CGRectMake(0, HEIGHT/2, WIDTH, 50)
+    highScoresLabel.text = scoresAsText + "|"
+    highScoresLabel.textAlignment = NSTextAlignment.Center
+    highScoresLabel.textColor = RED
+    highScoresLabel.font = scoreListFont
     var highScoreText: UILabel = UILabel()
-    if score.currentScoreIsHighScore() && score.currentScore != 0 {
-      highScoreText.text = "New High Score!"
-    } else if score.currentScore == 0 {
-      highScoreText.text = "Better Luck Next Time!"
-    } else {
-      highScoreText.text = "Good Job!"
-    }
-    highScoreText.textColor = GREEN
-    highScoreText.frame = CGRectMake(0, 50, WIDTH, 60)
+    highScoreText.text = "High Scores"
+    highScoreText.frame = CGRectMake(0, HEIGHT/2 + 50, WIDTH, 30)
+    highScoreText.font = UIFont.systemFontOfSize(20)
     highScoreText.textAlignment = NSTextAlignment.Center
-    highScoreText.font = labelFont
-    self.view.addSubview(highScoreText)
+    highScoreText.textColor = RED
+    if numberOfScores > 1 {
+      self.view.addSubview(highScoresLabel)
+      self.view.addSubview(highScoreText)
+    }
+
+    // Text displayed changes based on the score.
+    var newScoreText: UILabel = UILabel()
+    if score.currentScoreIsHighScore() && score.currentScore != 0 {
+      newScoreText.text = "New High Score!"
+    } else if score.currentScore == 0 {
+      newScoreText.text = "Better Luck Next Time!"
+    } else {
+      newScoreText.text = "Good Job!"
+    }
+    newScoreText.textColor = GREEN
+    newScoreText.frame = CGRectMake(0, 50, WIDTH, 60)
+    newScoreText.textAlignment = NSTextAlignment.Center
+    newScoreText.font = labelFont
+    self.view.addSubview(newScoreText)
   }
 }
