@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GameKit
 
 class ViewController: UIViewController {
 
@@ -16,14 +15,13 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
 
   @IBAction func playGamePressed(sender: UIButton) {
     showViewController(gameViewController(), sender: self)

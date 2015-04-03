@@ -37,7 +37,7 @@ class gameViewController: UIViewController {
   let labelFont = UIFont.systemFontOfSize(50)
 
   let ONE_SECOND: NSTimeInterval = 1
-  let TIME_INTERVAL: NSTimeInterval = 15
+  let TIME_INTERVAL: NSTimeInterval = 10
 
   let WIDTH = UIScreen.mainScreen().bounds.width
   let HEIGHT = UIScreen.mainScreen().bounds.height
