@@ -25,6 +25,7 @@
 		633C0F0B1AC31DEE00788930 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C0F0A1AC31DEE00788930 /* Score.swift */; };
 		634882871AB36E4E008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		634882881AB36E4F008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
+		6372003B1ACF14CC00BCE5C0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372003A1ACF14CC00BCE5C0 /* Score.swift */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		63334F3C1AA78437004C86BA /* resultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultController.swift; sourceTree = "<group>"; };
 		633C0F081AC30C3500788930 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		633C0F0A1AC31DEE00788930 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		6372003A1ACF14CC00BCE5C0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				63AA28C21AA4E4C0005E869A /* GameBoard.swift */,
+				6372003A1ACF14CC00BCE5C0 /* Score.swift */,
 				63AA28C01AA4D40F005E869A /* mainController.swift */,
 				6314971A1A8E98F60015CAD0 /* gameController.swift */,
 				63334F3C1AA78437004C86BA /* resultController.swift */,
@@ -417,6 +420,7 @@
 				63AA28C11AA4D40F005E869A /* mainController.swift in Sources */,
 				63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */,
 				6314971B1A8E98F60015CAD0 /* gameController.swift in Sources */,
+				6372003B1ACF14CC00BCE5C0 /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

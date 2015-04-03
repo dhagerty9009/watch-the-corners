@@ -10,16 +10,17 @@ import WatchKit
 import Foundation
 
 class resultController: WKInterfaceController {
-  
+
+  let score = Score.sharedInstance
+
   // The final score from the game.
   @IBOutlet weak var finalScore: WKInterfaceLabel!
-  
+
   @IBAction func newGame() {
     pushControllerWithName("gameController", context: nil)
   }
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
-    var score = context as Int!
-    finalScore.setText("\(score)")
+    finalScore.setText("\(score.currentScore)")
   }
 }

@@ -24,7 +24,7 @@ class gameController: WKInterfaceController {
   let ONE_SECOND: NSTimeInterval = 1
 
   // Game data
-  var highScore: Int!
+  let score = Score.sharedInstance
   var minuteTimer: NSTimer!
   var secondTimer: NSTimer!
   var board:GameBoard!
@@ -70,14 +70,14 @@ class gameController: WKInterfaceController {
     var button = button
     var active = board.activeButton
     if button == active {
-      highScore = highScore + 1
-      if highScore % 10 == 0 {
+      score.currentScore = score.currentScore + 1
+      if score.currentScore % 10 == 0 {
         gameTimeLeft = gameTimeLeft + Int(TIME_INTERVAL)
         secondTimer.invalidate()
         minuteTimer.invalidate()
         setTimer()
       }
-      scoreLabel.setText("\(highScore)")
+      scoreLabel.setText("\(score.currentScore)")
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
@@ -120,7 +120,7 @@ class gameController: WKInterfaceController {
   // This is the game timer, started when the player pushes the start button.
   func startGame() {
     NSLog("Game started!")
-    highScore = 0
+    score.currentScore = 0
     gameTimeLeft = Int(TIME_INTERVAL) - 1
     setTimer()
     board = GameBoard()
@@ -162,14 +162,14 @@ class gameController: WKInterfaceController {
 
     NSLog("End Game Reason : \(endGameText)")
 
-    NSLog("Game over: score was \(highScore)")
+    NSLog("Game over: score was \(score.currentScore)")
 
+    var waitTimer: NSTimer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("toResults"), userInfo: nil, repeats: false)
     toResults()
   }
 
   func toResults() {
-    sleep(1)
-    pushControllerWithName("resultController", context: highScore)
+    pushControllerWithName("resultController", context: nil)
   }
 
   // The default initialization function
