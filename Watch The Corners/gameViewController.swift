@@ -64,7 +64,7 @@ class gameViewController: UIViewController {
     buttonOne.showsTouchWhenHighlighted = true
     buttonOne.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonOne)
-
+    // button two, top right corner
     buttonTwo = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
     buttonTwo.frame = CGRectMake(HALF_WIDTH, 20, HALF_WIDTH, HALF_WIDTH)
     buttonTwo.backgroundColor = GRAY
@@ -72,7 +72,7 @@ class gameViewController: UIViewController {
     buttonTwo.showsTouchWhenHighlighted = true
     buttonTwo.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonTwo)
-
+    // button three, bottom left corner
     buttonThree = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
     buttonThree.frame = CGRectMake(0, HEIGHT-HALF_WIDTH, HALF_WIDTH, HALF_WIDTH)
     buttonThree.backgroundColor = GRAY
@@ -80,7 +80,7 @@ class gameViewController: UIViewController {
     buttonThree.showsTouchWhenHighlighted = true
     buttonThree.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonThree)
-
+    // button four, bottom right corner
     buttonFour = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
     buttonFour.frame = CGRectMake(HALF_WIDTH, HEIGHT - HALF_WIDTH, HALF_WIDTH, HALF_WIDTH)
     buttonFour.backgroundColor = GRAY
@@ -103,13 +103,13 @@ class gameViewController: UIViewController {
     gameTimerLabel.textColor = RED
     gameTimerLabel.textAlignment = NSTextAlignment.Right
     gameTimerLabel.font = labelFont
-    gameTimerLabel.text = "15"
+    gameTimerLabel.text = "10"
     self.view.addSubview(gameTimerLabel)
 
   }
 
   func updateLabels() {
-    gameTimerLabel.text = "\(timeLeft)"
+    gameTimerLabel.text = "\(timeLeft - 1)"
     timeLeft = timeLeft - 1
   }
 
@@ -127,8 +127,7 @@ class gameViewController: UIViewController {
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
-      endGameReason = EndGameReason.WrongButton
-      gameOver()
+      prepareGameOver(sender)
     }
   }
 
@@ -152,14 +151,9 @@ class gameViewController: UIViewController {
     }
   }
 
-  func updateLabel() {
-    gameTimerLabel.text = "\(timeLeft)"
-    timeLeft = timeLeft - 1
-  }
-
   func setTimers() {
     let TIME = NSTimeInterval(timeLeft)
-    gameTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
+    gameTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("prepareGameOver:"), userInfo: nil, repeats: false)
     secondTimer = NSTimer.scheduledTimerWithTimeInterval(ONE_SECOND, target: self, selector: Selector("updateLabels"), userInfo: nil, repeats: true)
   }
 
@@ -168,11 +162,23 @@ class gameViewController: UIViewController {
     secondTimer.invalidate()
   }
 
-  func gameOver() {
+  func prepareGameOver(button: UIButton?) {
     invalidateTimers()
+    if button == nil {
+      endGameReason = EndGameReason.TimeOut
+    } else {
+      if button?.tag != board.activeButton {
+        endGameReason = EndGameReason.WrongButton
+      }
+    }
+    gameOver(button)
+  }
+
+  func gameOver(button: UIButton?) {
     switch endGameReason {
     case .WrongButton:
       NSLog("Wrong button tapped")
+      button?.backgroundColor = RED
     case .TimeOut:
       NSLog("Timer timed out")
       buttonOne.backgroundColor = RED
@@ -184,8 +190,7 @@ class gameViewController: UIViewController {
     default:
       NSLog("Game over")
     }
-    sleep(2)
-    toScoreScreen()
+    var waitTimer = NSTimer.scheduledTimerWithTimeInterval(ONE_SECOND*2, target: self, selector: Selector("toScoreScreen"), userInfo: nil, repeats: false)
   }
 
   func toScoreScreen() {
