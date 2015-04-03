@@ -61,6 +61,7 @@ class gameViewController: UIViewController {
     buttonOne.frame = CGRectMake(0, 20, HALF_WIDTH, HALF_WIDTH)
     buttonOne.backgroundColor = GRAY
     buttonOne.tag = 1
+    buttonOne.showsTouchWhenHighlighted = true
     buttonOne.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonOne)
 
@@ -68,6 +69,7 @@ class gameViewController: UIViewController {
     buttonTwo.frame = CGRectMake(HALF_WIDTH, 20, HALF_WIDTH, HALF_WIDTH)
     buttonTwo.backgroundColor = GRAY
     buttonTwo.tag = 2
+    buttonTwo.showsTouchWhenHighlighted = true
     buttonTwo.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonTwo)
 
@@ -75,6 +77,7 @@ class gameViewController: UIViewController {
     buttonThree.frame = CGRectMake(0, HEIGHT-HALF_WIDTH, HALF_WIDTH, HALF_WIDTH)
     buttonThree.backgroundColor = GRAY
     buttonThree.tag = 3
+    buttonThree.showsTouchWhenHighlighted = true
     buttonThree.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonThree)
 
@@ -82,6 +85,7 @@ class gameViewController: UIViewController {
     buttonFour.frame = CGRectMake(HALF_WIDTH, HEIGHT - HALF_WIDTH, HALF_WIDTH, HALF_WIDTH)
     buttonFour.backgroundColor = GRAY
     buttonFour.tag = 4
+    buttonFour.showsTouchWhenHighlighted = true
     buttonFour.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonFour)
   }
