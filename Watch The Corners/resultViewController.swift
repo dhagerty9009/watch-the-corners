@@ -135,7 +135,7 @@ class resultViewController: UIViewController {
       if value > 0 {
         scoresAsText = scoresAsText + "| \(value) "
       } else if value == 0 {
-        scoresAsText = scoresAsText + "| - "
+        scoresAsText = scoresAsText + "| 0 "
       }
     }
   }

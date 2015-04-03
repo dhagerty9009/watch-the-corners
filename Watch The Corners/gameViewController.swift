@@ -46,9 +46,8 @@ class gameViewController: UIViewController {
   enum EndGameReason {
     case TimeOut
     case WrongButton
-    case Error
   }
-  var endGameReason = EndGameReason.Error
+  var endGameReason: EndGameReason = .TimeOut
 
   /*
   This is the game logic. There will be timer functions, update functions, and all the
@@ -109,7 +108,7 @@ class gameViewController: UIViewController {
   }
 
   func updateLabels() {
-    gameTimerLabel.text = "\(timeLeft - 1)"
+    gameTimerLabel.text = "\(timeLeft)"
     timeLeft = timeLeft - 1
   }
 
@@ -127,7 +126,9 @@ class gameViewController: UIViewController {
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
-      prepareGameOver(sender)
+      endGameReason = .WrongButton
+      sender.backgroundColor = RED
+      gameOver()
     }
   }
 
@@ -153,7 +154,7 @@ class gameViewController: UIViewController {
 
   func setTimers() {
     let TIME = NSTimeInterval(timeLeft)
-    gameTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("prepareGameOver:"), userInfo: nil, repeats: false)
+    gameTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
     secondTimer = NSTimer.scheduledTimerWithTimeInterval(ONE_SECOND, target: self, selector: Selector("updateLabels"), userInfo: nil, repeats: true)
   }
 
@@ -162,31 +163,17 @@ class gameViewController: UIViewController {
     secondTimer.invalidate()
   }
 
-  func prepareGameOver(button: UIButton?) {
+  func gameOver() {
     invalidateTimers()
-    if button == nil {
-      endGameReason = EndGameReason.TimeOut
-    } else {
-      if button?.tag != board.activeButton {
-        endGameReason = EndGameReason.WrongButton
-      }
-    }
-    gameOver(button)
-  }
-
-  func gameOver(button: UIButton?) {
     switch endGameReason {
     case .WrongButton:
       NSLog("Wrong button tapped")
-      button?.backgroundColor = RED
     case .TimeOut:
       NSLog("Timer timed out")
       buttonOne.backgroundColor = RED
       buttonTwo.backgroundColor = RED
       buttonThree.backgroundColor = RED
       buttonFour.backgroundColor = RED
-    case .Error:
-      NSLog("Error!")
     default:
       NSLog("Game over")
     }
