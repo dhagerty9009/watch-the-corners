@@ -140,16 +140,26 @@ class resultViewController: UIViewController {
     }
   }
 
+  func loadDefaults() {
+    storage.synchronize()
+    if storage.arrayForKey("highScores") != nil {
+      score.highScores = storage.arrayForKey("highScores") as [Int]
+    }
+  }
+
+  func saveDefaults() {
+    storage.setObject(score.highScores, forKey: "highScores")
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    storage.setObject(score.highScores, forKey: "highScores")
-    score.highScores = storage.arrayForKey("highScores") as [Int]
+    loadDefaults()
     score.addScoreToHighScores(score.currentScore)
+    saveDefaults()
 
     self.canDisplayBannerAds = true
     self.view.backgroundColor = WHITE
-
 
     formatHighScores()
     displayScores()

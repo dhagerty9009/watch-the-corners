@@ -23,7 +23,6 @@
 		63334F3D1AA78437004C86BA /* resultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63334F3C1AA78437004C86BA /* resultController.swift */; };
 		633C0F091AC30C3500788930 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C0F081AC30C3500788930 /* iAd.framework */; };
 		633C0F0B1AC31DEE00788930 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C0F0A1AC31DEE00788930 /* Score.swift */; };
-		634882871AB36E4E008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		634882881AB36E4F008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		6372003B1ACF14CC00BCE5C0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372003A1ACF14CC00BCE5C0 /* Score.swift */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
@@ -374,7 +373,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634882871AB36E4E008940C7 /* MainImages.xcassets in Resources */,
 				631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

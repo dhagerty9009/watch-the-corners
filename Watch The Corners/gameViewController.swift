@@ -108,7 +108,7 @@ class gameViewController: UIViewController {
   }
 
   func updateLabels() {
-    gameTimerLabel.text = "\(timeLeft)"
+    gameTimerLabel.text = "\(timeLeft - 1)"
     timeLeft = timeLeft - 1
   }
 
@@ -164,6 +164,7 @@ class gameViewController: UIViewController {
   }
 
   func gameOver() {
+    gameTimerLabel.text = "0"
     invalidateTimers()
     switch endGameReason {
     case .WrongButton:
@@ -175,7 +176,7 @@ class gameViewController: UIViewController {
       buttonThree.backgroundColor = RED
       buttonFour.backgroundColor = RED
     default:
-      NSLog("Game over")
+      NSLog("Something Went Wrong")
     }
     var waitTimer = NSTimer.scheduledTimerWithTimeInterval(ONE_SECOND*2, target: self, selector: Selector("toScoreScreen"), userInfo: nil, repeats: false)
   }
@@ -186,7 +187,7 @@ class gameViewController: UIViewController {
 
   func startGame() {
     score.currentScore = 0
-    timeLeft = Int(TIME_INTERVAL) - 1
+    timeLeft = Int(TIME_INTERVAL)
     setTimers()
     board = GameBoard()
     activateButton(board.activeButton)

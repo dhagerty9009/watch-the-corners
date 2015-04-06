@@ -22,6 +22,7 @@ class Score {
   }
 
   var currentScore: Int!
+  var mostRecentScore: Int!
   var highScores = [0, 0, 0, 0, 0]
 
   func addScoreToHighScores(score: Int) {
