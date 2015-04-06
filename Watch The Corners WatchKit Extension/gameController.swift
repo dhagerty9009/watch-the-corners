@@ -20,7 +20,7 @@ class gameController: WKInterfaceController {
   let RED : UIColor = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
 
   // Time Constants
-  let TIME_INTERVAL: NSTimeInterval = 15
+  let TIME_INTERVAL: NSTimeInterval = 10
   let ONE_SECOND: NSTimeInterval = 1
 
   // Game data
@@ -44,7 +44,6 @@ class gameController: WKInterfaceController {
   enum EndGameReason {
     case TimeOut
     case WrongButton
-    case Error
   }
   var endGameReason = EndGameReason.TimeOut
 
@@ -113,15 +112,13 @@ class gameController: WKInterfaceController {
   }
 
   func updateLabel() {
-    NSLog("Time left: \(gameTimeLeft)")
-    gameTimer.setText("\(gameTimeLeft)")
+    gameTimer.setText("\(gameTimeLeft - 1)")
     gameTimeLeft = gameTimeLeft - 1
   }
   // This is the game timer, started when the player pushes the start button.
   func startGame() {
-    NSLog("Game started!")
     score.currentScore = 0
-    gameTimeLeft = Int(TIME_INTERVAL) - 1
+    gameTimeLeft = Int(TIME_INTERVAL)
     setTimer()
     board = GameBoard()
     activateButton(board.activeButton)
@@ -156,8 +153,6 @@ class gameController: WKInterfaceController {
       buttonTwo.setBackgroundColor(RED)
       buttonThree.setBackgroundColor(RED)
       buttonFour.setBackgroundColor(RED)
-    case .Error:
-      endGameText = "error"
     }
 
     NSLog("End Game Reason : \(endGameText)")
@@ -165,7 +160,6 @@ class gameController: WKInterfaceController {
     NSLog("Game over: score was \(score.currentScore)")
 
     var waitTimer: NSTimer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("toResults"), userInfo: nil, repeats: false)
-    toResults()
   }
 
   func toResults() {
