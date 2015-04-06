@@ -16,7 +16,7 @@
                                     <color key="textColor" red="0.62745098040000002" green="0.82745098039999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
                                 </label>
-                                <label alignment="right" text="15" id="Wf3-gA-u7X">
+                                <label alignment="right" text="10" id="Wf3-gA-u7X">
                                     <color key="textColor" red="0.94117647059999998" green="0.33333333329999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="medium" pointSize="14"/>
                                 </label>

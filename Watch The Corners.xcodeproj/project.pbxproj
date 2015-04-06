@@ -10,20 +10,21 @@
 		631496F31A8E98C60015CAD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631496F21A8E98C60015CAD0 /* AppDelegate.swift */; };
 		631496F51A8E98C60015CAD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631496F41A8E98C60015CAD0 /* ViewController.swift */; };
 		631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631496F61A8E98C60015CAD0 /* Main.storyboard */; };
-		631496FA1A8E98C60015CAD0 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */; };
 		631497091A8E98C60015CAD0 /* Watch_The_CornersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631497081A8E98C60015CAD0 /* Watch_The_CornersTests.swift */; };
 		6314971B1A8E98F60015CAD0 /* gameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314971A1A8E98F60015CAD0 /* gameController.swift */; };
 		631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 631497201A8E98F60015CAD0 /* Watch The Corners WatchKit App.app */; };
 		631497291A8E98F60015CAD0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631497271A8E98F60015CAD0 /* Interface.storyboard */; };
 		6314972E1A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 631497161A8E98F60015CAD0 /* Watch The Corners WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		632FA49D1AD2F04C0001A109 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
+		632FA49E1AD2F04D0001A109 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
+		632FA49F1AD2F0500001A109 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		6332742C1AC05B35007056D0 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332742B1AC05B35007056D0 /* GameBoard.swift */; };
 		6332742E1AC05B99007056D0 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332742D1AC05B99007056D0 /* gameViewController.swift */; };
 		633274301AC0A25C007056D0 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332742F1AC0A25C007056D0 /* resultViewController.swift */; };
 		63334F3D1AA78437004C86BA /* resultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63334F3C1AA78437004C86BA /* resultController.swift */; };
 		633C0F091AC30C3500788930 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C0F081AC30C3500788930 /* iAd.framework */; };
 		633C0F0B1AC31DEE00788930 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C0F0A1AC31DEE00788930 /* Score.swift */; };
-		634882881AB36E4F008940C7 /* MainImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631496F91A8E98C60015CAD0 /* MainImages.xcassets */; };
 		6372003B1ACF14CC00BCE5C0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372003A1ACF14CC00BCE5C0 /* Score.swift */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
@@ -356,9 +357,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632FA49F1AD2F0500001A109 /* MainImages.xcassets in Resources */,
 				631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */,
 				631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */,
-				631496FA1A8E98C60015CAD0 /* MainImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632FA49D1AD2F04C0001A109 /* MainImages.xcassets in Resources */,
 				631497211A8E98F60015CAD0 /* Watch The Corners WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634882881AB36E4F008940C7 /* MainImages.xcassets in Resources */,
+				632FA49E1AD2F04D0001A109 /* MainImages.xcassets in Resources */,
 				631497291A8E98F60015CAD0 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,7 +638,7 @@
 		631497301A8E98F60015CAD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = WatchIcons;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -656,7 +658,7 @@
 		631497311A8E98F60015CAD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = WatchIcons;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = Watch_The_Corners_WatchKit_Extension;
