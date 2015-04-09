@@ -29,7 +29,7 @@ class resultController: WKInterfaceController {
   func loadDefaults() {
     storage.synchronize()
     if storage.arrayForKey("watchHighScores") != nil {
-      score.highScores = storage.arrayForKey("watchHighScores") as [Int]
+      score.highScores = storage.arrayForKey("watchHighScores") as! [Int]
     }
   }
 
