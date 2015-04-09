@@ -39,7 +39,7 @@ class resultViewController: UIViewController {
   var highScoreText: UILabel = UILabel()
   var scoreLabel: UILabel = UILabel()
 
-  var button: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+  var button: UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
 
   func backToGame() {
     storage.synchronize()
@@ -143,7 +143,7 @@ class resultViewController: UIViewController {
   func loadDefaults() {
     storage.synchronize()
     if storage.arrayForKey("highScores") != nil {
-      score.highScores = storage.arrayForKey("highScores") as [Int]
+      score.highScores = storage.arrayForKey("highScores") as! [Int]
     }
   }
 

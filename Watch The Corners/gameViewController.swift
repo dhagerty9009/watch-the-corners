@@ -56,7 +56,7 @@ class gameViewController: UIViewController {
 
   func makeButtons() {
     // button one, top left corner
-    buttonOne = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+    buttonOne = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
     buttonOne.frame = CGRectMake(0, 20, HALF_WIDTH, HALF_WIDTH)
     buttonOne.backgroundColor = GRAY
     buttonOne.tag = 1
@@ -64,7 +64,7 @@ class gameViewController: UIViewController {
     buttonOne.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonOne)
     // button two, top right corner
-    buttonTwo = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+    buttonTwo = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
     buttonTwo.frame = CGRectMake(HALF_WIDTH, 20, HALF_WIDTH, HALF_WIDTH)
     buttonTwo.backgroundColor = GRAY
     buttonTwo.tag = 2
@@ -72,7 +72,7 @@ class gameViewController: UIViewController {
     buttonTwo.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonTwo)
     // button three, bottom left corner
-    buttonThree = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+    buttonThree = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
     buttonThree.frame = CGRectMake(0, HEIGHT-HALF_WIDTH, HALF_WIDTH, HALF_WIDTH)
     buttonThree.backgroundColor = GRAY
     buttonThree.tag = 3
@@ -80,7 +80,7 @@ class gameViewController: UIViewController {
     buttonThree.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonThree)
     // button four, bottom right corner
-    buttonFour = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+    buttonFour = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
     buttonFour.frame = CGRectMake(HALF_WIDTH, HEIGHT - HALF_WIDTH, HALF_WIDTH, HALF_WIDTH)
     buttonFour.backgroundColor = GRAY
     buttonFour.tag = 4
