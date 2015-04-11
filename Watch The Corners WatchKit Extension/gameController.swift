@@ -124,10 +124,9 @@ class gameController: WKInterfaceController {
     activateButton(board.activeButton)
   }
 
-
-
   // A game over function to return the app to the initial state
   func gameOver() {
+    gameTimer.setText("0")
     var endGameText: String = ""
     secondTimer.invalidate()
     minuteTimer.invalidate()
