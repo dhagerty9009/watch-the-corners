@@ -164,6 +164,12 @@ class gameViewController: UIViewController {
   }
 
   func gameOver() {
+    // disable all interaction with buttons
+    buttonOne.enabled = false
+    buttonTwo.enabled = false
+    buttonThree.enabled = false
+    buttonFour.enabled = false
+
     gameTimerLabel.text = "0"
     invalidateTimers()
     switch endGameReason {
