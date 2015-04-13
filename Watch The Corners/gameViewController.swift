@@ -26,6 +26,7 @@ class gameViewController: UIViewController {
 
   var scoreLabel: UILabel = UILabel()
   var gameTimerLabel: UILabel = UILabel()
+  var timeLabel: UILabel = UILabel()
 
   var buttonOne: UIButton!
   var buttonTwo: UIButton!
@@ -38,6 +39,7 @@ class gameViewController: UIViewController {
 
   let ONE_SECOND: NSTimeInterval = 1
   let TIME_INTERVAL: NSTimeInterval = 10
+  let ADDITIONAL_TIME: NSTimeInterval = 2
 
   let WIDTH = UIScreen.mainScreen().bounds.width
   let HEIGHT = UIScreen.mainScreen().bounds.height
@@ -104,10 +106,17 @@ class gameViewController: UIViewController {
     gameTimerLabel.font = labelFont
     gameTimerLabel.text = "10"
     self.view.addSubview(gameTimerLabel)
+    timeLabel.frame = CGRectMake(0, HEIGHT/2, WIDTH, 60)
+    timeLabel.textColor = GRAY
+    timeLabel.textAlignment = NSTextAlignment.Center
+    timeLabel.font = labelFont
+    timeLabel.text = ""
+    self.view.addSubview(timeLabel)
 
   }
 
   func updateLabels() {
+    timeLabel.text = ""
     gameTimerLabel.text = "\(timeLeft - 1)"
     timeLeft = timeLeft - 1
   }
@@ -118,7 +127,8 @@ class gameViewController: UIViewController {
     if button == active {
       score.currentScore = score.currentScore + 1
       if score.currentScore % 10 == 0 {
-        timeLeft = timeLeft + Int(ONE_SECOND)
+        timeLabel.text = "+2"
+        timeLeft = timeLeft + Int(ADDITIONAL_TIME)
         invalidateTimers()
         setTimers()
       }
@@ -126,6 +136,7 @@ class gameViewController: UIViewController {
       board.makeRandomButtonActive()
       activateButton(board.activeButton)
     } else {
+      timeLabel.text = ""
       endGameReason = .WrongButton
       sender.backgroundColor = RED
       gameOver()

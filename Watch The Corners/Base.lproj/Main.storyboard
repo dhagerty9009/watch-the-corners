@@ -28,7 +28,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="A9s-3T-VJr">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-il-cbs">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-il-cbs">
                                 <rect key="frame" x="216" y="169" width="169" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                 <state key="normal" title="Play Game">
@@ -40,6 +40,17 @@
                                 </variation>
                                 <connections>
                                     <action selector="playGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3a-ae-6BV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im5-Rq-6aU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <state key="normal" title="How To Play">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToRules:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nlv-FN-tDV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKe-of-oxf">
@@ -61,10 +72,15 @@
                             <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="height" multiplier="5:3" id="5Mu-u6-Ze6"/>
                             <constraint firstAttribute="centerX" secondItem="A9s-3T-VJr" secondAttribute="centerX" id="7L3-5n-PtW"/>
                             <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-51" id="9zR-k7-Ca2"/>
+                            <constraint firstItem="jKe-of-oxf" firstAttribute="top" secondItem="wp7-il-cbs" secondAttribute="bottom" constant="8" id="CiJ-kf-Y3J"/>
                             <constraint firstAttribute="centerY" secondItem="jKe-of-oxf" secondAttribute="centerY" constant="-142.5" id="H1s-F1-nrc"/>
+                            <constraint firstAttribute="centerX" secondItem="jKe-of-oxf" secondAttribute="centerX" constant="2.5" id="Tte-3a-LH5"/>
                             <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="height" multiplier="1:1" id="W3c-LK-D5g"/>
+                            <constraint firstItem="wp7-il-cbs" firstAttribute="top" secondItem="im5-Rq-6aU" secondAttribute="bottom" constant="8" id="WSy-4k-Wgt"/>
                             <constraint firstItem="A9s-3T-VJr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Wok-BO-0gD"/>
+                            <constraint firstItem="im5-Rq-6aU" firstAttribute="top" secondItem="A9s-3T-VJr" secondAttribute="bottom" constant="-2" id="XMe-Md-PyX"/>
                             <constraint firstItem="A9s-3T-VJr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="XjA-9G-mlO"/>
+                            <constraint firstAttribute="centerX" secondItem="im5-Rq-6aU" secondAttribute="centerX" id="bfI-Ld-M5c"/>
                             <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="height" multiplier="5:3" id="daw-5h-F24"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wp7-il-cbs" secondAttribute="bottom" constant="282" id="eth-AM-r00"/>
                             <constraint firstItem="wp7-il-cbs" firstAttribute="top" secondItem="A9s-3T-VJr" secondAttribute="bottom" constant="33" id="kNk-40-sKw"/>
@@ -72,16 +88,16 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A9s-3T-VJr" secondAttribute="bottom" constant="532" id="lzE-t5-KfH"/>
                             <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-82" id="rda-sx-dh7"/>
                             <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="width" id="riF-IK-3IS"/>
-                            <constraint firstItem="jKe-of-oxf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" id="s26-Du-APh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUs-4K-32U" secondAttribute="bottom" constant="8" id="tqu-h6-oMx"/>
                             <constraint firstItem="A9s-3T-VJr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="wTB-Kw-4U6"/>
-                            <constraint firstItem="jKe-of-oxf" firstAttribute="top" secondItem="wp7-il-cbs" secondAttribute="bottom" constant="8" id="xvD-PB-WX3"/>
                             <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-51" id="yDj-R1-5K6"/>
+                            <constraint firstItem="jKe-of-oxf" firstAttribute="top" secondItem="wp7-il-cbs" secondAttribute="bottom" constant="16" id="zVP-Af-1gh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="gUs-4K-32U"/>
                                 <exclude reference="A9s-3T-VJr"/>
+                                <exclude reference="im5-Rq-6aU"/>
                                 <exclude reference="jKe-of-oxf"/>
                             </mask>
                             <mask key="constraints">
@@ -93,15 +109,19 @@
                                 <exclude reference="daw-5h-F24"/>
                                 <exclude reference="riF-IK-3IS"/>
                                 <exclude reference="wTB-Kw-4U6"/>
+                                <exclude reference="XMe-Md-PyX"/>
+                                <exclude reference="bfI-Ld-M5c"/>
                                 <exclude reference="2PT-QZ-dlP"/>
                                 <exclude reference="3tl-jX-Yll"/>
                                 <exclude reference="9zR-k7-Ca2"/>
+                                <exclude reference="WSy-4k-Wgt"/>
                                 <exclude reference="kNk-40-sKw"/>
                                 <exclude reference="rda-sx-dh7"/>
                                 <exclude reference="yDj-R1-5K6"/>
+                                <exclude reference="CiJ-kf-Y3J"/>
                                 <exclude reference="H1s-F1-nrc"/>
-                                <exclude reference="s26-Du-APh"/>
-                                <exclude reference="xvD-PB-WX3"/>
+                                <exclude reference="Tte-3a-LH5"/>
+                                <exclude reference="zVP-Af-1gh"/>
                                 <exclude reference="lkT-nf-lNe"/>
                                 <exclude reference="eth-AM-r00"/>
                                 <exclude reference="lzE-t5-KfH"/>
@@ -112,6 +132,7 @@
                             <mask key="subviews">
                                 <include reference="gUs-4K-32U"/>
                                 <include reference="A9s-3T-VJr"/>
+                                <include reference="im5-Rq-6aU"/>
                                 <include reference="jKe-of-oxf"/>
                             </mask>
                             <mask key="constraints">
@@ -123,15 +144,19 @@
                                 <exclude reference="daw-5h-F24"/>
                                 <include reference="riF-IK-3IS"/>
                                 <exclude reference="wTB-Kw-4U6"/>
+                                <include reference="XMe-Md-PyX"/>
+                                <include reference="bfI-Ld-M5c"/>
                                 <include reference="2PT-QZ-dlP"/>
                                 <include reference="3tl-jX-Yll"/>
                                 <exclude reference="9zR-k7-Ca2"/>
+                                <include reference="WSy-4k-Wgt"/>
                                 <exclude reference="kNk-40-sKw"/>
                                 <exclude reference="rda-sx-dh7"/>
                                 <exclude reference="yDj-R1-5K6"/>
-                                <include reference="H1s-F1-nrc"/>
-                                <include reference="s26-Du-APh"/>
-                                <include reference="xvD-PB-WX3"/>
+                                <include reference="CiJ-kf-Y3J"/>
+                                <exclude reference="H1s-F1-nrc"/>
+                                <include reference="Tte-3a-LH5"/>
+                                <exclude reference="zVP-Af-1gh"/>
                                 <include reference="lkT-nf-lNe"/>
                                 <exclude reference="eth-AM-r00"/>
                                 <exclude reference="lzE-t5-KfH"/>
