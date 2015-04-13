@@ -39,11 +39,28 @@ class resultViewController: UIViewController {
   var highScoreText: UILabel = UILabel()
   var scoreLabel: UILabel = UILabel()
 
+  var gameScoreTextFrame: CGRect!
+  var highScoreFrame: CGRect!
+  var highScoreTextFrame: CGRect!
+  var gameScoreFrame: CGRect!
+  var buttonFrame: CGRect!
+  var logoFrame: CGRect!
+
   var button: UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
 
   func backToGame() {
     storage.synchronize()
     showViewController(gameViewController(), sender: self)
+  }
+
+  func makeFrames() {
+    logoFrame = CGRectMake(10, 30, WIDTH, WIDTH/4)
+    gameScoreTextFrame = CGRectMake(0, WIDTH/4 + 30, WIDTH, 60)
+    gameScoreFrame = CGRectMake(0, WIDTH/2, WIDTH, 160)
+    highScoreFrame = CGRectMake(0, HEIGHT/2 + 30, WIDTH, 50)
+    highScoreTextFrame = CGRectMake(0, HEIGHT/2 + 90, WIDTH, 30)
+    buttonFrame = CGRectMake(5, HEIGHT*2/3 + 65, WIDTH-10, 70)
+
   }
 
   func displayScores() {
@@ -52,6 +69,14 @@ class resultViewController: UIViewController {
     highScoreLabels()
     playAgainButton()
     scoreLogicHandler()
+    showLogo()
+  }
+
+  func showLogo() {
+    let imageView = UIImageView()
+    imageView.frame = logoFrame
+    imageView.image = UIImage(named: "text-logo")
+    self.view.addSubview(imageView)
   }
 
   func scoreLogicHandler() {
@@ -85,7 +110,7 @@ class resultViewController: UIViewController {
   }
 
   func gameScoreText() {
-    newScoreText.frame = CGRectMake(0, 50, WIDTH, 60)
+    newScoreText.frame = gameScoreTextFrame
     newScoreText.textAlignment = NSTextAlignment.Center
     newScoreText.font = labelFont
     self.view.addSubview(newScoreText)
@@ -93,7 +118,7 @@ class resultViewController: UIViewController {
 
   func highScoreLabels() {
     // high score labels
-    highScoresLabel.frame = CGRectMake(0, HEIGHT/2, WIDTH, 50)
+    highScoresLabel.frame = highScoreFrame
     highScoresLabel.text = scoresAsText + "|"
     highScoresLabel.textAlignment = NSTextAlignment.Center
     highScoresLabel.textColor = DARK_GRAY
@@ -101,7 +126,7 @@ class resultViewController: UIViewController {
     highScoresLabel.adjustsFontSizeToFitWidth = true
     // A label to describe the high scores
     highScoreText.text = "High Scores"
-    highScoreText.frame = CGRectMake(0, HEIGHT/2 + 50, WIDTH, 30)
+    highScoreText.frame = highScoreTextFrame
     highScoreText.font = UIFont.systemFontOfSize(20)
     highScoreText.textAlignment = NSTextAlignment.Center
     highScoreText.textColor = DARK_GRAY
@@ -112,7 +137,7 @@ class resultViewController: UIViewController {
   func gameScoreLabel() {
     // The player's score from the completed game
     scoreLabel.text = "\(score.currentScore)"
-    scoreLabel.frame = CGRectMake(0, 125, WIDTH, 160)
+    scoreLabel.frame = gameScoreFrame
     scoreLabel.textAlignment = NSTextAlignment.Center
     scoreLabel.font = scoreFont
     self.view.addSubview(scoreLabel)
@@ -120,7 +145,7 @@ class resultViewController: UIViewController {
 
   func playAgainButton() {
     // The button to allow the player to start a new game
-    button.frame = CGRectMake(5, HEIGHT*2/3 + 30, WIDTH-10, 60)
+    button.frame = buttonFrame
     button.setTitle("Play Again", forState: UIControlState.Normal)
     button.setTitleColor(DARK_GRAY, forState: UIControlState.Normal)
     button.layer.cornerRadius = 10
@@ -162,6 +187,7 @@ class resultViewController: UIViewController {
     self.canDisplayBannerAds = true
     self.view.backgroundColor = WHITE
 
+    makeFrames()
     formatHighScores()
     displayScores()
 
