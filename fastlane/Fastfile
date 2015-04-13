@@ -4,49 +4,69 @@ fastlane_version '0.3.0'
 before_all do
   ensure_git_status_clean
 
-  ENV['SLACK_URL'] = 'https://hooks.slack.com/services/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'
-
   increment_build_number
 
   xcclean
-
-  xctool :archive
-
-  xcexport
-
 end
 
-lane :test do
-  xctool :test
-  snapshot
-end
-
-lane :beta do
-  snapshot
-  sigh
-  deliver :skip_deploy, :beta
-end
-
-lane :deploy do
-  snapshot
+lane :major do
+  increment_version_number 'major'
+  ipa({
+        workspace: 'Watch The Corners.xcworkspace',
+        configuration: 'Release',
+        scheme: 'Watch The Corners',
+        clean: true,
+        destination: './build/ipa',
+        ipa: 'WatchTheCorners.ipa'
+      })
   sigh
   deliver :skip_deploy, :force
-  frameit
+end
+
+lane :minor do
+  increment_version_number 'minor'
+  ipa({
+        workspace: 'Watch The Corners.xcworkspace',
+        configuration: 'Release',
+        scheme: 'Watch The Corners',
+        clean: true,
+        destination: './build/ipa',
+        ipa: 'WatchTheCorners.ipa'
+      })
+  sigh
+  deliver :skip_deploy, :force
+end
+
+lane :patch do
+  increment_version_number
+  ipa({
+        workspace: 'Watch The Corners.xcworkspace',
+        configuration: 'Release',
+        scheme: 'Watch The Corners',
+        clean: true,
+        destination: './build/ipa',
+        ipa: 'WatchTheCorners.ipa'
+      })
+  sigh
+  deliver :skip_deploy, :force
 end
 
 after_all do |lane|
   clean_build_artifacts
+  commit_version_bump(
+    message: "New #{lane} version built and submitted."
+  )
   slack({
-    message: "Successfully deployed an update for Watch The Corners via #{lane}",
-    success: true
-  })
+          message: "Deployed a #{lane} update for Watch The Corners.",
+          success: true
+        })
   notify "Finished running #{lane}!"
 end
 
 error do |lane, exception|
   slack({
-    message: "Error deploying your update for Watch the Corners via #{lane}, caused by #{exception}",
-    success: false
-    })
-  notify "Error running #{lane}, caused by #{exception}."
+          message: "Error deploying a #{lane} update for Watch the Corners, caused by #{exception}",
+          success: false
+        })
+  notify "Error running #{lane}."
 end

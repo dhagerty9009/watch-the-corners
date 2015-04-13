@@ -16,15 +16,8 @@ email 'hagerty9009@gmail.com'
 ########################################
 
 ipa do
-  ENV['IPA_OUTPUT_PATH']
+  './build/ipa/WatchTheCorners.ipa'
   success do
     system("say 'Successfully deployed a new version!'")
-  end
-end
-
-beta_ipa do
-  ENV['IPA_OUTPUT_PATH']
-  success do
-    system("say 'Successfully deployed a new beta!'")
   end
 end
