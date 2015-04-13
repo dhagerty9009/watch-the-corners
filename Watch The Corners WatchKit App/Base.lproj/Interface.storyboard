@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BBu-0I-fMw">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BBu-0I-fMw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -14,11 +14,11 @@
                             <items>
                                 <label alignment="center" text="0" id="Fpw-LA-iK6">
                                     <color key="textColor" red="0.62745098040000002" green="0.82745098039999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
                                 </label>
                                 <label alignment="right" text="10" id="Wf3-gA-u7X">
                                     <color key="textColor" red="0.94117647059999998" green="0.33333333329999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="14"/>
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="18"/>
                                 </label>
                             </items>
                         </group>
@@ -55,7 +55,7 @@
                             </items>
                         </group>
                     </items>
-                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="buttonFour" destination="HGg-sp-blw" id="EGx-dB-OKz"/>
                         <outlet property="buttonOne" destination="pBv-gp-gVK" id="NIi-tp-hMC"/>
@@ -80,7 +80,7 @@
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                 </label>
                                 <label alignment="right" text="Highs" textAlignment="right" id="85K-o7-X7y">
-                                    <color key="textColor" red="0.27450980390000002" green="0.25098039220000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                 </label>
                             </items>
@@ -92,15 +92,15 @@
                                     <fontDescription key="font" type="boldSystem" pointSize="50"/>
                                 </label>
                                 <label alignment="right" text="0" textAlignment="right" id="bua-KV-Wb8">
-                                    <color key="textColor" red="0.27450980390000002" green="0.25098039220000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
                                 </label>
                                 <label alignment="right" verticalAlignment="center" text="0" textAlignment="right" id="nXw-S3-AbH">
-                                    <color key="textColor" red="0.27450980390000002" green="0.25098039220000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
                                 </label>
                                 <label alignment="right" verticalAlignment="bottom" text="0" textAlignment="right" id="JTQ-XY-aJe">
-                                    <color key="textColor" red="0.27450980390000002" green="0.25098039220000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
                                 </label>
                             </items>
@@ -114,7 +114,7 @@
                             </connections>
                         </button>
                     </items>
-                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="finalScore" destination="0dI-Hv-aE6" id="XcG-pj-ygd"/>
                         <outlet property="highestScore" destination="bua-KV-Wb8" id="gRh-uk-adP"/>
@@ -131,11 +131,11 @@
                 <controller identifier="mainController" id="BBu-0I-fMw" customClass="mainController" customModule="Watch_The_Corners_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Press Start" id="Njz-Vo-VEJ">
-                            <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" type="system" weight="light" pointSize="22"/>
                         </label>
                         <label alignment="center" text="To Play" textAlignment="center" id="YyH-ea-DnI">
-                            <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" type="system" weight="light" pointSize="22"/>
                         </label>
                         <button width="1" alignment="left" title="Start Game" id="7O5-92-cjV">
@@ -147,7 +147,7 @@
                             </connections>
                         </button>
                     </items>
-                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-125" y="124"/>
