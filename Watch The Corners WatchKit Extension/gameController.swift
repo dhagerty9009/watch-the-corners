@@ -81,13 +81,13 @@ class gameController: WKInterfaceController {
       activateButton(board.activeButton)
     } else {
       endGameReason = EndGameReason.WrongButton
-      gameOver()
+      gameOver(button)
     }
   }
 
   func setTimer() {
     let TIME = NSTimeInterval(gameTimeLeft)
-    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("gameOver"), userInfo: nil, repeats: false)
+    minuteTimer = NSTimer.scheduledTimerWithTimeInterval(TIME, target: self, selector: Selector("gameOver:"), userInfo: 0, repeats: false)
     secondTimer = NSTimer.scheduledTimerWithTimeInterval(ONE_SECOND, target: self, selector: Selector("updateLabel"), userInfo: nil, repeats: true)
   }
   // This function changes the color of a button depending on whether it is the active button or not.
@@ -125,7 +125,8 @@ class gameController: WKInterfaceController {
   }
 
   // A game over function to return the app to the initial state
-  func gameOver() {
+  func gameOver(button: Int) {
+    var tapped = button
     gameTimer.setText("0")
     var endGameText: String = ""
     secondTimer.invalidate()
