@@ -98,6 +98,7 @@ class resultViewController: UIViewController {
     highScoresLabel.textAlignment = NSTextAlignment.Center
     highScoresLabel.textColor = DARK_GRAY
     highScoresLabel.font = scoreListFont
+    highScoresLabel.adjustsFontSizeToFitWidth = true
     // A label to describe the high scores
     highScoreText.text = "High Scores"
     highScoreText.frame = CGRectMake(0, HEIGHT/2 + 50, WIDTH, 30)

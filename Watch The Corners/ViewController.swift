@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var playGameButton: UIButton!
 
+  @IBOutlet weak var highScoreButton: UIButton!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,6 +24,10 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func goToHighScores(sender: UIButton) {
+    showViewController(resultViewController(), sender: self)
+  }
+  
   @IBAction func playGamePressed(sender: UIButton) {
     showViewController(gameViewController(), sender: self)
   }
