@@ -25,13 +25,13 @@ class ViewController: UIViewController {
   }
 
   @IBAction func goToHighScores(sender: UIButton) {
-    showViewController(resultViewController(), sender: self)
+    showViewController(scoresViewController(), sender: self)
   }
-  
+
   @IBAction func playGamePressed(sender: UIButton) {
     showViewController(gameViewController(), sender: self)
   }
-  
+
   @IBAction func goToRules(sender: UIButton) {
     showViewController(rulesViewController(), sender: self)
   }

@@ -27,6 +27,7 @@
 		633C0F091AC30C3500788930 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C0F081AC30C3500788930 /* iAd.framework */; };
 		633C0F0B1AC31DEE00788930 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C0F0A1AC31DEE00788930 /* Score.swift */; };
 		6372003B1ACF14CC00BCE5C0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372003A1ACF14CC00BCE5C0 /* Score.swift */; };
+		63725C181ADC3C85003382CC /* scoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63725C171ADC3C85003382CC /* scoresViewController.swift */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		633C0F081AC30C3500788930 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		633C0F0A1AC31DEE00788930 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		6372003A1ACF14CC00BCE5C0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		63725C171ADC3C85003382CC /* scoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scoresViewController.swift; sourceTree = "<group>"; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 				6332742D1AC05B99007056D0 /* gameViewController.swift */,
 				6332742F1AC0A25C007056D0 /* resultViewController.swift */,
 				632033601ADC2BFF0034F4CF /* rulesViewController.swift */,
+				63725C171ADC3C85003382CC /* scoresViewController.swift */,
 				631496F61A8E98C60015CAD0 /* Main.storyboard */,
 				631496F91A8E98C60015CAD0 /* MainImages.xcassets */,
 				631496FB1A8E98C60015CAD0 /* LaunchScreen.xib */,
@@ -401,6 +404,7 @@
 				632033611ADC2BFF0034F4CF /* rulesViewController.swift in Sources */,
 				633274301AC0A25C007056D0 /* resultViewController.swift in Sources */,
 				6332742C1AC05B35007056D0 /* GameBoard.swift in Sources */,
+				63725C181ADC3C85003382CC /* scoresViewController.swift in Sources */,
 				631496F51A8E98C60015CAD0 /* ViewController.swift in Sources */,
 				631496F31A8E98C60015CAD0 /* AppDelegate.swift in Sources */,
 				633C0F0B1AC31DEE00788930 /* Score.swift in Sources */,
