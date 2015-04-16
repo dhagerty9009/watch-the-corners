@@ -79,7 +79,7 @@ class scoresViewController: UIViewController {
   func playAgainButton() {
     // The button to allow the player to start a new game
     button.frame = CGRectMake(5, HEIGHT*2/3 + 30, WIDTH-10, 60)
-    button.setTitle("Play Again", forState: UIControlState.Normal)
+    button.setTitle("Play Game", forState: UIControlState.Normal)
     button.setTitleColor(DARK_GRAY, forState: UIControlState.Normal)
     button.layer.cornerRadius = 10
     button.backgroundColor = GREEN
