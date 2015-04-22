@@ -15,8 +15,11 @@ class gameViewController: UIViewController {
   let WHITE: UIColor = UIColor.init(red: 0.94, green: 0.94, blue: 0.94, alpha: 1)
   let BLACK: UIColor = UIColor.blackColor()
   let GREEN: UIColor = UIColor.init(red: 0.64, green: 0.83, blue: 0.63, alpha: 1)
-  let GRAY: UIColor = UIColor.init(red: 0.58, green: 0.59, blue: 0.6, alpha: 1)
-  let RED : UIColor = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
+  let GRAY: UIColor  = UIColor.init(red: 0.58, green: 0.59, blue: 0.6, alpha: 1)
+  let RED: UIColor   = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
+  let TRUE_WHITE: UIColor = UIColor.whiteColor()
+
+  let imageSize: CGSize = CGSizeMake(1, 1)
 
   // Game variables and constants
   var board: GameBoard!
@@ -28,10 +31,10 @@ class gameViewController: UIViewController {
   var gameTimerLabel: UILabel = UILabel()
   var timeLabel: UILabel = UILabel()
 
-  var buttonOne: UIButton!
-  var buttonTwo: UIButton!
-  var buttonThree: UIButton!
-  var buttonFour: UIButton!
+  var buttonOne: GameButton!
+  var buttonTwo: GameButton!
+  var buttonThree: GameButton!
+  var buttonFour: GameButton!
 
   let score = Score.sharedInstance
 
@@ -58,35 +61,31 @@ class gameViewController: UIViewController {
 
   func makeButtons() {
     // button one, top left corner
-    buttonOne = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+    buttonOne = GameButton.buttonWithType(UIButtonType.Custom) as! GameButton
     buttonOne.frame = CGRectMake(0, 20, HALF_WIDTH, HALF_WIDTH)
     buttonOne.backgroundColor = GRAY
     buttonOne.tag = 1
-    buttonOne.showsTouchWhenHighlighted = true
     buttonOne.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonOne)
     // button two, top right corner
-    buttonTwo = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+    buttonTwo = GameButton.buttonWithType(UIButtonType.Custom) as! GameButton
     buttonTwo.frame = CGRectMake(HALF_WIDTH, 20, HALF_WIDTH, HALF_WIDTH)
     buttonTwo.backgroundColor = GRAY
     buttonTwo.tag = 2
-    buttonTwo.showsTouchWhenHighlighted = true
     buttonTwo.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonTwo)
     // button three, bottom left corner
-    buttonThree = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+    buttonThree = GameButton.buttonWithType(UIButtonType.Custom) as! GameButton
     buttonThree.frame = CGRectMake(0, HEIGHT-HALF_WIDTH, HALF_WIDTH, HALF_WIDTH)
     buttonThree.backgroundColor = GRAY
     buttonThree.tag = 3
-    buttonThree.showsTouchWhenHighlighted = true
     buttonThree.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonThree)
     // button four, bottom right corner
-    buttonFour = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+    buttonFour = GameButton.buttonWithType(UIButtonType.Custom) as! GameButton
     buttonFour.frame = CGRectMake(HALF_WIDTH, HEIGHT - HALF_WIDTH, HALF_WIDTH, HALF_WIDTH)
     buttonFour.backgroundColor = GRAY
     buttonFour.tag = 4
-    buttonFour.showsTouchWhenHighlighted = true
     buttonFour.addTarget(self, action: Selector("buttonTapped:"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(buttonFour)
   }
@@ -119,6 +118,11 @@ class gameViewController: UIViewController {
     timeLabel.text = ""
     gameTimerLabel.text = "\(timeLeft - 1)"
     timeLeft = timeLeft - 1
+  }
+
+  func flashBackground(sender: UIButton) {
+    var button = sender
+    button.backgroundColor = TRUE_WHITE
   }
 
   func buttonTapped(sender: UIButton) {
