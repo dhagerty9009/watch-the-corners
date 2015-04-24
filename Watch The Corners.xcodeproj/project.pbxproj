@@ -31,6 +31,7 @@
 		63A2F5531AE8013500EB8C33 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2F5521AE8013500EB8C33 /* GameButton.swift */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
+		63E493C31AEAC1F00057EF2E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E493C21AEAC1F00057EF2E /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		63A2F5521AE8013500EB8C33 /* GameButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		63E493C21AEAC1F00057EF2E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E493C31AEAC1F00057EF2E /* Social.framework in Frameworks */,
 				633C0F091AC30C3500788930 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +134,7 @@
 		631496E41A8E98C60015CAD0 = {
 			isa = PBXGroup;
 			children = (
+				63E493C21AEAC1F00057EF2E /* Social.framework */,
 				633C0F081AC30C3500788930 /* iAd.framework */,
 				631496EF1A8E98C60015CAD0 /* Watch The Corners */,
 				631497051A8E98C60015CAD0 /* Watch The CornersTests */,
@@ -156,10 +160,10 @@
 			children = (
 				631496F21A8E98C60015CAD0 /* AppDelegate.swift */,
 				6332742B1AC05B35007056D0 /* GameBoard.swift */,
+				63A2F5521AE8013500EB8C33 /* GameButton.swift */,
 				633C0F0A1AC31DEE00788930 /* Score.swift */,
 				631496F41A8E98C60015CAD0 /* ViewController.swift */,
 				6332742D1AC05B99007056D0 /* gameViewController.swift */,
-				63A2F5521AE8013500EB8C33 /* GameButton.swift */,
 				6332742F1AC0A25C007056D0 /* resultViewController.swift */,
 				632033601ADC2BFF0034F4CF /* rulesViewController.swift */,
 				63725C171ADC3C85003382CC /* scoresViewController.swift */,

@@ -12,14 +12,12 @@ import Foundation
 class gameViewController: UIViewController {
 
   //Colors
-  let WHITE: UIColor = UIColor.init(red: 0.94, green: 0.94, blue: 0.94, alpha: 1)
-  let BLACK: UIColor = UIColor.blackColor()
-  let GREEN: UIColor = UIColor.init(red: 0.64, green: 0.83, blue: 0.63, alpha: 1)
-  let GRAY: UIColor  = UIColor.init(red: 0.58, green: 0.59, blue: 0.6, alpha: 1)
-  let RED: UIColor   = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
+  let WHITE: UIColor      = UIColor.init(red: 0.94, green: 0.94, blue: 0.94, alpha: 1)
+  let BLACK: UIColor      = UIColor.blackColor()
+  let GREEN: UIColor      = UIColor.init(red: 0.64, green: 0.83, blue: 0.63, alpha: 1)
+  let GRAY: UIColor       = UIColor.init(red: 0.58, green: 0.59, blue: 0.6, alpha: 1)
+  let RED: UIColor        = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
   let TRUE_WHITE: UIColor = UIColor.whiteColor()
-
-  let imageSize: CGSize = CGSizeMake(1, 1)
 
   // Game variables and constants
   var board: GameBoard!
@@ -27,9 +25,9 @@ class gameViewController: UIViewController {
   var secondTimer: NSTimer!
   var timeLeft: Int!
 
-  var scoreLabel: UILabel = UILabel()
+  var scoreLabel: UILabel     = UILabel()
   var gameTimerLabel: UILabel = UILabel()
-  var timeLabel: UILabel = UILabel()
+  var timeLabel: UILabel      = UILabel()
 
   var buttonOne: GameButton!
   var buttonTwo: GameButton!
@@ -44,8 +42,8 @@ class gameViewController: UIViewController {
   let TIME_INTERVAL: NSTimeInterval = 10
   let ADDITIONAL_TIME: NSTimeInterval = 2
 
-  let WIDTH = UIScreen.mainScreen().bounds.width
-  let HEIGHT = UIScreen.mainScreen().bounds.height
+  let WIDTH      = UIScreen.mainScreen().bounds.width
+  let HEIGHT     = UIScreen.mainScreen().bounds.height
   let HALF_WIDTH = UIScreen.mainScreen().bounds.width/2
 
   enum EndGameReason {
