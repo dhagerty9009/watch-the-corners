@@ -2,43 +2,36 @@
 fastlane_version '0.3.0'
 
 before_all do
+  update_fastlane
   ensure_git_status_clean
-
   increment_build_number
-
   xcclean
 end
 
 lane :major do
-  increment_version_number 'major'
-  ipa({
-        workspace: 'Watch The Corners.xcworkspace',
-        configuration: 'Release',
-        scheme: 'Watch The Corners',
-        clean: true,
-        destination: './build/ipa',
-        ipa: 'WatchTheCorners.ipa'
-      })
-  sigh
-  deliver :skip_deploy, :force
+  increment_version_number(
+    bump_type: 'major'
+  )
+  commit_version_bump
 end
 
 lane :minor do
-  increment_version_number 'minor'
-  ipa({
-        workspace: 'Watch The Corners.xcworkspace',
-        configuration: 'Release',
-        scheme: 'Watch The Corners',
-        clean: true,
-        destination: './build/ipa',
-        ipa: 'WatchTheCorners.ipa'
-      })
-  sigh
-  deliver :skip_deploy, :force
+  increment_version_number(
+    bump_type: 'minor'
+  )
+  commit_version_bump
 end
 
 lane :patch do
   increment_version_number
+  commit_version_bump
+end
+
+lane :deploy do
+  add_git_tag(
+    grouping: 'releases',
+    prefix: 'v'
+  )
   ipa({
         workspace: 'Watch The Corners.xcworkspace',
         configuration: 'Release',
@@ -53,20 +46,17 @@ end
 
 after_all do |lane|
   clean_build_artifacts
-  commit_version_bump(
-    message: "New #{lane} version built and submitted."
+  slack(
+    message: "Deployed a #{lane} update for Watch The Corners.",
+    success: true
   )
-  slack({
-          message: "Deployed a #{lane} update for Watch The Corners.",
-          success: true
-        })
   notify "Finished running #{lane}!"
 end
 
 error do |lane, exception|
-  slack({
-          message: "Error deploying a #{lane} update for Watch the Corners, caused by #{exception}",
-          success: false
-        })
+  slack(
+    message: "Error deploying a #{lane} update for Watch the Corners, caused by #{exception}",
+    success: false
+  )
   notify "Error running #{lane}."
 end

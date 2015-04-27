@@ -72,6 +72,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>watchcorners</string>
 				<string>fb446211812218912</string>
 			</array>
 		</dict>

@@ -34,6 +34,7 @@
 		63A1F2D01AEE8B5D008AA07B /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63A1F2CE1AEE8B5D008AA07B /* TwitterKitResources.bundle */; };
 		63A1F2D21AEE8E75008AA07B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */; };
 		63A1F2D41AEE8E7F008AA07B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */; };
+		63A1F2D71AEEABB7008AA07B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2D61AEEABB7008AA07B /* FBSDKLoginKit.framework */; };
 		63A2F5531AE8013500EB8C33 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2F5521AE8013500EB8C33 /* GameButton.swift */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
@@ -111,6 +112,7 @@
 		63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		63A1F2D51AEE91DF008AA07B /* FacebookBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookBridge.h; sourceTree = "<group>"; };
+		63A1F2D61AEEABB7008AA07B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		63A2F5521AE8013500EB8C33 /* GameButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				63A1F2C21AEE8713008AA07B /* Crashlytics.framework in Frameworks */,
 				63A1F2D41AEE8E7F008AA07B /* FBSDKCoreKit.framework in Frameworks */,
 				633C0F091AC30C3500788930 /* iAd.framework in Frameworks */,
+				63A1F2D71AEEABB7008AA07B /* FBSDKLoginKit.framework in Frameworks */,
 				63A1F2C31AEE8713008AA07B /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +185,7 @@
 				63A1F2CE1AEE8B5D008AA07B /* TwitterKitResources.bundle */,
 				63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */,
 				63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */,
+				63A1F2D61AEEABB7008AA07B /* FBSDKLoginKit.framework */,
 				63A1F2D51AEE91DF008AA07B /* FacebookBridge.h */,
 				631496F21A8E98C60015CAD0 /* AppDelegate.swift */,
 				6332742B1AC05B35007056D0 /* GameBoard.swift */,

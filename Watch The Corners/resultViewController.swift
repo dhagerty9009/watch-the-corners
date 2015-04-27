@@ -9,6 +9,7 @@
 import UIKit
 import iAd
 import Social
+import TwitterKit
 
 class resultViewController: UIViewController {
 
@@ -33,7 +34,7 @@ class resultViewController: UIViewController {
   let FACEBOOK_TEXT = "I scored big in Watch the Corners! Try and beat me!"
   let TWITTER_TEXT  = "I scored big in @WatchCornerGame! Try and beat me!"
 
-  let APP_URL: NSURL = NSURL(string: "https://itunes.apple.com/us/app/watch-the-corners/id978732428?ls=1&mt=8")!
+  let APP_URL: NSURL = NSURL(string: "https://fb.me/447414902098603")!
 
   var scoresAsText = ""
   var numberOfScores = 0
@@ -55,8 +56,6 @@ class resultViewController: UIViewController {
   var facebookFrame: CGRect!
 
   var button: UIButton        = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-  var facebookShare: UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-  var twitterShare: UIButton  = UIButton.buttonWithType(UIButtonType.System) as! UIButton
 
   func backToGame() {
     storage.synchronize()
@@ -69,9 +68,9 @@ class resultViewController: UIViewController {
     gameScoreFrame     = CGRectMake(0, WIDTH/2, WIDTH, 160)
     highScoreFrame     = CGRectMake(0, HEIGHT/2 + 30, WIDTH, 50)
     highScoreTextFrame = CGRectMake(0, HEIGHT/2 + 90, WIDTH, 30)
-    buttonFrame        = CGRectMake(75, HEIGHT*2/3 + 65, WIDTH - 80, 70)
-    twitterFrame       = CGRectMake(5, HEIGHT*2/3 + 65, 70, 70)
-    facebookFrame      = CGRectMake(WIDTH - 75, HEIGHT*2/3 + 65, 70, 70)
+    buttonFrame        = CGRectMake(80, HEIGHT*2/3 + 65, WIDTH - 160, 70)
+    twitterFrame       = CGRectMake(WIDTH - 75, HEIGHT*2/3 + 65, 70, 70)
+    facebookFrame      = CGRectMake(5, HEIGHT*2/3 + 65, 70, 70)
   }
 
   func displayScores() {
@@ -160,6 +159,8 @@ class resultViewController: UIViewController {
     button.frame = buttonFrame
     button.setTitle("Play Again", forState: UIControlState.Normal)
     button.setTitleColor(DARK_GRAY, forState: UIControlState.Normal)
+    button.titleLabel?.adjustsFontSizeToFitWidth = true
+    button.titleLabel?.center
     button.layer.cornerRadius = 10
     button.backgroundColor = GREEN
     button.titleLabel?.font = buttonFont
@@ -167,8 +168,16 @@ class resultViewController: UIViewController {
     button.addTarget(self, action: Selector("backToGame"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(button)
 
+    var content = FBSDKShareLinkContent()
+    content.contentURL = APP_URL
+    content.contentTitle = "I scored big in Watch the Corners!"
+
+    let facebookShare = FBSDKShareButton.init()
     facebookShare.frame = facebookFrame
-    
+    facebookShare.shareContent = content
+
+    self.view.addSubview(facebookShare)
+
   }
 
   func formatHighScores() {
@@ -201,25 +210,6 @@ class resultViewController: UIViewController {
     UIGraphicsEndImageContext()
     return screenshot
   }
-
-  func shareOnFacebook() {
-    if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-      var composeSheet = SLComposeViewController.init(forServiceType: SLServiceTypeFacebook)
-      composeSheet.addImage(saveScreenshot(view))
-      composeSheet.setInitialText(FACEBOOK_TEXT)
-      composeSheet.addURL(APP_URL)
-    }
-  }
-
-  func shareOnTwitter() {
-    if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
-      var composeSheet = SLComposeViewController.init(forServiceType: SLServiceTypeTwitter)
-      composeSheet.addImage(saveScreenshot(view))
-      composeSheet.setInitialText(TWITTER_TEXT)
-      composeSheet.addURL(APP_URL)
-    }
-  }
-
 
   override func viewDidLoad() {
     super.viewDidLoad()
