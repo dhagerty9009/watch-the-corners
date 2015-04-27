@@ -24,6 +24,31 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>9</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>aa67a683a3ead2c663bf5e75bedd51297acd1957</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>consumerKey</key>
+					<string>lGnBWo81fSLMB3o24qy7zEtd4</string>
+					<key>consumerSecret</key>
+					<string>KGmaK8xgY60t4XnJhzA6o834qKU19EYu7ReKwxoAy8xYIQcsdv</string>
+				</dict>
+				<key>KitName</key>
+				<string>Twitter</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -37,6 +62,19 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>FacebookAppID</key>
+	<string>446211812218912</string>
+	<key>FacebookDisplayName</key>
+	<string>Watch The Corners</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb446211812218912</string>
+			</array>
+		</dict>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

@@ -28,6 +28,12 @@
 		633C0F0B1AC31DEE00788930 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C0F0A1AC31DEE00788930 /* Score.swift */; };
 		6372003B1ACF14CC00BCE5C0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372003A1ACF14CC00BCE5C0 /* Score.swift */; };
 		63725C181ADC3C85003382CC /* scoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63725C171ADC3C85003382CC /* scoresViewController.swift */; };
+		63A1F2C21AEE8713008AA07B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2C01AEE8713008AA07B /* Crashlytics.framework */; };
+		63A1F2C31AEE8713008AA07B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2C11AEE8713008AA07B /* Fabric.framework */; };
+		63A1F2CF1AEE8B5D008AA07B /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2CD1AEE8B5D008AA07B /* TwitterKit.framework */; };
+		63A1F2D01AEE8B5D008AA07B /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63A1F2CE1AEE8B5D008AA07B /* TwitterKitResources.bundle */; };
+		63A1F2D21AEE8E75008AA07B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */; };
+		63A1F2D41AEE8E7F008AA07B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */; };
 		63A2F5531AE8013500EB8C33 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2F5521AE8013500EB8C33 /* GameButton.swift */; };
 		63AA28C11AA4D40F005E869A /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C01AA4D40F005E869A /* mainController.swift */; };
 		63AA28C31AA4E4C0005E869A /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA28C21AA4E4C0005E869A /* GameBoard.swift */; };
@@ -98,6 +104,13 @@
 		633C0F0A1AC31DEE00788930 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		6372003A1ACF14CC00BCE5C0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		63725C171ADC3C85003382CC /* scoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scoresViewController.swift; sourceTree = "<group>"; };
+		63A1F2C01AEE8713008AA07B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		63A1F2C11AEE8713008AA07B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		63A1F2CD1AEE8B5D008AA07B /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
+		63A1F2CE1AEE8B5D008AA07B /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
+		63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		63A1F2D51AEE91DF008AA07B /* FacebookBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookBridge.h; sourceTree = "<group>"; };
 		63A2F5521AE8013500EB8C33 /* GameButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 		63AA28C01AA4D40F005E869A /* mainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		63AA28C21AA4E4C0005E869A /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
@@ -110,7 +123,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E493C31AEAC1F00057EF2E /* Social.framework in Frameworks */,
+				63A1F2CF1AEE8B5D008AA07B /* TwitterKit.framework in Frameworks */,
+				63A1F2D21AEE8E75008AA07B /* FBSDKShareKit.framework in Frameworks */,
+				63A1F2C21AEE8713008AA07B /* Crashlytics.framework in Frameworks */,
+				63A1F2D41AEE8E7F008AA07B /* FBSDKCoreKit.framework in Frameworks */,
 				633C0F091AC30C3500788930 /* iAd.framework in Frameworks */,
+				63A1F2C31AEE8713008AA07B /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,14 +176,21 @@
 		631496EF1A8E98C60015CAD0 /* Watch The Corners */ = {
 			isa = PBXGroup;
 			children = (
+				63A1F2C01AEE8713008AA07B /* Crashlytics.framework */,
+				63A1F2C11AEE8713008AA07B /* Fabric.framework */,
+				63A1F2CD1AEE8B5D008AA07B /* TwitterKit.framework */,
+				63A1F2CE1AEE8B5D008AA07B /* TwitterKitResources.bundle */,
+				63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */,
+				63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */,
+				63A1F2D51AEE91DF008AA07B /* FacebookBridge.h */,
 				631496F21A8E98C60015CAD0 /* AppDelegate.swift */,
 				6332742B1AC05B35007056D0 /* GameBoard.swift */,
 				63A2F5521AE8013500EB8C33 /* GameButton.swift */,
 				633C0F0A1AC31DEE00788930 /* Score.swift */,
 				631496F41A8E98C60015CAD0 /* ViewController.swift */,
+				632033601ADC2BFF0034F4CF /* rulesViewController.swift */,
 				6332742D1AC05B99007056D0 /* gameViewController.swift */,
 				6332742F1AC0A25C007056D0 /* resultViewController.swift */,
-				632033601ADC2BFF0034F4CF /* rulesViewController.swift */,
 				63725C171ADC3C85003382CC /* scoresViewController.swift */,
 				631496F61A8E98C60015CAD0 /* Main.storyboard */,
 				631496F91A8E98C60015CAD0 /* MainImages.xcassets */,
@@ -249,6 +274,8 @@
 				631496EA1A8E98C60015CAD0 /* Frameworks */,
 				631496EB1A8E98C60015CAD0 /* Resources */,
 				631497351A8E98F60015CAD0 /* Embed App Extensions */,
+				63A1F2BF1AEE86DF008AA07B /* ShellScript */,
+				63A1F2C41AEE87DE008AA07B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -370,6 +397,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A1F2D01AEE8B5D008AA07B /* TwitterKitResources.bundle in Resources */,
 				632FA49F1AD2F0500001A109 /* MainImages.xcassets in Resources */,
 				631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */,
 				631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */,
@@ -402,6 +430,35 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63A1F2BF1AEE86DF008AA07B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run aa67a683a3ead2c663bf5e75bedd51297acd1957 68be87fda61d299be7dab451bee972012e4f19130abe0cf82edfe62135f6ebc7";
+		};
+		63A1F2C41AEE87DE008AA07B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run aa67a683a3ead2c663bf5e75bedd51297acd1957 68be87fda61d299be7dab451bee972012e4f19130abe0cf82edfe62135f6ebc7";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		631496E91A8E98C60015CAD0 /* Sources */ = {
@@ -580,11 +637,17 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 6;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/david/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Watch The Corners/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/FacebookBridge.h";
 				SYMROOT = build;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -600,11 +663,17 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 6;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/david/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Watch The Corners/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/FacebookBridge.h";
 				SYMROOT = build;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
