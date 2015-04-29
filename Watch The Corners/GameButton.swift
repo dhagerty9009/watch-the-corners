@@ -8,13 +8,6 @@
 
 import UIKit
 
-enum GameButtonPosition {
-  case TopLeftPosition
-  case TopRightPosition
-  case BottomLeftPosition
-  case BottonRightPosition
-}
-
 class GameButton: UIButton {
 
   let WHITE: UIColor      = UIColor.init(red: 0.94, green: 0.94, blue: 0.94, alpha: 1)

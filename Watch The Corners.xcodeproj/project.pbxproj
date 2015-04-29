@@ -28,6 +28,8 @@
 		633C0F0B1AC31DEE00788930 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C0F0A1AC31DEE00788930 /* Score.swift */; };
 		635851071AF12C90001D1997 /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635851061AF12C90001D1997 /* GCHelper.swift */; };
 		635851091AF1374A001D1997 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635851081AF1374A001D1997 /* GameKit.framework */; };
+		6358510C1AF15668001D1997 /* blip2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6358510A1AF15668001D1997 /* blip2.wav */; };
+		6358510D1AF15668001D1997 /* endgame.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6358510B1AF15668001D1997 /* endgame.wav */; };
 		6372003B1ACF14CC00BCE5C0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372003A1ACF14CC00BCE5C0 /* Score.swift */; };
 		63725C181ADC3C85003382CC /* scoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63725C171ADC3C85003382CC /* scoresViewController.swift */; };
 		63A1F2C21AEE8713008AA07B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2C01AEE8713008AA07B /* Crashlytics.framework */; };
@@ -107,6 +109,8 @@
 		633C0F0A1AC31DEE00788930 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		635851061AF12C90001D1997 /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
 		635851081AF1374A001D1997 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		6358510A1AF15668001D1997 /* blip2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blip2.wav; sourceTree = "<group>"; };
+		6358510B1AF15668001D1997 /* endgame.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = endgame.wav; sourceTree = "<group>"; };
 		6372003A1ACF14CC00BCE5C0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		63725C171ADC3C85003382CC /* scoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scoresViewController.swift; sourceTree = "<group>"; };
 		63A1F2C01AEE8713008AA07B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
@@ -214,6 +218,8 @@
 		631496F01A8E98C60015CAD0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6358510A1AF15668001D1997 /* blip2.wav */,
+				6358510B1AF15668001D1997 /* endgame.wav */,
 				631496F11A8E98C60015CAD0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -408,10 +414,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6358510D1AF15668001D1997 /* endgame.wav in Resources */,
 				63A1F2D01AEE8B5D008AA07B /* TwitterKitResources.bundle in Resources */,
 				632FA49F1AD2F0500001A109 /* MainImages.xcassets in Resources */,
 				631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */,
 				631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */,
+				6358510C1AF15668001D1997 /* blip2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

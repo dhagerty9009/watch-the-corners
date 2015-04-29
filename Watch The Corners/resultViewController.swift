@@ -23,7 +23,6 @@ class resultViewController: UIViewController {
   let DARK_GRAY: UIColor    = UIColor.init(red: 0.18, green: 0.19, blue: 0.2, alpha: 1)
   let LIGHT_GRAY: UIColor   = UIColor.lightGrayColor()
   let RED : UIColor         = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
-  let TWITTER_BLUE: UIColor = UIColor.init(red: 0.333, green: 0.675, blue: 0.933, alpha: 1)
 
   let WIDTH  = UIScreen.mainScreen().bounds.width
   let HEIGHT = UIScreen.mainScreen().bounds.height
@@ -188,9 +187,10 @@ class resultViewController: UIViewController {
     // The button that shares to Twitter
     let twitterShare             = UIButton.buttonWithType(.Custom) as! UIButton
     twitterShare.frame           = twitterFrame
-    //twitterShare.backgroundColor = TWITTER_BLUE
 
     twitterShare.setImage(UIImage(named: "twitter-logo-white"), forState: UIControlState.Normal)
+
+    twitterShare.layer.cornerRadius = 5
     twitterShare.addTarget(self, action: Selector("shareToTwitter"), forControlEvents: .TouchUpInside)
     self.view.addSubview(twitterShare)
   }
