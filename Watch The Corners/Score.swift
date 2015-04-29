@@ -24,19 +24,25 @@ class Score {
   var currentScore: Int!
   var mostRecentScore: Int!
   var highScores = [0, 0, 0, 0, 0]
+  var duplicateScore = false
 
   func addScoreToHighScores(score: Int) {
-    for (index, storedScore) in enumerate(highScores) {
-      if score > storedScore {
-        var saved = storedScore
-        highScores.removeAtIndex(index)
-        highScores.insert(score, atIndex: index)
-        if index + 1 != 5 {
-          highScores.insert(saved, atIndex: index + 1)
+    mostRecentScore = highScores[0]
+    if currentScore != mostRecentScore {
+      for (index, storedScore) in enumerate(highScores) {
+        if score > storedScore {
+          var saved = storedScore
+          highScores.removeAtIndex(index)
+          highScores.insert(score, atIndex: index)
+          if index + 1 != 5 {
+            highScores.insert(saved, atIndex: index + 1)
+          }
+          highScores.removeLast()
+          break
         }
-        highScores.removeLast()
-        break
       }
+    } else if currentScore == mostRecentScore {
+      duplicateScore = true
     }
   }
 
@@ -47,5 +53,11 @@ class Score {
       return false
     }
   }
+
+  func reportToGameCenter() {
+    GCHelper.reportLeaderboardIdentifier("mainLeaderboard", score: currentScore)
+  }
+
+
 }
 

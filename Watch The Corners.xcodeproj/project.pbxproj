@@ -26,6 +26,8 @@
 		63334F3D1AA78437004C86BA /* resultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63334F3C1AA78437004C86BA /* resultController.swift */; };
 		633C0F091AC30C3500788930 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C0F081AC30C3500788930 /* iAd.framework */; };
 		633C0F0B1AC31DEE00788930 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C0F0A1AC31DEE00788930 /* Score.swift */; };
+		635851071AF12C90001D1997 /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635851061AF12C90001D1997 /* GCHelper.swift */; };
+		635851091AF1374A001D1997 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635851081AF1374A001D1997 /* GameKit.framework */; };
 		6372003B1ACF14CC00BCE5C0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372003A1ACF14CC00BCE5C0 /* Score.swift */; };
 		63725C181ADC3C85003382CC /* scoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63725C171ADC3C85003382CC /* scoresViewController.swift */; };
 		63A1F2C21AEE8713008AA07B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2C01AEE8713008AA07B /* Crashlytics.framework */; };
@@ -103,6 +105,8 @@
 		63334F3C1AA78437004C86BA /* resultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultController.swift; sourceTree = "<group>"; };
 		633C0F081AC30C3500788930 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		633C0F0A1AC31DEE00788930 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		635851061AF12C90001D1997 /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
+		635851081AF1374A001D1997 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		6372003A1ACF14CC00BCE5C0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		63725C171ADC3C85003382CC /* scoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scoresViewController.swift; sourceTree = "<group>"; };
 		63A1F2C01AEE8713008AA07B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
@@ -124,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635851091AF1374A001D1997 /* GameKit.framework in Frameworks */,
 				63E493C31AEAC1F00057EF2E /* Social.framework in Frameworks */,
 				63A1F2CF1AEE8B5D008AA07B /* TwitterKit.framework in Frameworks */,
 				63A1F2D21AEE8E75008AA07B /* FBSDKShareKit.framework in Frameworks */,
@@ -155,6 +160,7 @@
 		631496E41A8E98C60015CAD0 = {
 			isa = PBXGroup;
 			children = (
+				635851081AF1374A001D1997 /* GameKit.framework */,
 				63E493C21AEAC1F00057EF2E /* Social.framework */,
 				633C0F081AC30C3500788930 /* iAd.framework */,
 				631496EF1A8E98C60015CAD0 /* Watch The Corners */,
@@ -188,6 +194,7 @@
 				63A1F2D61AEEABB7008AA07B /* FBSDKLoginKit.framework */,
 				63A1F2D51AEE91DF008AA07B /* FacebookBridge.h */,
 				631496F21A8E98C60015CAD0 /* AppDelegate.swift */,
+				635851061AF12C90001D1997 /* GCHelper.swift */,
 				6332742B1AC05B35007056D0 /* GameBoard.swift */,
 				63A2F5521AE8013500EB8C33 /* GameButton.swift */,
 				633C0F0A1AC31DEE00788930 /* Score.swift */,
@@ -356,7 +363,7 @@
 						DevelopmentTeam = AFFQEB7V6T;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -474,6 +481,7 @@
 				6332742C1AC05B35007056D0 /* GameBoard.swift in Sources */,
 				63725C181ADC3C85003382CC /* scoresViewController.swift in Sources */,
 				631496F51A8E98C60015CAD0 /* ViewController.swift in Sources */,
+				635851071AF12C90001D1997 /* GCHelper.swift in Sources */,
 				631496F31A8E98C60015CAD0 /* AppDelegate.swift in Sources */,
 				633C0F0B1AC31DEE00788930 /* Score.swift in Sources */,
 				63A2F5531AE8013500EB8C33 /* GameButton.swift in Sources */,
