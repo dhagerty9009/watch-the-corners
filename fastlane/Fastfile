@@ -41,7 +41,44 @@ lane :deploy do
         ipa: 'WatchTheCorners.ipa'
       })
   sigh
-  deliver :skip_deploy, :force
+  deliver(
+    skip_deploy: true,
+    force: true
+  )
+end
+
+lane :crashlytics do
+  ipa({
+        workspace: 'Watch The Corners.xcworkspace',
+        configuration: 'Release',
+        scheme: 'Watch The Corners',
+        clean: true,
+        destination: './build/ipa',
+        ipa: 'WatchTheCorners.ipa'
+      })
+  sigh
+  crashlytics({
+                crashlytics_path: './Crashlytics.framework',
+                api_token: '...',
+                build_secret: '...',
+                ipa_path: './app.ipa'
+              })
+end
+
+lane :testflight do
+  ipa({
+        workspace: 'Watch The Corners.xcworkspace',
+        configuration: 'Release',
+        scheme: 'Watch The Corners',
+        clean: true,
+        destination: './build/ipa',
+        ipa: 'WatchTheCorners.ipa'
+      })
+  sigh
+  deliver(
+    beta: true,
+    force: true
+  )
 end
 
 after_all do |lane|
