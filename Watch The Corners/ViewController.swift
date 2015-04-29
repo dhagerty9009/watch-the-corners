@@ -35,5 +35,8 @@ class ViewController: UIViewController {
     showViewController(rulesViewController(), sender: self)
   }
 
+  @IBAction func goToGameCenter(sender: UIButton) {
+    GCHelper.showGameCenter(self, viewState: .Leaderboards)
+  }
 }
 

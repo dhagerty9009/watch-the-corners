@@ -33,11 +33,11 @@ class resultViewController: UIViewController {
   let scoreListFont = UIFont.systemFontOfSize(40)
 
   let FACEBOOK_TEXT = "I scored big in Watch the Corners! Try and beat me!"
-  let TWITTER_TEXT  = "I scored big in @WatchCornerGame! Try and beat me!"
+  let TWITTER_TEXT  = "I scored big in @WatchCornersApp! Try and beat me!"
 
   let APP_URL: NSURL = NSURL(string: "https://fb.me/447414902098603")!
 
-  var scoresAsText = ""
+  var scoresAsText   = ""
   var numberOfScores = 0
 
   var highScore: Int!
@@ -217,7 +217,7 @@ class resultViewController: UIViewController {
   }
 
   func saveScreenshot(view: UIView) -> UIImage {
-    var frame: CGRect         = UIScreen.mainScreen().bounds
+    var frame: CGRect         = CGRectMake(0, 0, WIDTH, (WIDTH/2) + 162)
     UIGraphicsBeginImageContext(frame.size)
     let context: CGContextRef = UIGraphicsGetCurrentContext()
     view.layer.renderInContext(context)
@@ -254,9 +254,9 @@ class resultViewController: UIViewController {
     score.addScoreToHighScores(score.currentScore)
     saveDefaults()
 
-    self.canDisplayBannerAds  = true
     self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic
-    self.view.backgroundColor = WHITE
+    self.canDisplayBannerAds            = true
+    self.view.backgroundColor           = WHITE
 
     makeFrames()
     formatHighScores()

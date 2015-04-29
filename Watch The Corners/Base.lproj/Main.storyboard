@@ -64,6 +64,17 @@
                                     <action selector="goToHighScores:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jD2-a8-Amh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="On9-Ro-oBO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <state key="normal" title="Game Center">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToGameCenter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycX-iR-5PA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -71,6 +82,7 @@
                             <constraint firstAttribute="centerX" secondItem="wp7-il-cbs" secondAttribute="centerX" constant="-0.5" id="3tl-jX-Yll"/>
                             <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="height" multiplier="5:3" id="5Mu-u6-Ze6"/>
                             <constraint firstAttribute="centerX" secondItem="A9s-3T-VJr" secondAttribute="centerX" id="7L3-5n-PtW"/>
+                            <constraint firstAttribute="centerX" secondItem="On9-Ro-oBO" secondAttribute="centerX" constant="2.5" id="9hx-dT-dk9"/>
                             <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-51" id="9zR-k7-Ca2"/>
                             <constraint firstItem="jKe-of-oxf" firstAttribute="top" secondItem="wp7-il-cbs" secondAttribute="bottom" constant="8" id="CiJ-kf-Y3J"/>
                             <constraint firstAttribute="centerY" secondItem="jKe-of-oxf" secondAttribute="centerY" constant="-142.5" id="H1s-F1-nrc"/>
@@ -88,6 +100,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A9s-3T-VJr" secondAttribute="bottom" constant="532" id="lzE-t5-KfH"/>
                             <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-82" id="rda-sx-dh7"/>
                             <constraint firstAttribute="width" secondItem="A9s-3T-VJr" secondAttribute="width" id="riF-IK-3IS"/>
+                            <constraint firstItem="On9-Ro-oBO" firstAttribute="top" secondItem="jKe-of-oxf" secondAttribute="bottom" constant="8" id="swx-rr-rN2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUs-4K-32U" secondAttribute="bottom" constant="8" id="tqu-h6-oMx"/>
                             <constraint firstItem="A9s-3T-VJr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="wTB-Kw-4U6"/>
                             <constraint firstAttribute="centerY" secondItem="wp7-il-cbs" secondAttribute="centerY" constant="-51" id="yDj-R1-5K6"/>
@@ -99,15 +112,9 @@
                                 <exclude reference="A9s-3T-VJr"/>
                                 <exclude reference="im5-Rq-6aU"/>
                                 <exclude reference="jKe-of-oxf"/>
+                                <exclude reference="On9-Ro-oBO"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="lkT-nf-lNe"/>
-                                <exclude reference="XMe-Md-PyX"/>
-                                <exclude reference="bfI-Ld-M5c"/>
-                                <exclude reference="CiJ-kf-Y3J"/>
-                                <exclude reference="H1s-F1-nrc"/>
-                                <exclude reference="Tte-3a-LH5"/>
-                                <exclude reference="zVP-Af-1gh"/>
                                 <exclude reference="5Mu-u6-Ze6"/>
                                 <exclude reference="7L3-5n-PtW"/>
                                 <exclude reference="W3c-LK-D5g"/>
@@ -116,6 +123,8 @@
                                 <exclude reference="daw-5h-F24"/>
                                 <exclude reference="riF-IK-3IS"/>
                                 <exclude reference="wTB-Kw-4U6"/>
+                                <exclude reference="XMe-Md-PyX"/>
+                                <exclude reference="bfI-Ld-M5c"/>
                                 <exclude reference="2PT-QZ-dlP"/>
                                 <exclude reference="3tl-jX-Yll"/>
                                 <exclude reference="9zR-k7-Ca2"/>
@@ -123,6 +132,13 @@
                                 <exclude reference="kNk-40-sKw"/>
                                 <exclude reference="rda-sx-dh7"/>
                                 <exclude reference="yDj-R1-5K6"/>
+                                <exclude reference="CiJ-kf-Y3J"/>
+                                <exclude reference="H1s-F1-nrc"/>
+                                <exclude reference="Tte-3a-LH5"/>
+                                <exclude reference="zVP-Af-1gh"/>
+                                <exclude reference="9hx-dT-dk9"/>
+                                <exclude reference="swx-rr-rN2"/>
+                                <exclude reference="lkT-nf-lNe"/>
                                 <exclude reference="eth-AM-r00"/>
                                 <exclude reference="lzE-t5-KfH"/>
                                 <exclude reference="tqu-h6-oMx"/>
@@ -134,15 +150,9 @@
                                 <include reference="A9s-3T-VJr"/>
                                 <include reference="im5-Rq-6aU"/>
                                 <include reference="jKe-of-oxf"/>
+                                <include reference="On9-Ro-oBO"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="lkT-nf-lNe"/>
-                                <include reference="XMe-Md-PyX"/>
-                                <include reference="bfI-Ld-M5c"/>
-                                <include reference="CiJ-kf-Y3J"/>
-                                <exclude reference="H1s-F1-nrc"/>
-                                <include reference="Tte-3a-LH5"/>
-                                <exclude reference="zVP-Af-1gh"/>
                                 <exclude reference="5Mu-u6-Ze6"/>
                                 <include reference="7L3-5n-PtW"/>
                                 <include reference="W3c-LK-D5g"/>
@@ -151,6 +161,8 @@
                                 <exclude reference="daw-5h-F24"/>
                                 <include reference="riF-IK-3IS"/>
                                 <exclude reference="wTB-Kw-4U6"/>
+                                <include reference="XMe-Md-PyX"/>
+                                <include reference="bfI-Ld-M5c"/>
                                 <include reference="2PT-QZ-dlP"/>
                                 <include reference="3tl-jX-Yll"/>
                                 <exclude reference="9zR-k7-Ca2"/>
@@ -158,6 +170,13 @@
                                 <exclude reference="kNk-40-sKw"/>
                                 <exclude reference="rda-sx-dh7"/>
                                 <exclude reference="yDj-R1-5K6"/>
+                                <include reference="CiJ-kf-Y3J"/>
+                                <exclude reference="H1s-F1-nrc"/>
+                                <include reference="Tte-3a-LH5"/>
+                                <exclude reference="zVP-Af-1gh"/>
+                                <include reference="9hx-dT-dk9"/>
+                                <include reference="swx-rr-rN2"/>
+                                <include reference="lkT-nf-lNe"/>
                                 <exclude reference="eth-AM-r00"/>
                                 <exclude reference="lzE-t5-KfH"/>
                                 <include reference="tqu-h6-oMx"/>
