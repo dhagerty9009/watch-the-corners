@@ -15,6 +15,12 @@ lane :major do
   commit_version_bump
 end
 
+lane :v2 do
+  increment_version_number(
+    version_number: '2.0.0'
+  )
+end
+
 lane :minor do
   increment_version_number(
     bump_type: 'minor'
