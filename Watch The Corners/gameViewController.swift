@@ -49,6 +49,8 @@ class gameViewController: UIViewController {
   let TIME_INTERVAL: NSTimeInterval = 10
   let ADDITIONAL_TIME: NSTimeInterval = 2
 
+  let GOAL: Int = 8
+
   let WIDTH      = UIScreen.mainScreen().bounds.width
   let HEIGHT     = UIScreen.mainScreen().bounds.height
   let HALF_WIDTH = UIScreen.mainScreen().bounds.width/2
@@ -123,7 +125,7 @@ class gameViewController: UIViewController {
     if button == active {
       buttonPlayer.play()
       score.currentScore = score.currentScore + 1
-      if score.currentScore % 10 == 0 {
+      if score.currentScore % GOAL == 0 {
         timeLabel.text = "+2"
         timeLeft       = timeLeft + Int(ADDITIONAL_TIME)
         invalidateTimers()

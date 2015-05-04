@@ -21,3 +21,10 @@ ipa do
     system("say 'Successfully deployed a new version!'")
   end
 end
+
+beta_ipa do
+  '.build/ipa/WatchTheCorners.ipa'
+  success do
+    system("say 'Deployed a new beta!'")
+  end
+end

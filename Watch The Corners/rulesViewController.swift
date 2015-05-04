@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import QuartzCore
 
 let WHITE: UIColor = UIColor.init(red: 0.94, green: 0.94, blue: 0.94, alpha: 1)
 let BLACK: UIColor = UIColor.blackColor()
@@ -24,21 +23,21 @@ let HALF_HEIGHT = UIScreen.mainScreen().bounds.height/2
 let labelFont = UIFont.boldSystemFontOfSize(25)
 
 class rulesViewController: UIViewController {
-  
+
   var testButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-  
+
   var rulesLabel: UILabel = UILabel()
-  
+
   var scoreRulesLabel: UILabel = UILabel()
-  
+
   var extraTimeLabel: UILabel = UILabel()
-  
+
   func makeButtons() {
     testButton.frame = CGRectMake(WIDTH/4, 30, WIDTH/2, WIDTH/2)
     testButton.backgroundColor = GREEN
     testButton.addTarget(self, action: Selector("testTapped"), forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(testButton)
-    
+
     rulesLabel.frame = CGRectMake(0, HALF_WIDTH + 40, WIDTH, 30)
     rulesLabel.font = labelFont
     rulesLabel.text = "Tap the GREEN button."
@@ -46,16 +45,16 @@ class rulesViewController: UIViewController {
     rulesLabel.textColor = DARK_GRAY
     self.view.addSubview(rulesLabel)
   }
-  
+
   func testTapped() {
     rulesLabel.text = "Good Job!"
     testButton.enabled = false
     testButton.backgroundColor = LIGHT_GRAY
-    
+
     var waitTimer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("scoreRules"), userInfo: nil, repeats: false)
-    
+
   }
-  
+
   func scoreRules() {
     scoreRulesLabel.text = "Try to get as many points as you can in TEN seconds."
     scoreRulesLabel.font = labelFont
@@ -65,10 +64,10 @@ class rulesViewController: UIViewController {
     scoreRulesLabel.numberOfLines = 3
     scoreRulesLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
     self.view.addSubview(scoreRulesLabel)
-    
+
     var waitTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("extraTimeRules"), userInfo: nil, repeats: false)
   }
-  
+
   func extraTimeRules() {
     extraTimeLabel.text = "Every TEN points, you get TWO extra seconds."
     extraTimeLabel.font = labelFont
@@ -78,10 +77,10 @@ class rulesViewController: UIViewController {
     extraTimeLabel.numberOfLines = 3
     extraTimeLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
     self.view.addSubview(extraTimeLabel)
-    
+
     var waitTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("playGame"), userInfo: nil, repeats: false)
   }
-  
+
   func playGame() {
     rulesLabel.text = "Tap the button to play."
     rulesLabel.textColor = RED
@@ -89,15 +88,15 @@ class rulesViewController: UIViewController {
     testButton.enabled = true
     testButton.addTarget(self, action: Selector("goToGame"), forControlEvents: UIControlEvents.TouchUpInside)
   }
-  
+
   func goToGame() {
     showViewController(gameViewController(), sender: self)
   }
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.view.backgroundColor = WHITE
     makeButtons()
-    
+
   }
 }

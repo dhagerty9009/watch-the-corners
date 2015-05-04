@@ -55,7 +55,7 @@ class Score {
   }
 
   func reportToGameCenter() {
-    GCHelper.reportLeaderboardIdentifier("mainLeaderboard", score: currentScore)
+    GCHelper.reportLeaderboardIdentifier("1", score: currentScore)
   }
 
 

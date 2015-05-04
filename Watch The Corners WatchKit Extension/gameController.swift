@@ -22,6 +22,9 @@ class gameController: WKInterfaceController {
   // Time Constants
   let TIME_INTERVAL: NSTimeInterval = 10
   let ONE_SECOND: NSTimeInterval = 1
+  let ADDITIONAL_TIME: NSTimeInterval = 3
+
+  let GOAL: Int = 5
 
   // Game data
   let score = Score.sharedInstance
@@ -70,8 +73,8 @@ class gameController: WKInterfaceController {
     var active = board.activeButton
     if button == active {
       score.currentScore = score.currentScore + 1
-      if score.currentScore % 10 == 0 {
-        gameTimeLeft = gameTimeLeft + Int(TIME_INTERVAL)
+      if score.currentScore % GOAL == 0 {
+        gameTimeLeft = gameTimeLeft + Int(ADDITIONAL_TIME)
         secondTimer.invalidate()
         minuteTimer.invalidate()
         setTimer()

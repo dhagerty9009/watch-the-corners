@@ -33,7 +33,7 @@ class resultViewController: UIViewController {
   let scoreListFont = UIFont.systemFontOfSize(40)
 
   let FACEBOOK_TEXT = "I scored big in Watch the Corners! Try and beat me!"
-  let TWITTER_TEXT  = "I scored big in @WatchCornersApp! Try and beat me!"
+  let TWITTER_TEXT  = "I scored big in #watchthecorners! Try and beat me!"
 
   let APP_URL: NSURL = NSURL(string: "https://fb.me/447414902098603")!
 
