@@ -9,8 +9,6 @@
 import UIKit
 import iAd
 import Social
-import Fabric
-import TwitterKit
 
 class resultViewController: UIViewController {
 
@@ -35,7 +33,8 @@ class resultViewController: UIViewController {
   let FACEBOOK_TEXT = "I scored big in Watch the Corners! Try and beat me!"
   let TWITTER_TEXT  = "I scored big in #watchthecorners! Try and beat me!"
 
-  let APP_URL: NSURL = NSURL(string: "https://fb.me/447414902098603")!
+  let TWITTER_APP_URL: NSURL = NSURL(string: "https://itunes.apple.com/app/apple-store/id978732428?pt=96139182&ct=Twitter&mt=8")!
+  let FACEBOOK_APP_URL: NSURL = NSURL(string: "https://itunes.apple.com/app/apple-store/id978732428?pt=96139182&ct=Facebook&mt=8")!
 
   var scoresAsText   = ""
   var numberOfScores = 0
@@ -231,7 +230,7 @@ class resultViewController: UIViewController {
       var sharesheet = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
       sharesheet.setInitialText(FACEBOOK_TEXT)
       sharesheet.addImage(saveScreenshot(view))
-      sharesheet.addURL(APP_URL)
+      sharesheet.addURL(FACEBOOK_APP_URL)
       self.presentViewController(sharesheet, animated: true, completion: nil)
     }
   }
@@ -241,7 +240,7 @@ class resultViewController: UIViewController {
       var sharesheet = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
       sharesheet.setInitialText(TWITTER_TEXT)
       sharesheet.addImage(saveScreenshot(view))
-      sharesheet.addURL(APP_URL)
+      sharesheet.addURL(TWITTER_APP_URL)
       self.presentViewController(sharesheet, animated: true, completion: nil)
     }
   }

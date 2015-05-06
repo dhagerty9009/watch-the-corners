@@ -34,8 +34,6 @@
 		63725C181ADC3C85003382CC /* scoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63725C171ADC3C85003382CC /* scoresViewController.swift */; };
 		63A1F2C21AEE8713008AA07B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2C01AEE8713008AA07B /* Crashlytics.framework */; };
 		63A1F2C31AEE8713008AA07B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2C11AEE8713008AA07B /* Fabric.framework */; };
-		63A1F2CF1AEE8B5D008AA07B /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2CD1AEE8B5D008AA07B /* TwitterKit.framework */; };
-		63A1F2D01AEE8B5D008AA07B /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63A1F2CE1AEE8B5D008AA07B /* TwitterKitResources.bundle */; };
 		63A1F2D21AEE8E75008AA07B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */; };
 		63A1F2D41AEE8E7F008AA07B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */; };
 		63A1F2D71AEEABB7008AA07B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1F2D61AEEABB7008AA07B /* FBSDKLoginKit.framework */; };
@@ -81,6 +79,16 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63A627A41AFA71C400DD831A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -115,8 +123,6 @@
 		63725C171ADC3C85003382CC /* scoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scoresViewController.swift; sourceTree = "<group>"; };
 		63A1F2C01AEE8713008AA07B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		63A1F2C11AEE8713008AA07B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
-		63A1F2CD1AEE8B5D008AA07B /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
-		63A1F2CE1AEE8B5D008AA07B /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
 		63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		63A1F2D51AEE91DF008AA07B /* FacebookBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookBridge.h; sourceTree = "<group>"; };
@@ -134,7 +140,6 @@
 			files = (
 				635851091AF1374A001D1997 /* GameKit.framework in Frameworks */,
 				63E493C31AEAC1F00057EF2E /* Social.framework in Frameworks */,
-				63A1F2CF1AEE8B5D008AA07B /* TwitterKit.framework in Frameworks */,
 				63A1F2D21AEE8E75008AA07B /* FBSDKShareKit.framework in Frameworks */,
 				63A1F2C21AEE8713008AA07B /* Crashlytics.framework in Frameworks */,
 				63A1F2D41AEE8E7F008AA07B /* FBSDKCoreKit.framework in Frameworks */,
@@ -191,8 +196,6 @@
 			children = (
 				63A1F2C01AEE8713008AA07B /* Crashlytics.framework */,
 				63A1F2C11AEE8713008AA07B /* Fabric.framework */,
-				63A1F2CD1AEE8B5D008AA07B /* TwitterKit.framework */,
-				63A1F2CE1AEE8B5D008AA07B /* TwitterKitResources.bundle */,
 				63A1F2D31AEE8E7F008AA07B /* FBSDKCoreKit.framework */,
 				63A1F2D11AEE8E75008AA07B /* FBSDKShareKit.framework */,
 				63A1F2D61AEEABB7008AA07B /* FBSDKLoginKit.framework */,
@@ -291,6 +294,7 @@
 				631496EA1A8E98C60015CAD0 /* Frameworks */,
 				631496EB1A8E98C60015CAD0 /* Resources */,
 				631497351A8E98F60015CAD0 /* Embed App Extensions */,
+				63A627A41AFA71C400DD831A /* Embed Frameworks */,
 				63A1F2BF1AEE86DF008AA07B /* ShellScript */,
 				63A1F2C41AEE87DE008AA07B /* ShellScript */,
 			);
@@ -414,11 +418,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6358510D1AF15668001D1997 /* endgame.wav in Resources */,
-				63A1F2D01AEE8B5D008AA07B /* TwitterKitResources.bundle in Resources */,
 				632FA49F1AD2F0500001A109 /* MainImages.xcassets in Resources */,
 				631496F81A8E98C60015CAD0 /* Main.storyboard in Resources */,
 				631496FD1A8E98C60015CAD0 /* LaunchScreen.xib in Resources */,
+				6358510D1AF15668001D1997 /* endgame.wav in Resources */,
 				6358510C1AF15668001D1997 /* blip2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,7 +659,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 12;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -682,7 +684,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 12;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
