@@ -24,11 +24,13 @@ class Score {
   var currentScore: Int!
   var mostRecentScore: Int!
   var highScores = [0, 0, 0, 0, 0]
-  var duplicateScore = false
+  var duplicateScore: Bool!
 
   func addScoreToHighScores(score: Int) {
     mostRecentScore = highScores[0]
+    println("\(mostRecentScore), \(currentScore)")
     if currentScore != mostRecentScore {
+      duplicateScore = false
       for (index, storedScore) in enumerate(highScores) {
         if score > storedScore {
           var saved = storedScore
@@ -45,6 +47,11 @@ class Score {
       duplicateScore = true
     }
   }
+
+  func getHighScore() -> Int {
+    return highScores[0]
+  }
+
 
   func currentScoreIsHighScore() -> Bool {
     if currentScore == highScores[0] {

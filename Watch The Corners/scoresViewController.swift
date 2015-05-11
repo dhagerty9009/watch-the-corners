@@ -36,15 +36,19 @@ class scoresViewController: UIViewController {
 
   var newScoreText: UILabel    = UILabel()
   var highScoresLabel: UILabel = UILabel()
-  var highScoreText: UILabel   = UILabel()
   var scoreLabel: UILabel      = UILabel()
-
-  var button: UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+  var highScoreText: UIButton  = UIButton.buttonWithType(.System) as! UIButton
+  var button: UIButton         = UIButton.buttonWithType(UIButtonType.System) as! UIButton
 
   func backToGame() {
     storage.synchronize()
     showViewController(gameViewController(), sender: self)
   }
+
+  func goToGameCenter() {
+    GCHelper.showGameCenter(self, viewState: .Leaderboards)
+  }
+
 
   func displayScores() {
     showLogo()
@@ -61,18 +65,21 @@ class scoresViewController: UIViewController {
 
   func highScoreLabels() {
     // high score labels
-    highScoresLabel.frame                     = CGRectMake(0, HEIGHT/2, WIDTH, 50)
+    highScoresLabel.frame                     = CGRectMake(0, HEIGHT/2 + 20, WIDTH, 50)
     highScoresLabel.text                      = scoresAsText + "|"
     highScoresLabel.textAlignment             = NSTextAlignment.Center
     highScoresLabel.textColor                 = DARK_GRAY
     highScoresLabel.font                      = scoreListFont
     highScoresLabel.adjustsFontSizeToFitWidth = true
     // A label to describe the high scores
-    highScoreText.text                        = "High Scores"
-    highScoreText.frame                       = CGRectMake(0, HEIGHT/2 + 50, WIDTH, 30)
-    highScoreText.font                        = UIFont.systemFontOfSize(20)
-    highScoreText.textAlignment               = NSTextAlignment.Center
-    highScoreText.textColor                   = DARK_GRAY
+    highScoreText.frame                     = CGRectMake(0, HEIGHT/2 + 70, WIDTH, 30)
+    highScoreText.titleLabel?.font          = UIFont.systemFontOfSize(20)
+    highScoreText.titleLabel?.textAlignment = NSTextAlignment.Center
+
+    highScoreText.setTitle("High Scores", forState: .Normal)
+    highScoreText.setTitleColor(DARK_GRAY, forState: .Normal)
+    highScoreText.addTarget(self, action: Selector("goToGameCenter"), forControlEvents: .TouchUpInside)
+
     self.view.addSubview(highScoresLabel)
     self.view.addSubview(highScoreText)
   }

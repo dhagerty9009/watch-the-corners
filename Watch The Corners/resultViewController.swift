@@ -23,12 +23,13 @@ class resultViewController: UIViewController {
   let RED : UIColor         = UIColor.init(red: 0.93, green: 0.34, blue: 0.34, alpha: 1)
 
   let WIDTH  = UIScreen.mainScreen().bounds.width
-  let HEIGHT = UIScreen.mainScreen().bounds.height
+  let HEIGHT = UIScreen.mainScreen().bounds.height - 50
 
   let labelFont     = UIFont.boldSystemFontOfSize(30)
   let buttonFont    = UIFont.systemFontOfSize(30)
   let scoreFont     = UIFont.boldSystemFontOfSize(150)
   let scoreListFont = UIFont.systemFontOfSize(40)
+  let highScoreFont = UIFont.boldSystemFontOfSize(30)
 
   let FACEBOOK_TEXT = "I scored big in Watch the Corners! Try and beat me!"
   let TWITTER_TEXT  = "I scored big in #watchthecorners! Try and beat me!"
@@ -41,13 +42,11 @@ class resultViewController: UIViewController {
 
   var highScore: Int!
 
-  var newScoreText: UILabel    = UILabel()
-  var highScoresLabel: UILabel = UILabel()
-  var highScoreText: UILabel   = UILabel()
-  var scoreLabel: UILabel      = UILabel()
+  var newScoreText: UILabel     = UILabel()
+  var scoreLabel: UILabel       = UILabel()
+  var highScoreText: UIButton   = UIButton.buttonWithType(.System) as! UIButton
 
   var gameScoreTextFrame: CGRect!
-  var highScoreFrame:     CGRect!
   var highScoreTextFrame: CGRect!
   var gameScoreFrame:     CGRect!
   var buttonFrame:        CGRect!
@@ -62,12 +61,17 @@ class resultViewController: UIViewController {
     showViewController(gameViewController(), sender: self)
   }
 
+  func goToScores() {
+    storage.synchronize()
+    showViewController(scoresViewController(), sender: self)
+  }
+
+
   func makeFrames() {
     logoFrame          = CGRectMake(10, 30, WIDTH, WIDTH/4)
     gameScoreTextFrame = CGRectMake(0, WIDTH/4 + 30, WIDTH, 60)
     gameScoreFrame     = CGRectMake(0, WIDTH/2, WIDTH, 160)
-    highScoreFrame     = CGRectMake(0, HEIGHT/2 + 30, WIDTH, 50)
-    highScoreTextFrame = CGRectMake(0, HEIGHT/2 + 90, WIDTH, 30)
+    highScoreTextFrame = CGRectMake(0, HEIGHT/2 + 90, WIDTH, 35)
     buttonFrame        = CGRectMake(80, HEIGHT*2/3 + 65, WIDTH - 160, 70)
     twitterFrame       = CGRectMake(WIDTH - 65, HEIGHT*2/3 + 75, 50, 50)
     facebookFrame      = CGRectMake(15, HEIGHT*2/3 + 75, 50, 50)
@@ -91,7 +95,7 @@ class resultViewController: UIViewController {
 
   func scoreLogicHandler() {
 
-    highScore = score.highScores[0]
+    highScore = score.getHighScore()
 
     var topTenPercent    = Int(floor(0.9 * Float(highScore)))
     var bottomTenPercent = Int(floor(0.1 * Float(highScore)))
@@ -110,7 +114,7 @@ class resultViewController: UIViewController {
         newScoreText.textColor = DARK_GRAY
         scoreLabel.textColor   = DARK_GRAY
       } else if (bottomTenPercent >= score.currentScore && score.currentScore > 0) {
-        newScoreText.text      = "Almost, But Not Quite..."
+        newScoreText.text      = "Almost There..."
         newScoreText.textColor = DARK_GRAY
         scoreLabel.textColor   = DARK_GRAY
       } else {
@@ -118,7 +122,7 @@ class resultViewController: UIViewController {
         newScoreText.textColor = LIGHT_GRAY
         scoreLabel.textColor   = LIGHT_GRAY
       }
-    } else if score.duplicateScore {
+    } else if (score.duplicateScore == true) {
       newScoreText.text      = "Better Luck Next Time!"
       newScoreText.textColor = DARK_GRAY
       scoreLabel.textColor   = DARK_GRAY
@@ -127,27 +131,23 @@ class resultViewController: UIViewController {
 
   func gameScoreText() {
     newScoreText.frame                     = gameScoreTextFrame
-    newScoreText.textAlignment             = NSTextAlignment.Center
+    newScoreText.textAlignment             = .Center
     newScoreText.font                      = labelFont
     newScoreText.adjustsFontSizeToFitWidth = true
+
     self.view.addSubview(newScoreText)
   }
 
   func highScoreLabels() {
-    // high score labels
-    highScoresLabel.frame                     = highScoreFrame
-    highScoresLabel.text                      = scoresAsText + "|"
-    highScoresLabel.textAlignment             = NSTextAlignment.Center
-    highScoresLabel.textColor                 = DARK_GRAY
-    highScoresLabel.font                      = scoreListFont
-    highScoresLabel.adjustsFontSizeToFitWidth = true
     // A label to describe the high scores
-    highScoreText.text                        = "High Scores"
-    highScoreText.frame                       = highScoreTextFrame
-    highScoreText.font                        = UIFont.systemFontOfSize(20)
-    highScoreText.textAlignment               = NSTextAlignment.Center
-    highScoreText.textColor                   = DARK_GRAY
-    self.view.addSubview(highScoresLabel)
+    highScoreText.frame                     = highScoreTextFrame
+    highScoreText.titleLabel?.font          = highScoreFont
+    highScoreText.titleLabel?.textAlignment = .Center
+
+    highScoreText.setTitle("High Score: \(score.getHighScore())", forState: .Normal)
+    highScoreText.setTitleColor(DARK_GRAY, forState: .Normal)
+    highScoreText.addTarget(self, action: Selector("goToScores"), forControlEvents: .TouchUpInside)
+
     self.view.addSubview(highScoreText)
   }
 
@@ -155,25 +155,24 @@ class resultViewController: UIViewController {
     // The player's score from the completed game
     scoreLabel.text          = "\(score.currentScore)"
     scoreLabel.frame         = gameScoreFrame
-    scoreLabel.textAlignment = NSTextAlignment.Center
+    scoreLabel.textAlignment = .Center
     scoreLabel.font          = scoreFont
+
     self.view.addSubview(scoreLabel)
   }
 
   func playAgainButton() {
     // The button to allow the player to start a new game
-    let button                       = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+    let button                       = UIButton.buttonWithType(.System) as! UIButton
     button.frame                     = buttonFrame
     button.layer.cornerRadius        = 10
     button.backgroundColor           = GREEN
     button.titleLabel?.font          = buttonFont
-    button.titleLabel?.textAlignment = NSTextAlignment.Center
+    button.titleLabel?.textAlignment = .Center
 
     button.setTitle("Play Again", forState: UIControlState.Normal)
     button.setTitleColor(DARK_GRAY, forState: UIControlState.Normal)
     button.addTarget(self, action: Selector("backToGame"), forControlEvents: UIControlEvents.TouchUpInside)
-
-    self.view.addSubview(button)
 
     // The button that shares to Facebook
     let facebookShare            = UIButton.buttonWithType(.Custom) as! UIButton
@@ -181,27 +180,18 @@ class resultViewController: UIViewController {
 
     facebookShare.setImage(UIImage(named: "facebook-logo"), forState: UIControlState.Normal)
     facebookShare.addTarget(self, action: Selector("shareToFacebook"), forControlEvents: .TouchUpInside)
-    self.view.addSubview(facebookShare)
 
     // The button that shares to Twitter
-    let twitterShare             = UIButton.buttonWithType(.Custom) as! UIButton
-    twitterShare.frame           = twitterFrame
+    let twitterShare                = UIButton.buttonWithType(.Custom) as! UIButton
+    twitterShare.frame              = twitterFrame
+    twitterShare.layer.cornerRadius = 5
 
     twitterShare.setImage(UIImage(named: "twitter-logo-white"), forState: UIControlState.Normal)
-
-    twitterShare.layer.cornerRadius = 5
     twitterShare.addTarget(self, action: Selector("shareToTwitter"), forControlEvents: .TouchUpInside)
-    self.view.addSubview(twitterShare)
-  }
 
-  func formatHighScores() {
-    for value in score.highScores {
-      if value > 0 {
-        scoresAsText = scoresAsText + "| \(value) "
-      } else if value == 0 {
-        scoresAsText = scoresAsText + "| 0 "
-      }
-    }
+    self.view.addSubview(button)
+    self.view.addSubview(facebookShare)
+    self.view.addSubview(twitterShare)
   }
 
   func loadDefaults() {
@@ -258,7 +248,6 @@ class resultViewController: UIViewController {
     self.view.backgroundColor           = WHITE
 
     makeFrames()
-    formatHighScores()
     displayScores()
 
   }

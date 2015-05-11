@@ -9,7 +9,6 @@
 import UIKit
 import Fabric
 import Crashlytics
-//import Armchair
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
