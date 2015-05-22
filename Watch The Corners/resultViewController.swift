@@ -102,6 +102,7 @@ class resultViewController: UIViewController {
 
     if !score.duplicateScore {
       if score.currentScoreIsHighScore() && score.currentScore != 0 {
+        score.reportToGameCenter()
         newScoreText.text      = "New High Score!"
         newScoreText.textColor = GREEN
         scoreLabel.textColor   = GREEN
@@ -239,7 +240,6 @@ class resultViewController: UIViewController {
     super.viewDidLoad()
 
     loadDefaults()
-    score.reportToGameCenter()
     score.addScoreToHighScores(score.currentScore)
     saveDefaults()
 

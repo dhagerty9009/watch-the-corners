@@ -173,20 +173,20 @@
                                 <exclude reference="gUs-4K-32U"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="zYL-lo-AZD"/>
+                                <exclude reference="9qU-U9-Vet"/>
                                 <exclude reference="EMe-ps-FcV"/>
                                 <exclude reference="GbT-8O-eYd"/>
                                 <exclude reference="S0R-Wq-x8b"/>
+                                <exclude reference="SdR-cY-zry"/>
+                                <exclude reference="Zcf-et-ZkC"/>
+                                <exclude reference="XrD-O9-K84"/>
+                                <exclude reference="gRB-0M-SRh"/>
                                 <exclude reference="B6R-IM-GLi"/>
                                 <exclude reference="KOW-A6-6Mc"/>
                                 <exclude reference="yPy-2B-jXP"/>
                                 <exclude reference="B1Q-41-Hk1"/>
                                 <exclude reference="HXy-fI-vV6"/>
-                                <exclude reference="XrD-O9-K84"/>
-                                <exclude reference="gRB-0M-SRh"/>
-                                <exclude reference="SdR-cY-zry"/>
-                                <exclude reference="Zcf-et-ZkC"/>
-                                <exclude reference="zYL-lo-AZD"/>
-                                <exclude reference="9qU-U9-Vet"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -198,20 +198,20 @@
                                 <include reference="gUs-4K-32U"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="zYL-lo-AZD"/>
+                                <include reference="9qU-U9-Vet"/>
                                 <include reference="EMe-ps-FcV"/>
                                 <include reference="GbT-8O-eYd"/>
                                 <include reference="S0R-Wq-x8b"/>
+                                <include reference="SdR-cY-zry"/>
+                                <include reference="Zcf-et-ZkC"/>
+                                <include reference="XrD-O9-K84"/>
+                                <include reference="gRB-0M-SRh"/>
                                 <include reference="B6R-IM-GLi"/>
                                 <include reference="KOW-A6-6Mc"/>
                                 <include reference="yPy-2B-jXP"/>
                                 <include reference="B1Q-41-Hk1"/>
                                 <include reference="HXy-fI-vV6"/>
-                                <include reference="XrD-O9-K84"/>
-                                <include reference="gRB-0M-SRh"/>
-                                <include reference="SdR-cY-zry"/>
-                                <include reference="Zcf-et-ZkC"/>
-                                <include reference="zYL-lo-AZD"/>
-                                <include reference="9qU-U9-Vet"/>
                             </mask>
                         </variation>
                     </view>
