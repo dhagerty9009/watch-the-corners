@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>8CA55341-9139-493F-ADFF-CDE39B268FCE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Watch The Corners</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B23807C93F859A6A0EF7EDA20FDCA4FB38E6ACA8</key>
 		<string>bitbucket.org:twistsix/watch-the-corners.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Watch The Corners.xcodeproj</string>
+	<string>Watch The Corners.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B23807C93F859A6A0EF7EDA20FDCA4FB38E6ACA8</key>
